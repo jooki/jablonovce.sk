@@ -67,5 +67,6 @@
         "label" : "Galéria"  
     },
 
-    "default_lang": "sk"
+    "default_lang": "sk", 
+    "multy_lang_using" : false 
 }
