@@ -1,0 +1,36 @@
+<!-- Start activity container -->
+        <div class="container add_bottom_60">
+        <div class="main_title add_bottom_45">
+            <span></span>
+            <h2>Zážitky v okolí</h2>
+            <p>
+                Ako sa dá využiť volný čas v okolí?
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-md-8" id="strip_activities">
+                <ul>
+                    <% content.activities.forEach(function(activity){ %>
+                    <li>
+                        <img src='<%= activity.thumbnail %>' alt= '<%= activity.imgAlt %>' class="img-circle styled"></a>
+                        <h4><%= activity.title %></h4>
+                        <p> 
+                            <% if (activity.text_preview) { %>
+                            <%= activity.text_preview %>
+                            <% } else { %>
+                            <%= activity.text %>
+                            <% } %>
+                            <a href='<%= activity.link %>' class="link_normal">Čítaj viac ...</a>
+                        </p>    
+                    </li>                   
+                    <% }); %>    
+                </ul>
+            </div>
+            <div class="col-md-4">
+                
+                <a class="box_style_1 weahter" href="/contacts">
+                <i class="icon-light-up"></i> Predpoveď počasia </a>
+                <!-- End  weather-->
+            </div>
+        </div><!-- End row -->
+    </div><!-- End container -->

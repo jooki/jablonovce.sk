@@ -1,0 +1,200 @@
+<!-- views/pages/reservation.ejs -->
+
+<!DOCTYPE html>
+<html lang='<%= default_lang %>'>
+
+<head>
+    <% include ../partials/header %>
+        <!-- SPECIFIC CSS -->
+        <link href="css/slider-pro.min.css" rel="stylesheet">
+        <link href="css/bootstrap-datapicker/bootstrap-datepicker.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--[if lte IE 8]>
+    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a>.</p>
+<![endif]-->
+
+    <div id="preloader">
+        <div class="sk-spinner sk-spinner-wave">
+            <div class="sk-rect1"></div>
+            <div class="sk-rect3"></div>
+            <div class="sk-rect4"></div>
+            <div class="sk-rect2"></div>
+            <div class="sk-rect5"></div>
+        </div>
+    </div>
+    <!-- End Preload -->
+    <div class="layer"></div>
+    <!-- Mobile menu overlay mask -->
+    <header>
+        <% include ../partials/lang_top %>
+            <% include ../partials/menu %>
+    </header>
+    <main>
+        <section class="sub_header" id="bg_room">
+            <div class="sub_header_content">
+                <div class="animated fadeInDown">
+                    <h1><%= content.accommodations[accommodation].title %></h1>
+                    <p>
+                        <%= content.accommodations[accommodation].title_preview %>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- End Section -->
+
+        <div class="container margin_60">
+            <div class="row">
+                <div class="col-md-8" id="single_tour_desc">
+
+                    <!--slider-->
+                    <% include ../partials/apartmans/slider_pro %>
+
+                        <div id="single_room_feat">
+                            <ul>
+                                <% content.accommodations[accommodation].facilities.forEach(function(faclility){ %>
+                                    <li><i class='<%= faclility.icon; %>'></i>
+                                        <%= faclility.title; %>
+                                    </li>
+                                    <% }); %>
+                            </ul>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h3><%= content.accommodations[accommodation].title %></h3>
+                            </div>
+                            <div class="col-md-9">
+                                <p>
+                                    <%= content.accommodations[accommodation].text %>
+                                </p>
+                                <h4>Vybavenie časti chalupy</h4>
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6">
+                                        <ul class="list_ok">
+                                            <% var n = -1;
+                                                content.accommodations[accommodation].facilities_text.forEach(function(faclility_text){
+                                                ++n;
+                                                if (n % 2 == 0 ) { %>
+                                                <li>
+                                                    <%= faclility_text.text %>
+                                                </li>
+                                                <% }}); %>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6">
+                                        <ul class="list_ok">
+                                            <% var n = -1;
+                                                content.accommodations[accommodation].facilities_text.forEach(function(faclility_text){
+                                                ++n; 
+                                                if (n % 2 == 1 ) { %>
+                                                <li>
+                                                    <%= faclility_text.text %>
+                                                </li>
+                                                <% }}); %>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- End row  -->
+                                <h4>Ceny ubytovania</h4>
+                                <!-- start pricing table -->
+                                <table class="table table-striped">
+                                    <tbody>
+                                        <% content.accommodations[accommodation].prices.forEach(function(price){ %>
+                                            <tr>
+                                                <td>
+                                                    <%= price.text %>
+                                                </td>
+                                                <td>
+                                                    <%= price.value %>
+                                                </td>
+                                                <td>
+                                                    <%= price.unit %>
+                                                </td>
+                                            </tr>
+                                            <% }); %>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- End col-md-9  -->
+                        </div>
+                        <!-- End row  -->
+                        <hr>
+                        <!-- recenzie  -->
+                </div>
+                <!-- End col-md-8 -->
+                <div class="col-md-4">
+                    <!-- rezervacny formulár -->
+                    <% include ../partials/apartmans/booking_form %>
+                        <!-- základné vybavenie -->
+
+                        <!-- contact_box -->
+                        <% include ../partials/apartmans/contact_box %>
+                </div>
+                <!-- End col-md-4 -->
+            </div>
+            <!-- End row -->
+        </div>
+        <!-- End Container -->
+    </main>
+    <footer>
+        <% include ../partials/footer %>
+    </footer>
+    <div id="toTop"></div>
+    <!-- Back to top button -->
+
+    <!-- Common scripts -->
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/common_scripts_min.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/validate.js"></script>
+    <!-- Specific scripts -->
+    <script src="js/jquery.sliderPro.min.js"></script>
+    <script type="text/javascript">
+        $( document ).ready(function( $ ) {
+		$( '#Img_carousel' ).sliderPro({
+			width: 960,
+			height: 500,
+			fade: true,
+			arrows: true,
+			buttons: false,
+			fullScreen: false,
+			smallSize: 500,
+			startSlide: 0,
+			mediumSize: 1000,
+			largeSize: 3000,
+			thumbnailArrows: true,
+			autoplay: false
+		});
+	});
+    </script>
+    <script src="js/quantity-bt.js"></script>
+    <script src="js/bootstrap-datapicker/bootstrap-datepicker.min.js"></script>
+    <script src="js/bootstrap-datapicker/locales/bootstrap-datepicker.sk.min.js" charset="UTF-8"></script>
+
+    <script>
+        //$('input.date-pick').datepicker({});
+    $(function () {
+        $('#check_in, #check_out').datepicker({
+            format: "dd.mm.yyyy",
+            weekStart: 1,
+            language: "sk",
+            autoclose: true,
+            todayHighlight: true,
+            datesDisabled: ['01.01.2016', '06.01.2016'],
+            toggleActive: true,
+            useCurrent: false
+        });
+        
+        $("#check_in").on("dp.change", function (e) {
+            $('#check_out').data("DateTimePicker").minDate(e.date);
+        });
+        
+        $("#check_out").on("dp.change", function (e) {
+            $('#check_in').data("DateTimePicker").maxDate(e.date);
+        });
+    })
+    </script>
+</body>
+
+</html>

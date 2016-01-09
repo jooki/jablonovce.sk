@@ -1,0 +1,23 @@
+<div id="Img_carousel" class="slider-pro">
+    <div class="sp-slides">
+        <% content[content.accommodations[accommodation].slider].forEach(function(pic){ %>
+            <div class="sp-slide">
+                <img alt="" class="sp-image" src="css/images/blank.gif" data-src='<%= pic.medium; %>' data-small='<%= pic.small; %>' data-medium='<%= pic.medium; %>'
+                data-large='<%= pic.large; %>' data-retina='<%= pic.large; %>'>
+
+                <% if (pic.text) { %>
+                    <p class="sp-layer sp-black sp-padding" data-position="bottomLeft" data-horizontal="5%" data-vertical="5%" data-width="90%"
+                    data-show-transition="up" data-show-delay="400">
+                        <%= pic.text %>
+                    </p>
+                <% } %>
+            </div>
+            <% }); %>
+    </div>
+
+    <div class="sp-thumbnails">
+        <% content[content.accommodations[accommodation].slider].forEach(function(pic){ %>
+            <img alt="" class="sp-thumbnail" src='<%= pic.thumbnail; %>'>
+            <% }); %>
+    </div>
+</div>

@@ -36,6 +36,9 @@ $headers .= "Content-Transfer-Encoding: quoted-printable" . PHP_EOL;
 $user = "$email_newsletter_2";
 $usersubject = "Thank You";
 $userheaders = "From: info@domain.com\n";
+$userheaders .= "MIME-Version: 1.0" . PHP_EOL;
+$userheaders .= "Content-type: text/plain; charset=utf-8" . PHP_EOL;
+$userheaders .= "Content-Transfer-Encoding: quoted-printable" . PHP_EOL;
 $usermessage = "Thank you for join to CountryHolidays Newsletter!";
 mail($user,$usersubject,$usermessage,$userheaders);
 

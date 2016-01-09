@@ -1,0 +1,91 @@
+<!-- views/pages/activities.ejs -->
+
+<!DOCTYPE html>
+<html lang='<%= default_lang %>'>
+<head>
+    <% include ../partials/header %>
+     
+</head>
+<body>
+<!--[if lte IE 8]>
+    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a>.</p>
+<![endif]-->
+     
+	<div id="preloader">
+        <div class="sk-spinner sk-spinner-wave">
+            <div class="sk-rect1"></div>
+            <div class="sk-rect2"></div>
+            <div class="sk-rect3"></div>
+            <div class="sk-rect4"></div>
+            <div class="sk-rect5"></div>
+        </div>
+    </div>
+    <!-- End Preload -->
+	<div class="layer"></div>
+    <!-- Mobile menu overlay mask -->
+    
+    <header>
+        <% include ../partials/lang_top %>
+        <% include ../partials/menu %>
+    </header>
+    
+    <main>
+        <section class="sub_header" id="bg_general">
+        <div class="sub_header_content">
+            <div class="animated fadeInDown">
+                <h1>Zážitky v okolí</h1>
+                <p>
+                    Ako sa dá využiť volný čas v okolí?
+                </p>
+            </div>
+        </div>
+    </section><!-- End Section -->
+    
+    <div class="container margin_60">
+        <div class="row">
+            <div class="col-lg-9 col-md-8">
+                <div class="row">
+                    <% content.activities.forEach(function(activity){ %>
+                    <div class="col-lg-6 col-md-12 col-sm-6">
+                        <section class="box_cat_wp">
+                        <div class="box_cat cat-hover">
+                            <a href='<%= activity.link %>' class="cat-overlay">
+                            <h2><%= activity.title %></h2>
+                            <p>
+                                <%= activity.text_preview %>
+                            </p>
+                            <span class="box_cat_bt">Čítaj viac</span>
+                            </a>
+                            <div class="cat-img">
+                                <img src='<%= activity.img %>' alt= '<%= activity.imgAlt %>'>
+                            </div>
+                        </div>
+                        </section>
+                    </div>
+                        <% }); %>  
+                </div><!-- End row -->
+            </div><!-- End col-lg-9 -->
+        </div><!-- End row -->
+    </div><!-- End Container -->
+    </main>
+
+    <footer>
+        <% include ../partials/footer %>
+    </footer>
+    <div id="toTop"></div><!-- Back to top button -->
+
+    <% include ../partials/common_scripts %>
+    <% include ../partials/rs-plugin_scripts %>
+    
+<!-- Specifi scripts -->
+<script src="js/mosaic.1.0.1.js"></script>
+<script type="text/javascript">
+	    jQuery(function ($) {
+	        $('.cat-hover').mosaic({
+	            animation: 'slide'		//fade or slide
+	        });
+	    });
+</script>
+
+</body>
+</html>

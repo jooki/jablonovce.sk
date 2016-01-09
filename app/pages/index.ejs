@@ -1,0 +1,47 @@
+<!-- views/pages/index.ejs -->
+
+<!DOCTYPE html>
+<html lang='<%= default_lang %>'>
+
+<head>
+    <% include ../partials/header %>
+        <!-- REVOLUTION SLIDER CSS -->
+        <link href="rs-plugin/css/settings.css" rel="stylesheet">
+        <link href="css/extralayers.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--[if lte IE 8]>
+    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a>.</p>
+<![endif]-->
+
+    <% include ../partials/preloader %>
+        
+    <div class="layer"></div>
+    <!-- Mobile menu overlay mask -->
+
+    <header>
+        <% include ../partials/lang_top %>
+        <% include ../partials/menu %>
+    </header>
+
+    <main>
+        <% include ../partials/slider %>
+        <% include ../partials/info %>
+        <% include ../partials/containers/acomodation %>
+        <% include ../partials/containers/activity %>
+        <% include ../partials/containers/button %>
+    </main>
+
+    <footer>
+        <% include ../partials/footer %>
+    </footer>
+    <div id="toTop"></div>
+    <!-- Back to top button -->
+
+    <% include ../partials/common_scripts %>
+    <% include ../partials/rs-plugin_scripts %>
+
+</body>
+
+</html>

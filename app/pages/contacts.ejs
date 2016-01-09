@@ -1,0 +1,207 @@
+<!-- views/pages/contacts.ejs -->
+
+<!DOCTYPE html>
+<html lang='<%= default_lang %>'>
+
+<head>
+    <% include ../partials/header %>
+        <link rel="stylesheet" href="css/weather.css">
+</head>
+
+<body>
+    <!--[if lte IE 8]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a>.</p>
+    <![endif]-->
+
+    <div id="preloader">
+        <div class="sk-spinner sk-spinner-wave">
+            <div class="sk-rect1"></div>
+            <div class="sk-rect2"></div>
+            <div class="sk-rect3"></div>
+            <div class="sk-rect4"></div>
+            <div class="sk-rect5"></div>
+        </div>
+    </div>
+    <!-- End Preload -->
+    <div class="layer"></div>
+    <!-- Mobile menu overlay mask -->
+
+    <header>
+        <% include ../partials/lang_top %>
+            <% include ../partials/menu %>
+    </header>
+    <!-- End Header -->
+    <main>
+        <div id="map"> </div>
+        <!-- end map-->
+
+        <div class="container margin_60">
+            <div id="testimonials">
+                <div class='row'>
+                    <div class='col-md-offset-1 col-md-10'>
+                        <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+                            <!-- Bottom Carousel Indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#quote-carousel" data-slide-to="1"></li>
+                                <li data-target="#quote-carousel" data-slide-to="2"></li>
+                            </ol>
+                            <!-- Carousel Slides / Quotes -->
+                            <div class="carousel-inner">
+                                <!-- Quote 1 -->
+                                <div class="item active">
+                                    <blockquote>
+                                        <img class="img-circle" src="img/testimonial_1.jpg" alt="">
+                                        <p>
+                                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit in arcu blandit, eget pretium nisl accumsan. Sed
+                                            ultricies commodo tortor, eu pretium mauris."
+                                        </p>
+                                        <small>Someone famous</small>
+                                    </blockquote>
+                                </div>
+                                <!-- Quote 2 -->
+                                <div class="item">
+                                    <blockquote>
+                                        <img class="img-circle" src="img/testimonial_1.jpg" alt="">
+                                        <p>
+                                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit in arcu blandit, eget pretium nisl accumsan. Sed
+                                            ultricies commodo tortor, eu pretium mauris."
+                                        </p>
+                                        <small>Someone famous</small>
+                                    </blockquote>
+                                </div>
+                                <!-- Quote 3 -->
+                                <div class="item">
+                                    <blockquote>
+                                        <img class="img-circle" src="img/testimonial_1.jpg" alt="">
+                                        <p>
+                                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit in arcu blandit, eget pretium nisl accumsan. Sed
+                                            ultricies commodo tortor, eu pretium mauris."
+                                        </p>
+                                        <small>Someone famous</small>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End row -->
+            </div>
+            <!-- End testimonials -->
+            <!-- Weather widget -->
+            <div class="main_title add_bottom_45">
+                <span></span>
+                <h2>Predpoved počasia</h2>
+            </div>
+            <div id="weather" class="clearfix"></div>
+            <!-- End Weather widget -->
+            <hr>
+            <div class="row">
+                <div class="col-md-8">
+                    <div id="message-contact"></div>
+                    <form method="post" action="assets/contact.php" id="contactform">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <label>Meno</label>
+                                    <input type="text" class="form-control" id="name_contact" name="name_contact" placeholder="Vaše meno">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <label>Priezvisko</label>
+                                    <input type="text" class="form-control" id="lastname_contact" name="lastname_contact" placeholder="Vaše priezvisko">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End row -->
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="email" id="email_contact" name="email_contact" class="form-control" placeholder="Váš Email">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <label>Telefón</label>
+                                    <input type="text" id="phone_contact" name="phone_contact" class="form-control" placeholder="Vaše telefónne číslo">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Správa pre nás</label>
+                                    <textarea id="message_contact" name="message_contact" class="form-control" placeholder="Správa urečená pre nás" style="height:150px;"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row add_bottom_30">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Overenie </label>
+                                    <input type="text" id="verify_contact" class=" form-control add_bottom_30" placeholder="Ste človek? 3 + 1 =">
+                                </div>
+                                <input type="submit" value="Odoslať" class="btn_1" id="submit-contact">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- End col-md-8 -->
+
+                <div class="col-md-4">
+                    <div class="box_style_1">
+                        <h3>Kontakt</h3>
+                        <h5>Adresa</h5>
+                        <p>??? Jabloňovce
+                            <br>Slovakia 935 06</p>
+                        <h5>Telefón</h5>
+                        <p>
+                            <a href='<%= phone.link %>'>
+                                <%= phone.label %>
+                            </a>
+                        </p>
+                        <h5>Email</h5>
+                        <p>
+                            <a href='<%= mailto.link %>'>
+                                <%= mailto.label %>
+                            </a>
+                        </p>
+                        <p>...</p>
+                    </div>
+                </div>
+                <!-- End col-md-4 -->
+            </div>
+            <!-- End row -->
+        </div>
+        <!-- End Container -->
+    </main>
+
+    <footer>
+        <% include ../partials/footer %>
+    </footer>
+    <div id="toTop"></div>
+    <!-- Back to top button -->
+
+    <!-- Common scripts -->
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/common_scripts_min.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="assets/validate.js"></script>
+
+    <!-- Specifi scripts -->
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="js/mapmarker.jquery.js"></script>
+    <script type="text/javascript" src="js/mapmarker_func.jquery.js"></script>
+
+    <script src="js/jquery.zweatherfeed.js"></script>
+    <script>
+        $('#weather').weatherfeed(['819959'], {
+        woeid: true,
+		forecast: true
+        });
+    </script>
+</body>
+
+</html>

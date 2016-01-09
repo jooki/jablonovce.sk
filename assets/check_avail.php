@@ -64,6 +64,9 @@ $headers .= "Content-Transfer-Encoding: quoted-printable" . PHP_EOL;
 $user = "$email_booking";
 $usersubject = "Thank You";
 $userheaders = "From: info@domain.com\n";
+$userheaders .= "MIME-Version: 1.0" . PHP_EOL;
+$userheaders .= "Content-type: text/plain; charset=utf-8" . PHP_EOL;
+$userheaders .= "Content-Transfer-Encoding: quoted-printable" . PHP_EOL;
 $usermessage = "Thank you for contact CountryHolidays. We will reply shortly with more details. Here a summary of your request: \n\n$e_content.  \n\n Call 0034 434324  for further information.";
 mail($user,$usersubject,$usermessage,$userheaders);
 

@@ -1,0 +1,17 @@
+typings
+node_modules
+
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+*.DS*
+
+pids
+logs
+results
+
+npm-debug.log

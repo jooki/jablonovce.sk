@@ -1,7 +1,19 @@
 {
   "name": "jablonovce.sk",
   "version": "0.0.1",
+  "main": "Server.js",
+  "description": "Web stranka jablonovce - Prázdniny na vidieku.",
+  "homepage": "http://jablonovce.sk",
+  "author": {
+    "name": "Kluvanec Jozef",
+    "email": "jozef.kluvanec@sim.sk"
+  },
   "dependencies": {
+    "ejs": "^2.3.4",
     "express": "^4.11.0"
+  },
+  "engines": {
+    "node": "^4.2.x",
+    "npm": "^3.5.x"
   }
 }

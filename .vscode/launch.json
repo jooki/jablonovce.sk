@@ -7,7 +7,10 @@
 			"name": "Jablonovce",
 			// Type of configuration.
 			"type": "node",
-			// Workspace relative or absolute path to the program.
+
+			"request": "launch",
+
+			// Workspace relative or absolute path to the program.			
 			"program": "Server.js",
 			// Automatically stop program after launch.
 			"stopOnEntry": false,
@@ -31,8 +34,7 @@
 		{
 			"name": "Attach",
 			"type": "node",
-			// TCP/IP address. Default is "localhost".
-			"address": "localhost",
+			"request": "attach",
 			// Port to attach to.
 			"port": 8080,
 			"sourceMaps": false

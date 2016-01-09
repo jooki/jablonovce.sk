@@ -1,0 +1,17 @@
+<!-- Start ubytovanie container -->
+<div class="bg_gray add_bottom_60">
+    <div class="container">
+        <div class="row">
+            <% content.accommodations.forEach(function(ubytko){ %>
+                <div class="col-md-6 col-sm-6">
+                    <div class="img_zoom">
+                        <a href='/<%= ubytko.type %>'><img src='<%= ubytko.img %>' alt= '<%= ubytko.imgAlt %>' class="img-responsive"></a>
+                    </div>
+                    <h3><%= ubytko.title %><span class="price_home"><%= ubytko.price %><em><%= ubytko.unit %></em></span> </h3>
+                    <p><%= ubytko.text_preview; %></p>
+                    <p><a href='/<%= ubytko.type %>' class="btn_1">Detaily</a></p>
+                </div>
+                <% }); %>
+        </div><!-- End row -->
+    </div><!-- End container -->
+</div>

@@ -86,6 +86,9 @@ $headers .= "Content-Transfer-Encoding: quoted-printable" . PHP_EOL;
 $user = "$email_review";
 $usersubject = "Thank You";
 $userheaders = "From: info@domain.com\n";
+$userheaders .= "MIME-Version: 1.0" . PHP_EOL;
+$userheaders .= "Content-type: text/plain; charset=utf-8" . PHP_EOL;
+$userheaders .= "Content-Transfer-Encoding: quoted-printable" . PHP_EOL;
 $usermessage = "Thank you for review CountryHolidays! Here a summary of your review: \n $e_content. ";
 mail($user,$usersubject,$usermessage,$userheaders);
 

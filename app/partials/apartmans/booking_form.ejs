@@ -1,0 +1,77 @@
+<div class="box_style_1" id="book_in">
+    <h3>Rezervácia</h3>
+    <div id="message-booking"></div>
+    <form role="form" method="post" action="assets/check_avail.php" id="check_avail" autocomplete="off">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <div class="form-group">
+                    <label>Príchod</label>
+                    <input class="form-control" type="text" id="check_in" name="check_in" placeholder="Dátum príchodu" />
+                    <span class="input-icon"><i class="icon-calendar"></i></span>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <div class="form-group">
+                    <label>Odchod</label>
+                    <input class="form-control" type="text" id="check_out" name="check_out" placeholder="Dátum odchodu" />
+                    <span class="input-icon"><i class="icon-calendar"></i></span>
+                </div>
+            </div>
+        </div>
+        <!-- End row -->
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <div class="form-group">
+                    <label>Dospelý</label>
+                    <div class="qty-buttons">
+                        <input type="button" value="-" class="qtyminus" name="adults">
+                        <input type="text" name="adults" id="adults" value="2" class="qty form-control" placeholder="2">
+                        <input type="button" value="+" class="qtyplus" name="adults">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <div class="form-group">
+                    <label>Deti</label>
+                    <div class="qty-buttons">
+                        <input type="button" value="-" class="qtyminus" name="children">
+                        <input type="text" name="children" id="children" value="" class="qty form-control" placeholder="0">
+                        <input type="button" value="+" class="qtyplus" name="children">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End row -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label>Časť chalupy</label>
+                    <select class="form-control" name="room_type" id="room_type">
+                        <!--TODO: Ciklus pre výpočet možností ubytovania a názvu -->
+                        <option value="">Vyberte časť na prenájom</option>
+                        <% content.accommodations.forEach(function(accomm){%>
+                            <option value='<%= accomm.type %>'><%= accomm.title %></option>
+                        <% });%>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-6">
+                <div class="form-group">
+                    <label>Meno</label>
+                    <input type="text" class="form-control" name="name_booking" id="name_booking" placeholder="Vaše meno a priezvisko">
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-6">
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="text" class="form-control" name="email_booking" id="email_booking" placeholder="Váš email">
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12">
+                <div class="form-group">
+                    <input type="submit" value="Rezervovať" class="btn_full" id="submit-booking">
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
