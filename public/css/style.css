@@ -483,7 +483,7 @@ input#email_newsletter_2.form-control{
 	right:10px;
 	bottom:12px;
 }
-.error_message { margin:0 0 5px 0; padding:0;color: #C33; display:inline-block; font-weight:600;}
+.error_message { margin:0 0 5px 0; padding:0;color: #C33; display:block; font-weight:600;}
 #book .error_message { color: #FF9;}
 
 .header-video {
