@@ -3,9 +3,11 @@
  * It requires the database module that we wrote previously.
  */
 var express = require('express');
-var router = express.Router();
-
+var ejs = require('ejs');
 var path = require('path');
+
+var router = express.Router();
+// Setting database for posting all requirements
 var userPost = require(path.join(__dirname, 'data', 'posted'))
 // Setting Log for all posted users IP address 
 var usersLog = require(path.join(__dirname, 'data', 'loger'))
@@ -52,8 +54,7 @@ module.exports = function Routes(app) {
         res.render('activities.ejs', data);
     });
 
-    // posting data to the database
-    // This is executed before the next two post requests
+    // This is executed before the next post requests
     router.post('*', function (req, res, next) {
 
         // Register the user in the database by ip address
@@ -66,7 +67,8 @@ module.exports = function Routes(app) {
         });
 
     });
-
+    
+    // TODO: bolo by fajn keby to bolo zjednodusene a rozdelene popripade zovseobecnene
     router.post('/api/contact', function (req, res) {
         req.checkBody("name_contact", data.validationError.name_IsEmpty).notEmpty();
         req.checkBody("lastname_contact", data.validationError.lastname_IsEmpty).notEmpty();
@@ -103,6 +105,7 @@ module.exports = function Routes(app) {
     })
 
     router.post('/api/reserve', function (req, res) {
+        // server site validacia
         req.checkBody("check_in", data.validationError.check_in_IsEmpty).notEmpty();
         req.checkBody("check_out", data.validationError.check_out_IsEmpty).notEmpty();
         req.checkBody("adults", data.validationError.adults_isNumeric).isNumeric();
@@ -119,8 +122,10 @@ module.exports = function Routes(app) {
         req.checkBody("name_booking", data.validationError.name_IsEmpty).notEmpty();
         req.checkBody("email_booking", data.validationError.email_IsEmail).isEmail();
         req.checkBody("phone_booking", data.validationError.phone_format).optional().isNumeric();
+        
         var html
         var errors = req.validationErrors();
+        // spracovanie validacie a zalogovanie do databazy
         if (errors) {
             html = ejs.render('<% errors.forEach(function(error){ %><div class="error_message"><span><%= error.msg %></span></div> <% }) %>', { "errors": errors });
             res.send(html);
