@@ -1,0 +1,97 @@
+{
+    "phone" : {
+        "link" : "tel://004542344599",
+        "label" : "+45 423 445 99"  
+    },
+    
+    "mailto" : {
+        "link" : "mailto:info@jablonovce.sk",
+        "label" : "info@jablonovce.sk"  
+    },
+    
+    "facebook" : {
+        "link" : "https://www.facebook.com"
+    },
+    
+    "twiter" : {
+        "link" : "https://www.twiter.com"
+    },
+    
+    "googlePlus" : {
+        "link" : "https://plus.google.com/jablonovce"
+    },
+    
+     "instagram" : {
+        "link" : "https://www.instagram.com/jablonovce"
+    },
+    
+    "about": {
+        "route" : "/about",
+        "sysLink" : "/app/pages/about",
+        "label" : "O nás"  
+    },
+    
+    "activity": {
+        "route" :  "/activities",
+        "sysLink"  :  "/app/pages/activities",
+        "label" : "Aktivity"  
+    },
+ 
+    "apartmans": {
+        "route" :  "/reservation",
+        "sysLink"  :  "/app/pages/apartmans",
+        "label" : "Rezervácia"  
+    },
+    
+    "loft": {
+        "route" :  "/loft",
+        "sysLink"  :  "/app/pages/reservation:0",
+        "label" : "Podkrovná časť "  
+    },
+    
+    "groundfloor": {
+        "route" :  "/groundfloor",
+        "sysLink"  :  "/app/pages/reservation:1",
+        "label" : "Prízemná časť s wellness "  
+    },
+    
+    "contacts": {
+        "route" :  "/contacts",
+        "sysLink"  :  "/app/pages/contacts",
+        "label" : "Kontaktujte nás"  
+    },
+    
+    "gallery": {
+        "route" :  "/gallery",
+        "sysLink"  :  "/app/pages/gallery",
+        "label" : "Galéria"  
+    },
+
+    "default_lang": "sk", 
+    "multy_lang_using" : false, 
+    
+    "validationError":{
+        "name_IsEmpty": "Prosím zapíšte Vaše meno.",
+        "lastname_IsEmpty": "Prosím zapíšte Vaše priezvisko.",
+        "email_IsEmail": "Prosím zapíšte Vašu e-mailovú adresu.",
+        "phone_IsNumeric": "Prosím zapíšte Vaše telefónne číso.",
+        "message_IsEmpty": "Prosím zapíšte aspoň stručnú správu pre nás.",
+        "verify_IsNumber": "Zapíšte vysledok z rovnice.",
+        "check_in_IsEmpty": "Prosím vyberte dátum príchodu.",
+        "check_out_IsEmpty": "Prosím vyberte dátum odchodu.",
+        "adults_isNumeric": "Prosím zadajte počet dospelých osôb",
+        "children_isNumeric": "Prosím zadajte počet detí.",
+        "room_type_IsEmpty": "Prosím vyberte časť k prenájmu",
+        "adults_loft_IsInt": "Počet dospelých može byt v rozsahu od 2 do 12 osôb.",
+        "children_loft_IsInt": "Počet detí može byt v rozsahu od 0 do 10.",
+        "adults_groundfloor_IsInt": "Počet maximálny počet dospelých osôb sú 2 osoby.",
+        "children_groundfloor_IsInt": "Počet maximálny počet detí sú 2.",
+        "phone_format" : "Prosím zapíšte Vaše telefónne číso vo formáte \"0905123456\"."
+    }, 
+    
+    "validationStatus":{
+        "thankyou" : "Ďakujeme za Váš záujem",
+        "reservation" : "Vaša rezerváciaa bola odoslaná. Budeme Vás čoskoro kontaktovať.",
+        "contact" : "Vaša správa bola odoslaná. Budeme Vás čoskoro kontaktovať."
+    }
+}

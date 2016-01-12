@@ -13,7 +13,7 @@
     "ejs": "^2.3.4",
     "express": "^4.11.0",
     "express-validator": "^2.18.0",
-    "lowdb": "^0.11.4"
+    "nedb": "^1.6.0"
   },
   "engines": {
     "node": "^4.2.x",

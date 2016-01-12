@@ -1,7 +1,7 @@
 <div class="box_style_1" id="book_in">
     <h3>Rezervácia</h3>
     <div id="message-booking"></div>
-    <form role="form" method="post" action="assets/check_avail.php" id="check_avail" autocomplete="off">
+    <form role="form" method="post" action="api/reserve" id="check_avail" autocomplete="off">
         <div class="row">
             <div class="col-md-6 col-sm-6 col-xs-6">
                 <div class="form-group">
@@ -35,7 +35,7 @@
                     <label>Deti</label>
                     <div class="qty-buttons">
                         <input type="button" value="-" class="qtyminus" name="children">
-                        <input type="text" name="children" id="children" value="" class="qty form-control" placeholder="0">
+                        <input type="text" name="children" id="children" value="0" class="qty form-control" placeholder="0">
                         <input type="button" value="+" class="qtyplus" name="children">
                     </div>
                 </div>
@@ -45,10 +45,10 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group">
-                    <label>Časť chalupy</label>
+                    <label>Časť k prenájmu</label>
                     <select class="form-control" name="room_type" id="room_type">
                         <!--TODO: Ciklus pre výpočet možností ubytovania a názvu -->
-                        <option value="">Vyberte časť na prenájom</option>
+                        <option value="">Vyberte časť chalupy na prenájom</option>
                         <% content.accommodations.forEach(function(accomm){%>
                             <option value='<%= accomm.type %>'><%= accomm.title %></option>
                         <% });%>
@@ -59,6 +59,12 @@
                 <div class="form-group">
                     <label>Meno</label>
                     <input type="text" class="form-control" name="name_booking" id="name_booking" placeholder="Vaše meno a priezvisko">
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-6">
+                <div class="form-group">
+                    <label>Telefón</label>
+                    <input type="text" class="form-control" name="phone_booking" id="phone_booking" placeholder="Vaše telefónne číslo">
                 </div>
             </div>
             <div class="col-md-12 col-sm-6">

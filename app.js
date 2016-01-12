@@ -1,67 +1,51 @@
+'use strict';
 // BASE SETUP
 // ==============================================
 var express = require('express');
 var path = require('path');
 var ejs = require('ejs');
-//var fs = require('fs');
 var env = process.env;
 var app = express();
 
-var DB_PATH_CONTACTS = path.join(__dirname + '/DB/', 'contacts.json');
-var DB_VERSION = 1;
-var Database = require('warehouse');
-var db = new Database({ path: DB_PATH_CONTACTS, version: DB_VERSION });
+const DB_PATH_SETTINGD = path.join(__dirname, 'data', 'config.json');
+const DB_PATH_CONTENT = path.join(__dirname, 'data', 'data.json');
 
-var ContactAs = db.model('contact', {
-    created: { type: Date, default: Date.now },
-    modified: { type: Date, default: Date.now },
-    name: String,
-    lastname: String,
-    email: String,
-    phone: String,
-    msg: String
-});
+// povodne nacitanie JSON datat 
+var data = require(DB_PATH_SETTINGD);
+data.content = require(DB_PATH_CONTENT).content;
 
-var data = require(__dirname + '/DB/links.json');
-data.content = require(__dirname + '/DB/data.json').content;
-
-//console.log(JSON.stringify(fulldata));
- 
+var userPost = require(path.join(__dirname, 'data', 'posted'))
 // SETUP static paths
 // ==============================================
-app.use(express.static(__dirname + '/public'));
-
-// set the view engine to ejs
-app.set('view engine', 'ejs');
-
+app.use(express.static(path.join(__dirname, 'public')));
 // ROUTES
 // ==============================================
 var router = express.Router();
-
+    
 router.get('/', function (req, res) {
-    res.render(path.join(__dirname + '/app/pages/index.ejs'), data);
+    res.render(path.join(__dirname, 'app','pages','index.ejs'), data);
 });
 
 router.get('/index', function (req, res) {
-    res.render(path.join(__dirname + '/app/pages/index.ejs'), data);
+    res.render(path.join(__dirname, 'app','pages','index.ejs'), data);
 });
 
 router.get('/contacts', function (req, res) {
-    res.render(path.join(__dirname + '/app/pages/contacts.ejs'), data);
+    res.render(path.join(__dirname, 'app','pages','contacts.ejs'), data);
 });
 
 router.get('/loft', function (req, res) {
     data.accommodation = 0;
-    res.render(path.join(__dirname + '/app/pages/reservation.ejs'), data);
+    res.render(path.join(__dirname, 'app','pages','reservation.ejs'), data);
 });
 
 router.get('/groundfloor', function (req, res) {
     data.accommodation = 1;
-    res.render(path.join(__dirname + '/app/pages/reservation.ejs'), data);
+    res.render(path.join(__dirname, 'app','pages','reservation.ejs'), data);
 });
 
 router.get('/activities', function (req, res) {
-    res.render(path.join(__dirname + '/app/pages/activities.ejs'), data);
+    res.render(path.join(__dirname, 'app','pages','activities.ejs'), data);
 });
 
 // API
@@ -72,12 +56,12 @@ app.use(validator());
 
 // kontrola pre kontakt
 router.post('/api/contact', function (req, res) {
-    req.checkBody("name_contact", 'Prosím zapíšte vaše meno.').notEmpty();
-    req.checkBody("lastname_contact", 'Prosím zapíšte vaše priezvisko.').notEmpty();
-    req.checkBody("email_contact", 'Prosím napíšte správnu e-mailovú adresu').isEmail();
-    req.checkBody("phone_contact", 'Prosím zapíšte vaše telefónne čísno na ktoré vas možeme kontaktovať.').isNumeric();
-    req.checkBody("message_contact", 'Prosím zapíšte správu pre nás.').notEmpty();
-    req.checkBody("verify_contact", 'Zapíšte vysledok z rovnice.').isNumeric('4');
+    req.checkBody("name_contact", data.validationError.name_IsEmpty).notEmpty();
+    req.checkBody("lastname_contact", data.validationError.lastname_IsEmpty).notEmpty();
+    req.checkBody("email_contact", data.validationError.email_IsEmail).isEmail();
+    req.checkBody("phone_contact", data.validationError.phone_IsNumeric).isNumeric();
+    req.checkBody("message_contact", data.validationError.message_IsEmpty).notEmpty();
+    req.checkBody("verify_contact", data.validationError.verify_IsNumber).isNumeric('4');
     var html
     var errors = req.validationErrors();
     if (errors) {
@@ -85,24 +69,72 @@ router.post('/api/contact', function (req, res) {
         res.send(html);
         return;
     } else {
-        // normal processing here
-        console.log(req.body);
-        html = "<div id='success_page' style='padding:20px 0'>"
-        html += "<strong >Email Sent.</strong>"
-        html += "Thank you <strong>" + req.body.name_contact
-        html += "</strong>,<br> your message has been submitted. We will contact you shortly."
-        html += "</div>"
-        res.send(html);
-
-        ContactAs.save({
+        userPost.create({
+            type: 'content', 
             name: req.body.name_contact,
             lastname: req.body.lastname_contact,
-            email: req.body.email_contact,
+            email: req.body.email_contact, 
             phone: req.body.phone_contact,
-            msg: req.body.message_contact
-        }).then(function (contact) {
-            console.log(contact);
-        })
+            message: req.body.message_contact
+        },function (err, newDoc) {   // Callback is optional 
+                // newDoc is the newly inserted document, including its _id 
+                // newDoc has no key called notToBeSaved since its value was undefined 
+                if (!err) {
+                    html = "<div id='success_page' style='padding:20px 0'>"
+                    + data.validationStatus.thankyou + "<strong>" + req.body.name_contact
+                    + "</strong>,<br>" + data.validationStatus.contact + "</div>"
+                    res.send(html);
+                }
+                console.log(newDoc);
+            })
+    }
+})
+
+router.post('/api/reserve', function(req, res){
+    req.checkBody("check_in", data.validationError.check_in_IsEmpty).notEmpty();
+    req.checkBody("check_out",  data.validationError.check_out_IsEmpty).notEmpty();
+    req.checkBody("adults",  data.validationError.adults_isNumeric).isNumeric();
+    req.checkBody("children", data.validationError.children_isNumeric).isNumeric();
+    req.checkBody("room_type", data.validationError.room_type_IsEmpty).notEmpty();
+    if (req.body.room_type === "loft"){
+        req.checkBody("adults", data.validationError.adults_loft_IsInt).isInt({min:2, max:12});
+        req.checkBody("children", data.validationError.children_loft_IsInt).isInt({min:0, max:10});
+    } 
+    if (req.body.room_type === "groundfloor"){
+        req.checkBody("adults", data.validationError.adults_groundfloor_IsInt).isInt({min:2, max:4});
+        req.checkBody("children", data.validationError.children_groundfloor_IsInt).isInt({min:0, max:2});
+    }
+    req.checkBody("name_booking", data.validationError.name_IsEmpty).notEmpty();
+    req.checkBody("email_booking", data.validationError.email_IsEmail).isEmail();
+    req.checkBody("phone_booking", data.validationError.phone_format).optional().isNumeric();
+    var html
+    var errors = req.validationErrors();
+    if (errors) {
+        html = ejs.render('<% errors.forEach(function(error){ %><div class="error_message"><span><%= error.msg %></span></div> <% }) %>', { "errors": errors });
+        res.send(html);
+        return;
+    } else {
+        userPost.create({
+            type: 'reservation', 
+            check_in: req.body.check_in,
+            check_out: req.body.check_out,
+            adults: req.body.adults, 
+            children: req.body.children,
+            room_type: req.body.room_type,
+            name_booking: req.body.name_booking,
+            email_booking: req.body.email_booking,
+            phone_booking: req.body.phone_booking
+        },function (err, newDoc) {   // Callback is optional 
+                // newDoc is the newly inserted document, including its _id 
+                // newDoc has no key called notToBeSaved since its value was undefined 
+                if (!err) {
+                    html = "<div id='success_page' style='padding:20px 0'>"                    
+                    + data.validationStatus.thankyou + "<strong>" + req.body.name_booking
+                    + "</strong>,<br>" + data.validationStatus.contact + "</div>"
+                    res.send(html);
+                }
+                console.log(newDoc);
+            })
     }
 })
 // TODO: 
@@ -142,18 +174,6 @@ app.get('/icon_pack_2', function (req, res) {
 app.get('/icon_pack_3', function (req, res) {
     res.sendFile(path.join(__dirname + '/app/pages/icon_pack_3.html'));
 });
-
-// SETTINGS
-// ==============================================
-if (env.NODE_ENV || 'development') {
-    // setting end configuration for development 
-    app.set('db uri', 'mongodb://localhost/jablonovce');
-}
-
-if (env.NODE_ENV || 'production') {
-    // setting end configuration for produciotn 
-    app.set('db uri', 'mongodb://localhost/jablonovce');
-}
 
 app.use('/', router);
 module.exports = app;
