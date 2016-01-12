@@ -1,6 +1,7 @@
 /**
  * This file defines the routes used in your application
  * It requires the database module that we wrote previously.
+ * http://expressjs.com/en/api.html#router
  */
 var express = require('express');
 var ejs = require('ejs');
@@ -24,6 +25,8 @@ data.content = require(DB_PATH_CONTENT).content;
 
 /**
  * Rozsirenie modulu a uprava routerov
+ * req : http://expressjs.com/en/api.html#req
+ * res : http://expressjs.com/en/api.html#res
  */
 module.exports = function Routes(app) {
 
@@ -69,7 +72,15 @@ module.exports = function Routes(app) {
     });
     
     // TODO: bolo by fajn keby to bolo zjednodusene a rozdelene popripade zovseobecnene
+    // req.path vrati /api/contact to pomoze pri prelozdelenie 
     router.post('/api/contact', function (req, res) {
+        
+        /**
+         * Validation body 
+         * https://www.npmjs.com/package/express-validator 
+         * Dependencies: https://www.npmjs.com/package/validator
+         */
+
         req.checkBody("name_contact", data.validationError.name_IsEmpty).notEmpty();
         req.checkBody("lastname_contact", data.validationError.lastname_IsEmpty).notEmpty();
         req.checkBody("email_contact", data.validationError.email_IsEmail).isEmail();
@@ -105,7 +116,13 @@ module.exports = function Routes(app) {
     })
 
     router.post('/api/reserve', function (req, res) {
-        // server site validacia
+        
+        /**
+         * Validation body 
+         * https://www.npmjs.com/package/express-validator 
+         * Dependencies: https://www.npmjs.com/package/validator
+         */
+        
         req.checkBody("check_in", data.validationError.check_in_IsEmpty).notEmpty();
         req.checkBody("check_out", data.validationError.check_out_IsEmpty).notEmpty();
         req.checkBody("adults", data.validationError.adults_isNumeric).isNumeric();
@@ -122,7 +139,7 @@ module.exports = function Routes(app) {
         req.checkBody("name_booking", data.validationError.name_IsEmpty).notEmpty();
         req.checkBody("email_booking", data.validationError.email_IsEmail).isEmail();
         req.checkBody("phone_booking", data.validationError.phone_format).optional().isNumeric();
-        
+
         var html
         var errors = req.validationErrors();
         // spracovanie validacie a zalogovanie do databazy
