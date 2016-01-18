@@ -5,7 +5,7 @@
 
 var express = require('express');
 var path = require('path');
-var ejs = require('ejs');
+// var ejs = require('ejs');
 var bodyParser = require('body-parser');
 var validator = require('express-validator');
 

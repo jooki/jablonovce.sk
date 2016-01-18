@@ -1,284 +1,442 @@
-{"content" :{ 
-    "accommodations" : [
-        {
-            "id" : 1,
-            "type" : "loft",
-            "link" : "",
-            "img" : "img/room_1.jpg", 
-            "imgAlt" : "", 
-            "title" : "Podkrovná časť", 
-            "title_preview" : "Táto časť chlapupy ponúka ubytovanie pre 6 osôb s možnosťou až do 12 osôb.",
-            "text" : "Táto časť domu poskytuje pohodlné ubytovanie pre  6 osôb. Avšak je možné ubytovať až dvojnásobný počet, teda 12 osôb. K dispozícii sú tri samostatné spálne (2x štvorlôžková, 1x dvojlôžková), obývačka s rozkladacou sedačkou, kuchyňa (elektrická varná platňa, rúra, chladnička, mikrovlnka, kanvica) a kúpeľňa s vaňou spolu s WC.  Súčasťou vybavenia je WiFi pripojenie a TV. Deti do 2 rokov sú ubytované zdarma a na vyžiadanie zabezpečíme detskú postieľku. V tejto časti domu je možné sa ubytovať aj s Vašim psíkom či mačkou za poplatok 2eur/deň/zvieratko. V celom blízkom okolí nie je pripojenie na žiadneho z mobilných operátorov.",
-            "text_preview" : "Táto časť domu poskytuje pohodlné ubytovanie pre  6 osôb. Avšak je možné ubytovať až dvojnásobný počet, teda 12 osôb. K dispozícii sú tri samostatné spálne (2x štvorlôžková, 1x dvojlôžková), obývačka s rozkladacou sedačkou, kuchyňa, kúpeľňa s vaňou spolu s WC ...",
-            "price" : "od 30€",
-            "unit" : "eur/noc",
-            "slider" : "slider_loft",
-            "facilities" : [
-                {"icon" : "icon_set_2_icon-116" , "title" :"TV"},
-                {"icon" : "icon_set_1_icon-86" , "title" :"Wifi"},
-                {"icon" : "icon_set_2_icon-104" , "title" :"Válenda"},
-                {"icon" : "icon_set_2_icon-104" , "title" :"Manželská postel"},
-                {"icon" : "icon_set_2_icon-111" , "title" :"Kúpeľna s WC"},
-                {"icon" : "icon_set_1_icon-22" , "title" :"Váš miláčik"}
-            ], 
-            "facilities_text" :[
-                {"text" :"2x štvorlôžková spálňa"},
-                {"text" :"1x dvojlôžková spálňa"},
-                {"text" :"elektrická varná platňa"},
-                {"text" :"rúra"},
-                {"text" :"chladnička"},
-                {"text" :"mikrovlnná rúra"},
-                {"text" :"varná konvica"}
-            ], 
-            "prices" :[
-                {"text" :"2 osoby ", "value" : 30, "unit" : "eur/noc"},
-                {"text" :"každá daľšia osoba ", "value" : 12, "unit" : "eur/noc"},
-                {"text" :"zvieratko psík / mačička ", "value" : 2, "unit" : "eur/deň"},
-                {"text" :"deti do 2 rokov ", "value" : "bezplatne", "unit" : ""}
-            ]
-        }, 
-        {
-            "id" : 2,
-            "type" : "groundfloor",
-            "link" : "",
-            "img" : "img/room_2.jpg", 
-            "imgAlt" : "", 
-            "title" : "Prízemná časť s wellness", 
-            "title_preview" : "Táto časť chlapupy ponúka ubytovanie pre 4 osôb s možnosťou využitia wellness.",
-            "text" : "Prízemie ponúka ubytovanie pre štyri osoby. Táto časť domu je dimenzovaná pre dve dospelé osoby a dve deti. K dispozícii sú dve samostatné spálne (2x dvojlôžková), kuchyňa (elektrická varná platňa, rúra, chladnička, mikrovlnná rúra, umývačka riadku, kanvica, kávovar). Kúpeľňa s vaňou a sprchovým kútom, spolu s WC a jedno samostatné WC. V spoločenskej miestnosti spojenej s jedálňou je krb a vstup na zastrešenú terasu, z ktorej je priamy výhľad na detské ihrisko a obrovskú trampolínu. Hostia majú možnosť využiť saunu (fínsku alebo infra) a vírivku. K ďalšiemu vybaveniu patrí TV, WiFi, práčka, fén, množstvo hračiek a spoločenských hier. V celom blízkom okolí nie je možné pripojenie na žiadneho mobilného operátora.",
-            "text_preview" : "Prízemie ponúka ubytovanie pre štyri osoby. Táto časť domu je dimenzovaná pre dve dospelé osoby a dve deti. K dispozícii sú dve samostatné spálne (2x dvojlôžková), kuchyňa (elektrická varná platňa, rúra, chladnička, mikrovlnná rúra, umývačka riadku, kanvica, kávovar)...",
-            "price" : "170€",
-            "unit" : "eur/noc",
-            "slider" : "slider_groundfloor",
-            "facilities" : [
-                {"icon" : "icon_set_2_icon-116" , "title" :"TV"},
-                {"icon" : "icon_set_1_icon-86" , "title" :"Wifi"},
-                {"icon" : "icon_set_2_icon-104" , "title" :"Manželská postel"},
-                {"icon" : "icon_set_2_icon-111" , "title" :"Kúpeľna s WC"},
-                {"icon" : "icon_set_1_icon-22" , "title" :"Váš miláčik"}
-            ],
-            "facilities_text" :[
-                {"text" :"2x dvojlôžková spálňa"},
-                {"text" :"elektrická varná platňa"},
-                {"text" :"rúra"},
-                {"text" :"chladnička"},
-                {"text" :"mikrovlnná rúra"},
-                {"text" :"umývačka riadku"},
-                {"text" :"varná konvica"},
-                {"text" :"kávovar"},
-                {"text" :"vírivá vaňa"},
-                {"text" :"sauna"}
-            ], 
-            "prices" :[
-                {"text" :"2 osoby ", "value" : 170, "unit" : "eur/noc"}
-            ]
-
-        }
-    ], 
-    "activities" :[
-        {
-            "id" : 1,
-            "link" : "",
-            "img" : "img/activities_1.jpg",
-            "thumbnail":"img/activities_1_thumb.jpg", 
-            "imgAlt" : "", 
-            "title" : "Vyskúšajte si rybačku ", 
-            "text" : "Starostlivo udržiavaný rybník je ideálne miesto pre aktívny odpočinok. Kapre, karasy a ???.  Ulovte toho najväčšieho a porazte rekord uvedený na tabuli pod mólom. Aj naše ryby si zaslúžia starostlivosť a preto je deň na rybách spoplatnený sumou 5eur/osoba. Rybársky preukaz nie je nutný, je však nutné si priniesť vlastné rybárske vybavenie.",
-            "text_preview" : " Vyskúšajte si rybačku na starostlivo udržiavanóm rybníku priamo z chaty ..."
-        },
-        {
-            "id" : 2,
-            "link" : "",
-            "img" : "img/activities_2.jpg", 
-            "thumbnail":"img/activities_2_thumb.jpg", 
-            "imgAlt" : "", 
-            "title" : "Objavujte turistické chodníčky ", 
-            "text" : "priamo pri chalupe sa dá napojiť na turistickú trasu Bátovce, námestie – Tatárska lúka. (link na http://horne-jablonovce.oma.sk/turisticky-atlas). Celá dĺžka trasy má 22km, od chalupy je to približne 12 km a vedie okolo Počúvadlianskeho jazera, kde sa núka možnosť prestupu na žltú značku – Počúvadlianske jazero, tu je prechádzka dlhá 13,4 km; alebo pokračujte ďalej po zelenej na Tatársku lúku a odtiaľ po náučnom chodníku Sitno s dĺžkou 2,9 km.",
-            "text_preview" : "Objavujte turistické chodníčky ktoré sa nachádzajú priamo pri chalupe ... "
-        },
-        {
-            "id" : 3,
-            "link" : "",
-            "img" : "img/activities_3.jpg", 
-            "thumbnail":"img/activities_3_thumb.jpg", 
-            "imgAlt" : "", 
-            "title" : "Cykloturistika ", 
-            "text" : "popri chalupe vedie 82 km dlhá Cyklomagistrála  dr.Téryho (link na http://cyklotrasa.oma.sk/052). K dispozícií sú Vám dva bicykle a jedna detská sedačka.",
-            "text_preview" : "Cykloturistika cesticka ktorá vedie popri chalupe a je dlhá 82 km ..."
-        },
-        {
-            "id" : 4,
-            "link" : "",
-            "img" : "img/activities_4.jpg", 
-            "thumbnail":"img/activities_4_thumb.jpg", 
-            "imgAlt" : "", 
-            "title" : "Preveste sa na koňoch ", 
-            "text" : "vychádzky na koni pre začiatočníkov aj pokročilých. 1 hodina jazdy vychádza 9eur na koňa. Vychádzku je potrebné si dohodnúť pár dní vopred, neváhajte nás preto kontaktovať v prípade záujmu.",
-            "text_preview" : "Vychutnajte si prechadzku na konoch pre začiatočníkov aj pokročilých ..."
-        }
-    ],
-    "slider_loft" :[
+{
+    "content": {
+        "accommodations": [
             {
-                "id" : 1,
-                "link" : "",
-                "img" : "",
-                "thumbnail":"img/room_photo/1_thumb.jpg",
-                "medium" : "img/room_photo/1_medium.jpg",
-                "small" : "img/room_photo/1_small.jpg",
-                "large" : "img/room_photo/1_large.jpg",
-                "text" : "Text pre obrazovku cislo slider_1"
+                "id": 1,
+                "type": "loft",
+                "link": "",
+                "img": "img/loft/preview.jpg",
+                "imgAlt": "",
+                "title": "Podkrovná časť",
+                "title_preview": "Táto časť chlapupy ponúka ubytovanie pre 6 osôb s možnosťou až do 12 osôb.",
+                "text": "Táto časť domu poskytuje pohodlné ubytovanie pre  6 osôb. Avšak je možné ubytovať až dvojnásobný počet, teda 12 osôb. K dispozícii sú tri samostatné spálne (2x štvorlôžková, 1x dvojlôžková), obývačka s rozkladacou sedačkou, kuchyňa (elektrická varná platňa, rúra, chladnička, mikrovlnka, kanvica) a kúpeľňa s vaňou spolu s WC.  Súčasťou vybavenia je WiFi pripojenie a TV. Deti do 2 rokov sú ubytované zdarma a na vyžiadanie zabezpečíme detskú postieľku. V tejto časti domu je možné sa ubytovať aj s Vašim psíkom či mačkou za poplatok 2eur/deň/zvieratko. V celom blízkom okolí nie je pripojenie na žiadneho z mobilných operátorov.",
+                "text_preview": "Táto časť domu poskytuje pohodlné ubytovanie pre  6 osôb. Avšak je možné ubytovať až dvojnásobný počet, teda 12 osôb. K dispozícii sú tri samostatné spálne (2x štvorlôžková, 1x dvojlôžková), obývačka s rozkladacou sedačkou, kuchyňa, kúpeľňa s vaňou spolu s WC ...",
+                "price": "od 30€",
+                "unit": "eur/noc",
+                "slider": "slider_loft",
+                "facilities": [
+                    {
+                        "icon": "icon_set_2_icon-116",
+                        "title": "TV"
+                    },
+                    {
+                        "icon": "icon_set_1_icon-86",
+                        "title": "Wifi"
+                    },
+                    {
+                        "icon": "icon_set_2_icon-104",
+                        "title": "Válenda"
+                    },
+                    {
+                        "icon": "icon_set_2_icon-104",
+                        "title": "Manželská postel"
+                    },
+                    {
+                        "icon": "icon_set_2_icon-111",
+                        "title": "Kúpeľna s WC"
+                    },
+                    {
+                        "icon": "icon_set_1_icon-22",
+                        "title": "Váš miláčik"
+                    }
+                ],
+                "facilities_text": [
+                    {
+                        "text": "2x štvorlôžková spálňa"
+                    },
+                    {
+                        "text": "1x dvojlôžková spálňa"
+                    },
+                    {
+                        "text": "elektrická varná platňa"
+                    },
+                    {
+                        "text": "rúra"
+                    },
+                    {
+                        "text": "chladnička"
+                    },
+                    {
+                        "text": "mikrovlnná rúra"
+                    },
+                    {
+                        "text": "varná konvica"
+                    }
+                ],
+                "prices": [
+                    {
+                        "text": "2 osoby ",
+                        "value": 30,
+                        "unit": "eur/noc"
+                    },
+                    {
+                        "text": "každá daľšia osoba ",
+                        "value": 12,
+                        "unit": "eur/noc"
+                    },
+                    {
+                        "text": "zvieratko psík / mačička ",
+                        "value": 2,
+                        "unit": "eur/deň"
+                    },
+                    {
+                        "text": "deti do 2 rokov ",
+                        "value": "bezplatne",
+                        "unit": ""
+                    }
+                ]
             },
             {
-                "id" : 2,
-                "link" : "",
-                "img" : "",
-                "thumbnail":"img/room_photo/2_thumb.jpg",
-                "medium" : "img/room_photo/2_medium.jpg",
-                "small" : "img/room_photo/2_small.jpg",
-                "large" : "img/room_photo/2_large.jpg",
-                "text" : ""
-            },    
-            {
-                "id" : 3,
-                "link" : "",
-                "img" : "",
-                "thumbnail":"img/room_photo/3_thumb.jpg",
-                "medium" : "img/room_photo/3_medium.jpg",
-                "small" : "img/room_photo/3_small.jpg",
-                "large" : "img/room_photo/3_large.jpg",
-                "text" : ""
-            },    
-            {
-                "id" : 4,
-                "link" : "",
-                "img" : "",
-                "thumbnail":"img/room_photo/4_thumb.jpg",
-                "medium" : "img/room_photo/4_medium.jpg",
-                "small" : "img/room_photo/4_small.jpg",
-                "large" : "img/room_photo/4_large.jpg",
-                "text" : ""
-            },    
-            {
-                "id" : 5,
-                "link" : "",
-                "img" : "",
-                "thumbnail":"img/room_photo/5_thumb.jpg",
-                "medium" : "img/room_photo/5_medium.jpg",
-                "small" : "img/room_photo/5_small.jpg",
-                "large" : "img/room_photo/5_large.jpg",
-                "text" : ""
-            },    
-            {
-                "id" : 6,
-                "link" : "",
-                "img" : "",
-                "thumbnail":"img/room_photo/6_thumb.jpg",
-                "medium" : "img/room_photo/6_medium.jpg",
-                "small" : "img/room_photo/6_small.jpg",
-                "large" : "img/room_photo/6_large.jpg",
-                "text" : ""
-            },    
-            {
-                "id" : 7,
-                "link" : "",
-                "img" : "",
-                "thumbnail":"img/room_photo/7_thumb.jpg",
-                "medium" : "img/room_photo/7_medium.jpg",
-                "small" : "img/room_photo/7_small.jpg",
-                "large" : "img/room_photo/7_large.jpg",
-                "text" : ""
-            },    
-            {
-                "id" : 8,
-                "link" : "",
-                "img" : "",
-                "thumbnail":"img/room_photo/8_thumb.jpg",
-                "medium" : "img/room_photo/8_medium.jpg",
-                "small" : "img/room_photo/8_small.jpg",
-                "large" : "img/room_photo/8_large.jpg",
-                "text" : ""
-            }        
+                "id": 2,
+                "type": "groundfloor",
+                "link": "",
+                "img": "img/groundfloor/preview.jpg",
+                "imgAlt": "",
+                "title": "Prízemná časť s wellness",
+                "title_preview": "Táto časť chlapupy ponúka ubytovanie pre 4 osôb s možnosťou využitia wellness.",
+                "text": "Prízemie ponúka ubytovanie pre štyri osoby. Táto časť domu je dimenzovaná pre dve dospelé osoby a dve deti. K dispozícii sú dve samostatné spálne (2x dvojlôžková), kuchyňa (elektrická varná platňa, rúra, chladnička, mikrovlnná rúra, umývačka riadku, kanvica, kávovar). Kúpeľňa s vaňou a sprchovým kútom, spolu s WC a jedno samostatné WC. V spoločenskej miestnosti spojenej s jedálňou je krb a vstup na zastrešenú terasu, z ktorej je priamy výhľad na detské ihrisko a obrovskú trampolínu. Hostia majú možnosť využiť saunu (fínsku alebo infra) a vírivku. K ďalšiemu vybaveniu patrí TV, WiFi, práčka, fén, množstvo hračiek a spoločenských hier. V celom blízkom okolí nie je možné pripojenie na žiadneho mobilného operátora.",
+                "text_preview": "Prízemie ponúka ubytovanie pre štyri osoby. Táto časť domu je dimenzovaná pre dve dospelé osoby a dve deti. K dispozícii sú dve samostatné spálne (2x dvojlôžková), kuchyňa (elektrická varná platňa, rúra, chladnička, mikrovlnná rúra, umývačka riadku, kanvica, kávovar)...",
+                "price": "170€",
+                "unit": "eur/noc",
+                "slider": "slider_groundfloor",
+                "facilities": [
+                    {
+                        "icon": "icon_set_2_icon-116",
+                        "title": "TV"
+                    },
+                    {
+                        "icon": "icon_set_1_icon-86",
+                        "title": "Wifi"
+                    },
+                    {
+                        "icon": "icon_set_2_icon-104",
+                        "title": "Manželská postel"
+                    },
+                    {
+                        "icon": "icon_set_2_icon-111",
+                        "title": "Kúpeľna s WC"
+                    },
+                    {
+                        "icon": "icon_set_1_icon-22",
+                        "title": "Váš miláčik"
+                    }
+                ],
+                "facilities_text": [
+                    {
+                        "text": "2x dvojlôžková spálňa"
+                    },
+                    {
+                        "text": "elektrická varná platňa"
+                    },
+                    {
+                        "text": "rúra"
+                    },
+                    {
+                        "text": "chladnička"
+                    },
+                    {
+                        "text": "mikrovlnná rúra"
+                    },
+                    {
+                        "text": "umývačka riadku"
+                    },
+                    {
+                        "text": "varná konvica"
+                    },
+                    {
+                        "text": "kávovar"
+                    },
+                    {
+                        "text": "vírivá vaňa"
+                    },
+                    {
+                        "text": "sauna"
+                    }
+                ],
+                "prices": [
+                    {
+                        "text": "2 osoby ",
+                        "value": 170,
+                        "unit": "eur/noc"
+                    }
+                ]
+            }
         ],
-        "slider_groundfloor" :[
+        "activities": [
             {
-                "id" : 1,
-                "link" : "",
-                "img" : "",
-                "thumbnail":"img/room_photo/1_thumb.jpg",
-                "medium" : "img/room_photo/1_medium.jpg",
-                "small" : "img/room_photo/1_small.jpg",
-                "large" : "img/room_photo/1_large.jpg",
-                "text" : "Text pre obrazovku cislo slider_2"
+                "id": 1,
+                "link": "/#fish",
+                "img": "img/1_activity.jpg",
+                "thumbnail": "img/1_activity_thumb.jpg",
+                "imgAlt": "",
+                "title": "Vyskúšajte si rybačku ",
+                "text": "Starostlivo udržiavaný rybník je ideálne miesto pre aktívny odpočinok. Kapre, karasy a ???.  Ulovte toho najväčšieho a porazte rekord uvedený na tabuli pod mólom. Aj naše ryby si zaslúžia starostlivosť a preto je deň na rybách spoplatnený sumou 5eur/osoba. Rybársky preukaz nie je nutný, je však nutné si priniesť vlastné rybárske vybavenie.",
+                "text_preview": " Vyskúšajte si rybačku na starostlivo udržiavanóm rybníku priamo z chaty ..."
             },
             {
-                "id" : 2,
-                "link" : "",
-                "img" : "",
-                "thumbnail":"img/room_photo/2_thumb.jpg",
-                "medium" : "img/room_photo/2_medium.jpg",
-                "small" : "img/room_photo/2_small.jpg",
-                "large" : "img/room_photo/2_large.jpg",
-                "text" : ""
-            },    
+                "id": 2,
+                "link": "",
+                "img": "img/activities_2.jpg",
+                "thumbnail": "img/activities_2_thumb.jpg",
+                "imgAlt": "",
+                "title": "Objavujte turistické chodníčky ",
+                "text": "priamo pri chalupe sa dá napojiť na turistickú trasu Bátovce, námestie – Tatárska lúka. (link na http://horne-jablonovce.oma.sk/turisticky-atlas). Celá dĺžka trasy má 22km, od chalupy je to približne 12 km a vedie okolo Počúvadlianskeho jazera, kde sa núka možnosť prestupu na žltú značku – Počúvadlianske jazero, tu je prechádzka dlhá 13,4 km; alebo pokračujte ďalej po zelenej na Tatársku lúku a odtiaľ po náučnom chodníku Sitno s dĺžkou 2,9 km.",
+                "text_preview": "Objavujte turistické chodníčky ktoré sa nachádzajú priamo pri chalupe ... "
+            },
             {
-                "id" : 3,
-                "link" : "",
-                "img" : "",
-                "thumbnail":"img/room_photo/3_thumb.jpg",
-                "medium" : "img/room_photo/3_medium.jpg",
-                "small" : "img/room_photo/3_small.jpg",
-                "large" : "img/room_photo/3_large.jpg",
-                "text" : ""
-            },    
+                "id": 3,
+                "link": "",
+                "img": "img/activities_3.jpg",
+                "thumbnail": "img/activities_3_thumb.jpg",
+                "imgAlt": "",
+                "title": "Cykloturistika ",
+                "text": "popri chalupe vedie 82 km dlhá Cyklomagistrála  dr.Téryho (link na http://cyklotrasa.oma.sk/052). K dispozícií sú Vám dva bicykle a jedna detská sedačka.",
+                "text_preview": "Cykloturistika cesticka ktorá vedie popri chalupe a je dlhá 82 km ..."
+            },
             {
-                "id" : 4,
-                "link" : "",
-                "img" : "",
-                "thumbnail":"img/room_photo/4_thumb.jpg",
-                "medium" : "img/room_photo/4_medium.jpg",
-                "small" : "img/room_photo/4_small.jpg",
-                "large" : "img/room_photo/4_large.jpg",
-                "text" : ""
-            },    
+                "id": 4,
+                "link": "",
+                "img": "img/activities_4.jpg",
+                "thumbnail": "img/activities_4_thumb.jpg",
+                "imgAlt": "",
+                "title": "Prevezte sa na koňoch ",
+                "text": "vychádzky na koni pre začiatočníkov aj pokročilých. 1 hodina jazdy vychádza 9eur na koňa. Vychádzku je potrebné si dohodnúť pár dní vopred, neváhajte nás preto kontaktovať v prípade záujmu.",
+                "text_preview": "Vychutnajte si prechadzku na konoch pre začiatočníkov aj pokročilých ..."
+            }
+        ],
+        "slider_loft": [
             {
-                "id" : 5,
-                "link" : "",
-                "img" : "",
-                "thumbnail":"img/room_photo/5_thumb.jpg",
-                "medium" : "img/room_photo/5_medium.jpg",
-                "small" : "img/room_photo/5_small.jpg",
-                "large" : "img/room_photo/5_large.jpg",
-                "text" : ""
-            },    
+                "id": 1,
+                "link": "",
+                "img": "",
+                "thumbnail": "img/loft/1_thumb.jpg",
+                "medium": "img/loft/1_medium.jpg",
+                "small": "img/loft/1_small.jpg",
+                "large": "img/loft/1_large.jpg",
+                "text": "Text pre obrazovku cislo slider_1"
+            },
             {
-                "id" : 6,
-                "link" : "",
-                "img" : "",
-                "thumbnail":"img/room_photo/6_thumb.jpg",
-                "medium" : "img/room_photo/6_medium.jpg",
-                "small" : "img/room_photo/6_small.jpg",
-                "large" : "img/room_photo/6_large.jpg",
-                "text" : ""
-            },    
+                "id": 2,
+                "link": "",
+                "img": "",
+                "thumbnail": "img/loft/2_thumb.jpg",
+                "medium": "img/loft/2_medium.jpg",
+                "small": "img/loft/2_small.jpg",
+                "large": "img/loft/2_large.jpg",
+                "text": ""
+            },
             {
-                "id" : 7,
-                "link" : "",
-                "img" : "",
-                "thumbnail":"img/room_photo/7_thumb.jpg",
-                "medium" : "img/room_photo/7_medium.jpg",
-                "small" : "img/room_photo/7_small.jpg",
-                "large" : "img/room_photo/7_large.jpg",
-                "text" : ""
-            },    
+                "id": 3,
+                "link": "",
+                "img": "",
+                "thumbnail": "img/loft/3_thumb.jpg",
+                "medium": "img/loft/3_medium.jpg",
+                "small": "img/loft/3_small.jpg",
+                "large": "img/loft/3_large.jpg",
+                "text": ""
+            },
             {
-                "id" : 8,
-                "link" : "",
-                "img" : "",
-                "thumbnail":"img/room_photo/8_thumb.jpg",
-                "medium" : "img/room_photo/8_medium.jpg",
-                "small" : "img/room_photo/8_small.jpg",
-                "large" : "img/room_photo/8_large.jpg",
-                "text" : ""
-            }        
+                "id": 4,
+                "link": "",
+                "img": "",
+                "thumbnail": "img/loft/4_thumb.jpg",
+                "medium": "img/loft/4_medium.jpg",
+                "small": "img/loft/4_small.jpg",
+                "large": "img/loft/4_large.jpg",
+                "text": ""
+            },
+            {
+                "id": 5,
+                "link": "",
+                "img": "",
+                "thumbnail": "img/loft/5_thumb.jpg",
+                "medium": "img/loft/5_medium.jpg",
+                "small": "img/loft/5_small.jpg",
+                "large": "img/loft/5_large.jpg",
+                "text": ""
+            },
+            {
+                "id": 6,
+                "link": "",
+                "img": "",
+                "thumbnail": "img/loft/6_thumb.jpg",
+                "medium": "img/loft/6_medium.jpg",
+                "small": "img/loft/6_small.jpg",
+                "large": "img/loft/6_large.jpg",
+                "text": ""
+            },
+            {
+                "id": 7,
+                "link": "",
+                "img": "",
+                "thumbnail": "img/loft/7_thumb.jpg",
+                "medium": "img/loft/7_medium.jpg",
+                "small": "img/loft/7_small.jpg",
+                "large": "img/loft/7_large.jpg",
+                "text": ""
+            },
+            {
+                "id": 8,
+                "link": "",
+                "img": "",
+                "thumbnail": "img/loft/8_thumb.jpg",
+                "medium": "img/loft/8_medium.jpg",
+                "small": "img/loft/8_small.jpg",
+                "large": "img/loft/8_large.jpg",
+                "text": ""
+            },
+            {
+                "id": 9,
+                "link": "",
+                "img": "",
+                "thumbnail": "img/loft/9_thumb.jpg",
+                "medium": "img/loft/9_medium.jpg",
+                "small": "img/loft/9_small.jpg",
+                "large": "img/loft/9_large.jpg",
+                "text": ""
+            },
+            {
+                "id": 10,
+                "link": "",
+                "img": "",
+                "thumbnail": "img/loft/10_thumb.jpg",
+                "medium": "img/loft/10_medium.jpg",
+                "small": "img/loft/10_small.jpg",
+                "large": "img/loft/10_large.jpg",
+                "text": ""
+            },
+            {
+                "id": 11,
+                "link": "",
+                "img": "",
+                "thumbnail": "img/loft/11_thumb.jpg",
+                "medium": "img/loft/11_medium.jpg",
+                "small": "img/loft/11_small.jpg",
+                "large": "img/loft/11_large.jpg",
+                "text": ""
+            }
+        ],
+        "slider_groundfloor": [
+            {
+                "id": 1,
+                "link": "",
+                "img": "",
+                "thumbnail": "img/groundfloor/1_thumb.jpg",
+                "medium": "img/groundfloor/1_medium.jpg",
+                "small": "img/groundfloor/1_small.jpg",
+                "large": "img/groundfloor/1_large.jpg",
+                "text": "Text pre obrazovku cislo slider_2"
+            },
+            {
+                "id": 2,
+                "link": "",
+                "img": "",
+                "thumbnail": "img/groundfloor/2_thumb.jpg",
+                "medium": "img/groundfloor/2_medium.jpg",
+                "small": "img/groundfloor/2_small.jpg",
+                "large": "img/groundfloor/2_large.jpg",
+                "text": ""
+            },
+            {
+                "id": 3,
+                "link": "",
+                "img": "",
+                "thumbnail": "img/groundfloor/3_thumb.jpg",
+                "medium": "img/groundfloor/3_medium.jpg",
+                "small": "img/groundfloor/3_small.jpg",
+                "large": "img/groundfloor/3_large.jpg",
+                "text": ""
+            },
+            {
+                "id": 4,
+                "link": "",
+                "img": "",
+                "thumbnail": "img/groundfloor/4_thumb.jpg",
+                "medium": "img/groundfloor/4_medium.jpg",
+                "small": "img/groundfloor/4_small.jpg",
+                "large": "img/groundfloor/4_large.jpg",
+                "text": ""
+            },
+            {
+                "id": 5,
+                "link": "",
+                "img": "",
+                "thumbnail": "img/groundfloor/5_thumb.jpg",
+                "medium": "img/groundfloor/5_medium.jpg",
+                "small": "img/groundfloor/5_small.jpg",
+                "large": "img/groundfloor/5_large.jpg",
+                "text": ""
+            },
+            {
+                "id": 6,
+                "link": "",
+                "img": "",
+                "thumbnail": "img/groundfloor/6_thumb.jpg",
+                "medium": "img/groundfloor/6_medium.jpg",
+                "small": "img/groundfloor/6_small.jpg",
+                "large": "img/groundfloor/6_large.jpg",
+                "text": ""
+            },
+            {
+                "id": 7,
+                "link": "",
+                "img": "",
+                "thumbnail": "img/groundfloor/7_thumb.jpg",
+                "medium": "img/groundfloor/7_medium.jpg",
+                "small": "img/groundfloor/7_small.jpg",
+                "large": "img/groundfloor/7_large.jpg",
+                "text": ""
+            },
+            {
+                "id": 8,
+                "link": "",
+                "img": "",
+                "thumbnail": "img/groundfloor/8_thumb.jpg",
+                "medium": "img/groundfloor/8_medium.jpg",
+                "small": "img/groundfloor/8_small.jpg",
+                "large": "img/groundfloor/8_large.jpg",
+                "text": ""
+            },
+            {
+                "id": 9,
+                "link": "",
+                "img": "",
+                "thumbnail": "img/groundfloor/9_thumb.jpg",
+                "medium": "img/groundfloor/9_medium.jpg",
+                "small": "img/groundfloor/9_small.jpg",
+                "large": "img/groundfloor/9_large.jpg",
+                "text": ""
+            },
+            {
+                "id": 8,
+                "link": "",
+                "img": "",
+                "thumbnail": "img/groundfloor/10_thumb.jpg",
+                "medium": "img/groundfloor/10_medium.jpg",
+                "small": "img/groundfloor/10_small.jpg",
+                "large": "img/groundfloor/10_large.jpg",
+                "text": ""
+            },
+            {
+                "id": 8,
+                "link": "",
+                "img": "",
+                "thumbnail": "img/groundfloor/11_thumb.jpg",
+                "medium": "img/groundfloor/11_medium.jpg",
+                "small": "img/groundfloor/11_small.jpg",
+                "large": "img/groundfloor/11_large.jpg",
+                "text": ""
+            },
+            {
+                "id": 8,
+                "link": "",
+                "img": "",
+                "thumbnail": "img/groundfloor/12_thumb.jpg",
+                "medium": "img/groundfloor/12_medium.jpg",
+                "small": "img/groundfloor/12_small.jpg",
+                "large": "img/groundfloor/12_large.jpg",
+                "text": ""
+            }
         ]
-}}
+    }
+}
