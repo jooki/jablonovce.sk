@@ -29,7 +29,7 @@ module.exports = function (app) {
     app.use(express.static(path.join(__dirname, 'public')));
     
     // Parse POST request data. It will be available in the req.body object 
-    app.use(bodyParser.urlencoded({ extended: false }));
+    // app.use(bodyParser.urlencoded({ extended: false }));
     
     /**
      * Tell express URL encodet and we using validation

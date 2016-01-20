@@ -1,0 +1,8 @@
+<% if (facebook.Id) { %>
+<!-- Setting Social networks -->
+<script src="http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php/sk_SK" 	type="text/javascript"></script>
+<script type="text/javascript">
+	FB.init("<?= facebook.Id ?>", "/xd_receiver.htm");
+</script>
+<iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2FFacebookDevelopers&amp;width=182&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:182px; height:258px;" allowTransparency="true"></iframe>
+<% } %>

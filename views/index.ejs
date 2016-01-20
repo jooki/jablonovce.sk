@@ -1,0 +1,15 @@
+<!-- views/index.ejs -->
+<% layout('layout') -%>
+<% block('stylesheet').replace('<link href="rs-plugin/css/settings.css" rel="stylesheet">') -%>
+<% block('stylesheet').append('<link href="css/extralayers.css" rel="stylesheet">') -%>
+<% block('specifi_scripts').replace('<script src="rs-plugin/js/jquery.themepunch.tools.min.js"></script>') -%>
+<% block('specifi_scripts').append('<script src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>') -%>
+<% block('specifi_scripts').append('<script src="js/revolution_func.js"></script>') -%>
+
+<main>
+<%- partial('partials/slider') %>
+<%- partial('partials/info') %>
+<%- partial('partials/acomodation') %>
+<%- partial('partials/activity') %>
+<%- partial('partials/about') %>
+</main>

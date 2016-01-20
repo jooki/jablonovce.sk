@@ -1,0 +1,66 @@
+<!-- views/pages/layout.ejs -->
+
+<!DOCTYPE html>
+<html lang='<%= default_lang %>'>
+    <head>
+    <meta charset="<%= charset %>">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="<%= web_keywords %>" />
+    <meta name="description" content="<%= description %>">
+    <title><%= title %></title>
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
+
+    <!-- Google web fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+    <!--<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>-->
+    <!--<link href='http://fonts.googleapis.com/css?family=Gochi+Hand' rel='stylesheet' type='text/css'>-->
+    <link href='https://fonts.googleapis.com/css?family=Itim|Autour+One&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Istok+Web&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+   
+   	<!-- BASE CSS -->
+    <link href="css/base.css" rel="stylesheet">
+    <%- block('stylesheet').toString() %>
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    
+    <%- block('script').toString() %>
+        
+    </head>
+    <body>
+        <!--[if lte IE 8]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a>.</p>
+        <![endif]-->
+        <%- partial('partials/preloader.ejs') %>
+        <div class="layer"></div><!-- Mobile menu overlay mask -->
+        <header>
+            <%- block('header').toString() %>
+            <%- partial('partials/langs.ejs') %>
+            <%- partial('partials/menu.ejs') %>
+        </header>
+        <%- body -%>
+        <footer>
+            <%- partial('partials/footer.ejs') %>
+        </footer>
+        <div id="toTop"></div><!-- Back to top button -->
+        <%- partial('partials/common_scripts.ejs') %>
+        <%- block('specifi_scripts').toString() %>
+        <% if (url_referer == 'reservation') { %>  
+            <!-- render script -->
+            <%- partial('partials/reservation/scripts') %> 
+        <% }%>
+        <% if (url_referer == 'contact') { %>  
+            <!-- render script -->
+            <%- partial('partials/contact/scripts') %> 
+        <% }%>
+        <%- partial('partials/facebook.ejs', facebook) %>
+        <%- partial('partials/google-analytics.ejs', google_analytics) %>
+    </body>
+</html>

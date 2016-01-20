@@ -1,0 +1,91 @@
+<!-- views/reservation.ejs -->
+<% layout('layout') -%>
+<% block('stylesheet').replace('<link href="css/slider-pro.min.css" rel="stylesheet">') -%>
+<% block('stylesheet').append('<link href="css/bootstrap-datapicker/bootstrap-datepicker.css" rel="stylesheet">') -%>
+
+<main>
+    <section class="sub_header" id="bg_room">
+        <div class="sub_header_content">
+            <div class="animated fadeInDown">
+                <h1><%= content.accommodations[accommodation].title %></h1>
+                <p>
+                    <%= content.accommodations[accommodation].title_preview %>
+                </p>
+            </div>
+        </div>
+    </section><!-- End Section -->
+    <div class="container margin_60">
+        <div class="row">
+            <div class="col-md-8" id="single_tour_desc">
+                <%- partial('partials/reservation/slider_pro') %><!--slider-->
+                 <div id="single_room_feat">
+                    <ul>
+                        <% content.accommodations[accommodation].facilities.forEach(function(faclility){ %>
+                            <li><i class='<%= faclility.icon %>'></i>
+                                <%= faclility.title %>
+                            </li>
+                            <% }) %>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <h3><%= content.accommodations[accommodation].title %></h3>
+                    </div>
+                    <div class="col-md-9">
+                        <p>
+                            <%= content.accommodations[accommodation].text %>
+                        </p>
+                        <h4>Vybavenie časti chalupy</h4>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <ul class="list_ok">
+                                    <% var n = -1;
+                            content.accommodations[accommodation].facilities_text.forEach(function(faclility_text){
+                            ++n;
+                            if (n % 2 == 0 ) { %>
+                                        <li>
+                                            <%= faclility_text.text %>
+                                        </li>
+                                        <% }}) %>
+                                </ul>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <ul class="list_ok">
+                                    <% var n = -1;
+                            content.accommodations[accommodation].facilities_text.forEach(function(faclility_text){
+                            ++n; 
+                            if (n % 2 == 1 ) { %>
+                                        <li>
+                                            <%= faclility_text.text %>
+                                        </li>
+                                        <% }}) %>
+                                </ul>
+                            </div>
+                        </div><!-- End row  -->
+                        <h4>Ceny ubytovania</h4>
+                        <!-- start pricing table -->
+                        <table class="table table-striped">
+                            <tbody>
+                                <% content.accommodations[accommodation].prices.forEach(function(price){ %>
+                                    <tr>
+                                        <td><%= price.text %></td>
+                                        <td><%= price.value %></td>
+                                        <td><%= price.unit %></td>
+                                    </tr>
+                                    <% }) %>
+                            </tbody>
+                        </table><!-- End pricing table -->
+                    </div><!-- End col-md-9  -->
+                </div><!-- End row  -->
+                <hr>
+                <%- partial('partials/reservation/reviews') %>
+            </div><!-- End col-md-8 -->
+            <div class="col-md-4">
+                <%- partial('partials/reservation/booking_box') %>
+                <!-- základné vybavenie -->
+                <%- partial('partials/reservation/contact_box') %>
+            </div><!-- End col-md-4 -->
+        </div><!-- End row -->
+    </div><!-- End Container -->
+</main>
+

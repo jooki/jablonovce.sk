@@ -1,0 +1,47 @@
+<% block('specifi_scripts').toString(
+<!-- Specific scripts -->
+<script src="js/validate.js"></script>
+<script src="js/jquery.sliderPro.min.js"></script>
+<script type="text/javascript">
+    $( document ).ready(function( $ ) {
+        $('#Img_carousel').sliderPro({
+            width: 960,
+            height: 500,
+            fade: true,
+            arrows: true,
+            buttons: false,
+            fullScreen: false,
+            smallSize: 500,
+            startSlide: 0,
+            mediumSize: 1000,
+            largeSize: 3000,
+            thumbnailArrows: true,
+            autoplay: false
+        });
+    });
+</script>
+<script src="js/quantity-bt.js"></script>
+<script src="js/bootstrap-datapicker/bootstrap-datepicker.min.js"></script>
+<script src="js/bootstrap-datapicker/locales/bootstrap-datepicker.sk.min.js" charset="UTF-8"></script>
+<script>
+    $(function () {
+        $('#check_in, #check_out').datepicker({
+            format: "dd.mm.yyyy",
+            weekStart: 1,
+            language: "sk",
+            autoclose: true,
+            todayHighlight: true,
+            datesDisabled: ['01.01.2016', '06.01.2016'],
+            toggleActive: true,
+            useCurrent: false
+        });
+        
+        $("#check_in").on("dp.change", function (e) {
+            $('#check_out').data("DateTimePicker").minDate(e.date);
+        });
+        
+        $("#check_out").on("dp.change", function (e) {
+            $('#check_in').data("DateTimePicker").maxDate(e.date);
+        });
+    })
+</script>)

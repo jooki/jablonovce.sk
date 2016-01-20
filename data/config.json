@@ -10,7 +10,8 @@
     },
     
     "facebook" : {
-        "link" : "https://www.facebook.com"
+        "link" : "https://www.facebook.com",
+        "id": ""
     },
     
     "twiter" : {
@@ -68,7 +69,13 @@
     },
 
     "default_lang": "sk", 
-    "multy_lang_using" : false, 
+    "multy_lang_using" : false,
+    "title":"Prázdniny na vidieku", 
+    "web_keywords":"farm activities, itineraries, farm holidays, country holidays, bed and breakfast, hotel, country hotel",
+    "charset":"utf-8",
+    "description" : "Prázdniny na vidieku ",
+    "google_analytics" : "",
+    "url_referer" : "",
     
     "validationError":{
         "name_IsEmpty": "Prosím zapíšte Vaše meno.",
