@@ -8,11 +8,12 @@
 * [Príprava produkcie](#priprava-produkcie)
     
 ## Index 
-    . upravit slaider a napojit na DB
-    . upravit nacitavanie v casti aktivity 
+    ~~upravit slaider a napojit na DB~~
+    ~~upravit nacitavanie v casti aktivity~~
        
 ## Detail aktivit
-    . vytvorit stranku pre detail aktivi
+    * Dohodnute ze sa nebude realizovať
+        . vytvorit stranku pre detail aktivi
         
 ## Emaily
     . posielanie emailov pozivatelom systemu o rezervaciach a dotazoch
@@ -23,13 +24,13 @@
     . rozhranie pre zadavanie rezervacii
     
 ## Obmedzenia pre rezervacii
-    . nacitanie v rezervaciach obsadené terminy
-    . obsadene terminy vyznacit cervenou
-    . obmedzit rezervaciu terminy ak sa v rozpaty vyskytuje rezervacia terminu
+    ~~nacitanie v rezervaciach obsadené terminy~~
+    . obsadene terminy vyznacit cervenou? 
+    ~~obmedzit rezervaciu terminy ak sa v rozpaty vyskytuje rezervacia terminu~~
 
 ## Úprava fotiek
-    . pripravit sadu fotiek pre web
-    . prisposobyt pozadovanym velkostiam
+    ~~pripravit sadu fotiek pre web
+    ~~prisposobyt pozadovanym velkostiam
     
 ## Testovacie nastroje
     . zapracovat testovaci nastroj pre otestovanie spravnosti 
@@ -44,11 +45,11 @@
     . zatažovy test
     
 ## Vylepsenia
-    . logovanie uprav zmien a cinnosti na servery (https://github.com/winstonjs/winston.git)
-    . zapracovanie jednotneho layoutu (https://github.com/JacksonTian/ejs-mate.git)
+    * [logovanie uprav zmien a cinnosti na servery] (https://github.com/winstonjs/winston.git)
+    * [zapracovanie jednotneho layoutu] (https://github.com/JacksonTian/ejs-mate.git)
     . editacia vsetkych hodnot v databaze pre uzivatelsku opravu 
     . pridavanie aktivit
-    . primitivne prihlasenie sa do systemu (autentifikacia) https://github.com/jshttp/basic-auth.git
+    * [primitivne prihlasenie sa do systemu (autentifikacia)] (https://github.com/jshttp/basic-auth.git)
     . zapracovat error stranky pri nespravnom zadani url
      
 ## Pomocne linky
@@ -66,7 +67,7 @@
     Ghost simple powerful publishing platform: https://github.com/TryGhost/Ghost
     
     NPM Managery:
-    Nips :http://eirikb.github.io/nipster/
+    * [Nips](http://eirikb.github.io/nipster)
     http://node-modules.com
     https://www.npmjs.com
         

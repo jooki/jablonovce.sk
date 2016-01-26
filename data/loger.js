@@ -6,7 +6,7 @@ const DB_PATH_USER_CONTENT = path.join(__dirname, 'loger.db');
 var Database = require('nedb');
 var db = new Database({ filename: DB_PATH_USER_CONTENT , autoload: true, timestampData: true});
 
-var postdata = {
+var loger = {
     // metoda na vlozenie do DB
     create:function(data, cb){  
         db.insert(data , cb);
@@ -21,4 +21,4 @@ var postdata = {
     }
 };
 
-module.exports = postdata;
+module.exports = loger;

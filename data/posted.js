@@ -40,7 +40,7 @@ var postdata = {
         });
         db.count({type: 'booking'}, function (err, count){
             booking: count;
-        })
+        });
     }
 };
 

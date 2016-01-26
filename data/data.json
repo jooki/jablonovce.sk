@@ -14,6 +14,7 @@
                 "price": "od 30€",
                 "unit": "eur/noc",
                 "slider": "slider_loft",
+                "reserveddate" :["22.01.2016"],
                 "facilities": [
                     {
                         "icon": "icon_set_2_icon-116",
@@ -459,6 +460,29 @@
                 "small": "img/groundfloor/12_small.jpg",
                 "large": "img/groundfloor/12_large.jpg",
                 "text": ""
+            }
+        ], 
+        "slider": [
+            {
+                "id": 1,
+                "img": "img/slides_bg/slide_1.jpg",
+                "imgAlt": "slidebg1",
+                "laier1text": "PRÁZDNINY V ŠTIAVNICKÝCH VRCHOCH",
+                "laier2text": "Chalupa / Aktivity / Zážitky"
+            },
+            {
+                "id": 2,
+                "img": "img/slides_bg/slide_2.jpg",
+                "imgAlt": "slidebg2",
+                "laier1text": "Objavujte nadherné miesta",
+                "laier2text": "Chalupa / Aktivity / Zážitky"
+            },
+            {
+                "id": 3,
+                "img": "img/slides_bg/slide_3.jpg",
+                "imgAlt": "slidebg3",
+                "laier1text": "Vychutnajte si u nás krásne chvíle",
+                "laier2text": "Chalupa / Aktivity / Zážitky"
             }
         ]
     }

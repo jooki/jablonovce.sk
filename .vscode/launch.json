@@ -4,12 +4,12 @@
     "configurations": [
         {
             // Name of configuration; appears in the launch configuration drop down menu.
-            "name": "Jablonovce",
+            "name": "Server",
             // Type of configuration.
             "type": "node",
             "request": "launch",
             // Workspace relative or absolute path to the program.			
-            "program": "index.js",
+            "program": "app.js",
             // Automatically stop program after launch.
             "stopOnEntry": false,
             // Command line arguments passed to the program.
@@ -41,16 +41,18 @@
         },
         {
             // Name of configuration; appears in the launch configuration drop down menu.
-            "name": "Run mocha",
+            "name": "Debug mocha tests",
             // Type of configuration. Possible values: "node", "mono".
             "type": "node",
+            "request": "launch",
             // Workspace relative or absolute path to the program.
             "program": "node_modules/mocha/bin/_mocha",
             // Automatically stop program after launch.
             "stopOnEntry": false,
-            // Command line arguments passed to the program.
+            // Command line arguments passed to the program. "-r should", "-R spec"
             "args": [],
             // Workspace relative or absolute path to the working directory of the program being debugged. Default is the current workspace.
+            "runtimeArgs": [],
             "cwd": ".",
             // Workspace relative or absolute path to the runtime executable to be used. Default is the runtime executable on the PATH.
             "runtimeExecutable": null,
@@ -66,7 +68,7 @@
             "type": "node",
             "request": "launch",
             // Workspace relative or absolute path to the program.			
-            "program": "test/test.layout.js",
+            "program": "launch/run.layout.js",
             // Automatically stop program after launch.
             "stopOnEntry": false,
             // Command line arguments passed to the program.
@@ -88,5 +90,58 @@
             // If JavaScript source maps are enabled, the generated code is expected in this directory.
             "outDir": null
         },
+        {
+            // Name of configuration; appears in the launch configuration drop down menu.
+            "name": "reservation",
+            // Type of configuration.
+            "type": "node",
+            "request": "launch",
+            // Workspace relative or absolute path to the program.			
+            "program": "launch/run.reserved.js",
+            // Automatically stop program after launch.
+            "stopOnEntry": false,
+            // Command line arguments passed to the program.
+            "args": [],
+            // Workspace relative or absolute path to the working directory of the program being debugged. Default is the current workspace.
+            "cwd": ".",
+            // Workspace relative or absolute path to the runtime executable to be used. Default is the runtime executable on the PATH.
+            "runtimeExecutable": null,
+            // Optional arguments passed to the runtime executable.
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            // Environment variables passed to the program.
+            "env": {
+                "NODE_ENV": "development"
+            },
+            // Use JavaScript source maps (if they exist).
+            "sourceMaps": false,
+            // If JavaScript source maps are enabled, the generated code is expected in this directory.
+            "outDir": null
+        },
+        {
+            // Name of configuration; appears in the launch configuration drop down menu.
+            "name": "Debug gulp config..",
+            // Type of configuration.
+            "type": "node",
+            "request": "launch",
+            // Workspace relative or absolute path to the program.			
+            "program": "node_modules/gulp/bin/gulp.js",
+            // Automatically stop program after launch.
+            "stopOnEntry": true,
+            // Command line arguments passed to the program.
+            "args": [],
+            // Workspace relative or absolute path to the working directory of the program being debugged. Default is the current workspace.
+            "cwd": ".",
+            // Workspace relative or absolute path to the runtime executable to be used. Default is the runtime executable on the PATH.
+            "runtimeExecutable": null,           
+            // Environment variables passed to the program.
+            "env": {
+              
+            },
+           
+            // If JavaScript source maps are enabled, the generated code is expected in this directory.
+            "outDir": null
+        }
     ]
 }

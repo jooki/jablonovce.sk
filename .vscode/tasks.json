@@ -64,10 +64,10 @@
     "args": [],
 	"tasks": [
 		{
-			"taskName": "run-tests",
+			"taskName": "test-tests",
 			// Make this the default build command.
 			"isBuildCommand": false,
-            "isTestCommand": true,
+            "isTestCommand": true
 			// Show the output window only if unrecognized errors occur.
 			//"showOutput": "silent",
 			// Use the standard less compilation problem matcher.

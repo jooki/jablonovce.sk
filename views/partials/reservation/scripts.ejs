@@ -18,29 +18,39 @@
             autoplay: false
         });
     });
+
 </script>
 <script src="js/quantity-bt.js"></script>
-<script src="js/bootstrap-datapicker/bootstrap-datepicker.min.js"></script>
-<script src="js/bootstrap-datapicker/locales/bootstrap-datepicker.sk.min.js" charset="UTF-8"></script>
+<script src="moment/min/moment.min.js"></script>
+<script src="moment/locale/<%- default_lang %>.js"></script>
+<script src="eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
 <script>
     $(function () {
-        $('#check_in, #check_out').datepicker({
-            format: "dd.mm.yyyy",
-            weekStart: 1,
-            language: "sk",
-            autoclose: true,
-            todayHighlight: true,
-            datesDisabled: ['01.01.2016', '06.01.2016'],
-            toggleActive: true,
-            useCurrent: false
+       
+        $('#check_in').datetimepicker({
+            format: "L",
+            locale: "sk",
+            useCurrent: false,
+            minDate: Date.now(),
+            disabledDates: [<%- content.accommodations[accommodation].reserveddate %>]
+          
+        });
+        
+        $('#check_out').datetimepicker({
+            format: "L",
+            locale: "sk",
+            useCurrent: false,
+            minDate: Date.now(),
+            disabledDates: [<%- content.accommodations[accommodation].reserveddate %>]
         });
         
         $("#check_in").on("dp.change", function (e) {
             $('#check_out').data("DateTimePicker").minDate(e.date);
         });
-        
+
         $("#check_out").on("dp.change", function (e) {
             $('#check_in').data("DateTimePicker").maxDate(e.date);
         });
     })
+
 </script>
