@@ -6,6 +6,7 @@
 var express = require('express');
 var path = require('path');
 var config = require('../config');
+var Reserved = require(path.join(process.cwd(), 'data', 'reserved'));
 var router = express.Router();
 
 module.exports = function (app) {
@@ -16,7 +17,7 @@ module.exports = function (app) {
     */
 
     var data = require(path.join(process.cwd(), 'data', 'app-data'))();
-
+    this.reservedDates = [];
 
     /**
      * Rozsirenie modulu a uprava routerov
@@ -27,7 +28,7 @@ module.exports = function (app) {
 
     // invoked for any requests passed to this router
     router.use(function (req, res, next) {
-
+        data.url_referer = '';
         var usersLog = require(path.join(process.cwd(), 'data', 'loger'));
         usersLog.create({
             url: req.url,
@@ -41,6 +42,21 @@ module.exports = function (app) {
         next();
     });
 
+    // load async reservation  and prepare variable  
+    router.use(['/loft', '/groundfloor'], function (req, res, next) {
+        var path = req.baseUrl.substring(1);
+        var rl = new Reserved(path);
+        data.accommodation = (path == 'loft') ? 0 : 1;
+        data.url_referer = 'reservation';
+        setTimeout(function () {
+            rl.getReservedDays(function (err, dates) {
+                rl.rangeReservetDates(dates, data.default_lang, function (err, ret) {
+                    this.reservedDates = ret;
+                    next();
+                });
+            });
+        }, 1000);
+    });
     
     // Basic routing
     router.get('/', function (req, res) {
@@ -57,21 +73,12 @@ module.exports = function (app) {
     });
 
     router.get('/loft', function (req, res) {
-        data.accommodation = 0;
-        var rl = require(path.join(process.cwd(), 'data', 'reserved'));
-        rl.getReservedDays(function (err, dates) {
-            rl.rangeReservetDates(dates,data.default_lang ,function (err, reserveddate) {
-                data.content.accommodations[data.accommodation].reserveddate = [reserveddate];
-            });
-        });
-        data.url_referer = 'reservation';
-
+        data.content.accommodations[0].reserveddate = this.reservedDates;
         res.render('reservation.ejs', data);
     });
 
     router.get('/groundfloor', function (req, res) {
-        data.accommodation = 1;
-        data.url_referer = 'reservation';
+        data.content.accommodations[0].reserveddate = this.reservedDates;
         res.render('reservation.ejs', data);
     });
 

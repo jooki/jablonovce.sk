@@ -1,9 +1,9 @@
 var path = require('path');
 
-var reserved = require(path.join(process.cwd(), 'data', 'reserved'));
+var Reserved = require(path.join(process.cwd(), 'data', 'reserved'));
+var reserved = new Reserved('loft');
 var assert = require('assert');
 var async = require('async');
-var dbf = reserved.db;
 
 
 describe('Data test reserved.js', function () {
@@ -78,7 +78,7 @@ describe('Data test reserved.js', function () {
         });
     });
 
-    it('odstrani druhy zaznam ' + dt2.toString() , function (done) {
+    it('odstrani druhy zaznam ' + dt2.toString(), function (done) {
         this.sDate = dt2.toString();
         reserved.remove({ DTSTART: { "$gte": new Date(this.sDate) } }, false, function (err, count) {
             count.should.equal(1);
@@ -163,13 +163,13 @@ describe('Data test reserved.js', function () {
         });
     });
 
-    
-    
+
+
     var dt6_1 = new Date(dt);
     dt6_1.setDate(dt6_1.getDate() + 2);
     var dt6_2 = new Date(dt6_1);
     dt6_2.setDate(dt6_2.getDate() + 2);
-   
+
     it('pridat 3 new zaznamy', function (done) {
         var docs = [
             { DTSTART: dt6_1, DTEND: dt6_2, SUMMARY: "na 2 dni" },
@@ -183,13 +183,13 @@ describe('Data test reserved.js', function () {
             });
         });
     });
-    
+
     it('list rangeReservetDates', function (done) {
         reserved.getReservedDays(function (err, docs) {
-            reserved.rangeReservetDates(docs, 'en',function (err, aDates) {
+            reserved.rangeReservetDates(docs, 'en', function (err, aDates) {
                 console.log('date range');
                 console.log(aDates);
-                
+
                 done();
             });
         });

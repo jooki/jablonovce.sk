@@ -1,4 +1,4 @@
-<!-- Specific scripts -->
+<!-- Specific scripts booking-->
 <script src="js/validate.js"></script>
 <script src="js/jquery.sliderPro.min.js"></script>
 <script type="text/javascript">
@@ -26,24 +26,21 @@
 <script src="eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
 <script>
     $(function () {
-       
+   
         $('#check_in').datetimepicker({
             format: "L",
-            locale: "sk",
-            useCurrent: false,
+            locale: "<%- default_lang %>",
             minDate: Date.now(),
             disabledDates: [<%- content.accommodations[accommodation].reserveddate %>]
-          
         });
-        
         $('#check_out').datetimepicker({
             format: "L",
-            locale: "sk",
-            useCurrent: false,
+            locale: "<%- default_lang %>",
             minDate: Date.now(),
+            useCurrent: false,
             disabledDates: [<%- content.accommodations[accommodation].reserveddate %>]
         });
-        
+
         $("#check_in").on("dp.change", function (e) {
             $('#check_out').data("DateTimePicker").minDate(e.date);
         });
