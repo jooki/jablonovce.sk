@@ -1,11 +1,4 @@
 ## Úlohy ktore musia byt implementovane
-* [Detail aktivit](#detail-aktivit)
-* [Emaily](#emaily)
-* [Obsadené teríny](#obsadene-teriny)
-* [Obmedzenia pre rezervacii](#obmedzenia-pre-rezervacii)
-* [Úprava fotiek](#uprava-fotiek)
-* [Testovacie nastroje](#testovacie-nastroje)
-* [Príprava produkcie](#priprava-produkcie)
     
 ## Index 
     ~~upravit slaider a napojit na DB~~
@@ -13,15 +6,20 @@
        
 ## Detail aktivit
     * Dohodnute ze sa nebude realizovať
-        . vytvorit stranku pre detail aktivi
+        - vytvorit stranku pre detail aktivi
         
 ## Emaily
     . posielanie emailov pozivatelom systemu o rezervaciach a dotazoch
     . http://www.sitepoint.com/sending-email-using-node-js/
+    . https://www.npmjs.com/package/nodemailer
+    * Popis posielanie emailov. https://codeforgeek.com/2014/07/send-e-mail-node-js/
     
-## Obsadené teríny
-    . evidovat rezervovane terminy do DB
-    . rozhranie pre zadavanie rezervacii
+## Administracna cast 
+    * Prihlasenie sa do systemu
+    * Administracne rozhranie simple
+    * upravovat a zadavat datumy obsadenia
+    * vytvorenie linky pre prihlasenie alebo urobenie subdomeny 
+    * editovanie contectu databazy
     
 ## Obmedzenia pre rezervacii
     ~~nacitanie v rezervaciach obsadené terminy~~
@@ -36,6 +34,8 @@
     . zapracovat testovaci nastroj pre otestovanie spravnosti 
     . skusit zatoazove testy 
     . preskusat beh na produkcnom servery
+    . monitorovanie systemu
+    (www.google.com=node.js production server setup)
     
 ## Príprava produkcie
     . instalacia servera
@@ -43,6 +43,10 @@
     . konfigurácia pre servera
     . nsadenie projektu
     . zatažovy test
+
+## Databazy
+    * nasadit na vsetky tabulky camo (https://github.com/scottwrobinson/camo)
+    * prerobit napojenie na dokumeny a okladanie dokumentov (ekvivalen podobny ako v LN)
     
 ## Vylepsenia
     * [logovanie uprav zmien a cinnosti na servery] (https://github.com/winstonjs/winston.git)
@@ -53,8 +57,6 @@
     . zapracovat error stranky pri nespravnom zadani url
      
 ## Pomocne linky
-    ejs : http://ejs.co , https://github.com/mde/ejs.git
-    testovanie API : http://www.getpostman.com , https://scotch.io/tutorials/use-expressjs-to-get-url-and-post-parameters
     tsd moduly pre : https://github.com/DefinitelyTyped/tsd
     TypeScript Definition manager for DefinitelyTyped : http://definitelytyped.org/tsd/
     Epress Routing Beginners : http://jilles.me/express-routing-the-beginners-guide/
@@ -67,7 +69,11 @@
     Ghost simple powerful publishing platform: https://github.com/TryGhost/Ghost
     
     NPM Managery:
-    * [Nips](http://eirikb.github.io/nipster)
+    [Nips](http://eirikb.github.io/nipster)
     http://node-modules.com
     https://www.npmjs.com
         
+   Testovanie Should API https://shouldjs.github.io
+   Google pismo cestina slovencina : http://jecas.cz/ceska-pisma
+   Ejs : http://ejs.co , https://github.com/mde/ejs.git
+   Testovanie API : http://www.getpostman.com , https://scotch.io/tutorials/use-expressjs-to-get-url-and-post-parameters
