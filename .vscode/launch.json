@@ -6,7 +6,7 @@
             // Name of configuration; appears in the launch configuration drop down menu.
             "name": "Server",
             // Type of configuration.
-            "type": "node",
+             "type": "node",
             "request": "launch",
             // Workspace relative or absolute path to the program.			
             "program": "app.js",

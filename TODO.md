@@ -15,11 +15,12 @@
     * Popis posielanie emailov. https://codeforgeek.com/2014/07/send-e-mail-node-js/
     
 ## Administracna cast 
-    * Prihlasenie sa do systemu
+    * ~~Prihlasenie sa do systemu~~
     * Administracne rozhranie simple
     * upravovat a zadavat datumy obsadenia
     * vytvorenie linky pre prihlasenie alebo urobenie subdomeny 
     * editovanie contectu databazy
+    * pridávanie referencií
     
 ## Obmedzenia pre rezervacii
     ~~nacitanie v rezervaciach obsadené terminy~~

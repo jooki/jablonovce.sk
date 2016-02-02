@@ -67,8 +67,8 @@
         "sysLink"  :  "/app/pages/gallery",
         "label" : "Galéria"  
     },
-
-    "default_lang": "sk", 
+ 
+    "lang": "sk",
     "multy_lang_using" : false,
     "title":"Prázdniny v krásnom prostredí hôr", 
     "web_keywords":"farm activities, itineraries, farm holidays, country holidays, bed and breakfast, hotel, country hotel",

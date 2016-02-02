@@ -17,13 +17,14 @@ var app = express();
 // Configure express with the settings found in
 // our config.js file
 
-require('./config')(app);
+require(path.join(__dirname, 'config', 'config'))(app);
 
 // Add the routes that the app will react to,
 // as defined in our routes.js file
 
 require(path.join(__dirname, 'routers', 'index'))(app);
-// require(path.join(__dirname, 'routers', 'api'));
+require(path.join(__dirname, 'routers', 'api'))(app);
+require(path.join(__dirname, 'routers', 'login'))(app);
 
  
 

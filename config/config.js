@@ -8,7 +8,8 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var validator = require('express-validator');
 
-//var morgan = require('morgan')
+
+var morgan = require('morgan');
 
 var env = process.env;
 
@@ -22,8 +23,10 @@ module.exports = function (app) {
     // create a write stream (in append mode)
     //    var accessLogStream = fs.createWriteStream(__dirname + '/access.log', {flags: 'a'})
 
-    // setup the logger
-    //    app.use(morgan('combined', {stream: accessLogStream}))
+    // setup the logger https://github.com/expressjs/morgan
+    // dev :method :url :status :response-time ms - :res[content-length]
+    // short :remote-addr :remote-user :method :url HTTP/:http-version :status :res[content-length] - :response-time ms
+    app.use(morgan('dev'));
 
     // set the view engine to ejs
     // https://github.com/mde/ejs.git
@@ -34,11 +37,11 @@ module.exports = function (app) {
     // Tell express where it can find the templates
     // http://expressjs.com/en/api.html#app.set
     // app.set('views', path.join(__dirname, 'app', 'pages'));
-    app.set('views', path.join(__dirname, 'views'));
+    app.set('views', path.join(process.cwd(), 'views'));
     
     // Make the files in the public folder available to the world
-    app.use(express.static(path.join(__dirname, 'public')));
-    app.use(express.static(path.join(__dirname, 'bower_components')));
+    app.use(express.static(path.join(process.cwd(), 'public')));
+    app.use(express.static(path.join(process.cwd(), 'bower_components')));
     
     // Parse POST request data. 
     // It will be available in the req.body object 
@@ -50,6 +53,6 @@ module.exports = function (app) {
      * Dependencies: https://www.npmjs.com/package/validator
      */
     app.use(validator());
-    
-   
+
+
 };

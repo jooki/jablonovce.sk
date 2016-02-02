@@ -1,9 +1,9 @@
-{"DTSTART":{"$$date":1454070023977},"DTEND":{"$$date":1454070023977},"SUMMARY":"111","_id":"QNzunW466icnaYxV","createdAt":{"$$date":1453897224008},"updatedAt":{"$$date":1453897224008}}
-{"DTSTART":{"$$date":1453724423977},"DTEND":{"$$date":1453724423977},"SUMMARY":"00","_id":"V50Hu1SV2bEB4zBz","createdAt":{"$$date":1453897224005},"updatedAt":{"$$date":1453897224005}}
-{"DTSTART":1453897223977,"DTEND":1453897223977,"SUMMARY":"00","_id":"gXh49GuQEtceBJuS","createdAt":{"$$date":1453897224002},"updatedAt":{"$$date":1453897224002}}
-{"DTSTART":{"$$date":1453983623977},"DTEND":{"$$date":1453983623977},"SUMMARY":"222","_id":"j9AjvcLc1zD9ij7a","createdAt":{"$$date":1453897224008},"updatedAt":{"$$date":1453897224008}}
-{"DTSTART":1453897223977,"DTEND":1453897223977,"SUMMARY":"00","_id":"ktwqK3WSWVMyGjyv","createdAt":{"$$date":1453897224005},"updatedAt":{"$$date":1453897224005}}
-{"DTSTART":{"$$date":1454070023977},"DTEND":{"$$date":1454242823977},"SUMMARY":"na 2 dni","_id":"m46iKhAZcUqFRJey","createdAt":{"$$date":1453897224011},"updatedAt":{"$$date":1453897224011}}
-{"DTSTART":{"$$date":1454761223977},"DTEND":{"$$date":1454761223977},"SUMMARY":"333","_id":"m7ChHKvFVi9JAg4T","createdAt":{"$$date":1453897224008},"updatedAt":{"$$date":1453897224008}}
-{"DTSTART":{"$$date":1454070023977},"DTEND":{"$$date":1454070023977},"SUMMARY":"na 1 dup","_id":"qOV9685shGt2uWsz","createdAt":{"$$date":1453897224011},"updatedAt":{"$$date":1453897224011}}
-{"DTSTART":{"$$date":1454242823977},"DTEND":{"$$date":1454242823977},"SUMMARY":"na 1 dup","_id":"tZIkcmlDy8uo5AId","createdAt":{"$$date":1453897224011},"updatedAt":{"$$date":1453897224011}}
+{"DTSTART":{"$$date":1454283759442},"DTEND":{"$$date":1454283759442},"SUMMARY":"na 1 dup","_id":"0nUY5s8ihdivbv2r","createdAt":{"$$date":1454110959694},"updatedAt":{"$$date":1454110959694}}
+{"DTSTART":1454110959442,"DTEND":1454110959442,"SUMMARY":"00","_id":"84ypICFZoOcaOWmH","createdAt":{"$$date":1454110959687},"updatedAt":{"$$date":1454110959687}}
+{"DTSTART":{"$$date":1454283759442},"DTEND":{"$$date":1454456559442},"SUMMARY":"na 2 dni","_id":"CpAKWqM9n6gy9Lqg","createdAt":{"$$date":1454110959693},"updatedAt":{"$$date":1454110959693}}
+{"DTSTART":{"$$date":1454974959442},"DTEND":{"$$date":1454974959442},"SUMMARY":"333","_id":"MqhZa4K62vqC7FP1","createdAt":{"$$date":1454110959690},"updatedAt":{"$$date":1454110959690}}
+{"DTSTART":{"$$date":1454197359442},"DTEND":{"$$date":1454197359442},"SUMMARY":"222","_id":"WLqkFaTRKpGa5xgk","createdAt":{"$$date":1454110959690},"updatedAt":{"$$date":1454110959690}}
+{"DTSTART":{"$$date":1454283759442},"DTEND":{"$$date":1454283759442},"SUMMARY":"111","_id":"gkxZXMsPpZZ6psh0","createdAt":{"$$date":1454110959690},"updatedAt":{"$$date":1454110959690}}
+{"DTSTART":{"$$date":1454456559442},"DTEND":{"$$date":1454456559442},"SUMMARY":"na 1 dup","_id":"jOb7q8RQIUCfcsVf","createdAt":{"$$date":1454110959694},"updatedAt":{"$$date":1454110959694}}
+{"DTSTART":{"$$date":1453938159442},"DTEND":{"$$date":1453938159442},"SUMMARY":"00","_id":"rOzv0OurG0PYM8CQ","createdAt":{"$$date":1454110959687},"updatedAt":{"$$date":1454110959687}}
+{"DTSTART":1454110959442,"DTEND":1454110959442,"SUMMARY":"00","_id":"ulzuffjNbnNGnBbL","createdAt":{"$$date":1454110959681},"updatedAt":{"$$date":1454110959681}}

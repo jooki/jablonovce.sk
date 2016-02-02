@@ -1,0 +1,2 @@
+{"email":"jano@jano.sk","type":"admin","passwd":"$2a$08$6hoQSA6c.PbKPvRZBax.LeDRA1iUMTbtaUcC56zHUEei1GhwDNFQi","provider":"local","_id":"TkGxXGrL94DnVUUl"}
+{"$$indexCreated":{"fieldName":"email","unique":true,"sparse":false}}

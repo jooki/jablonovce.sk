@@ -5,20 +5,11 @@
  */
 var express = require('express');
 var path = require('path');
-var config = require('../config');
-var Reserved = require(path.join(process.cwd(), 'data', 'reserved'));
+var Reserved = require(path.join(process.cwd(), 'config', 'reserved'));
+
 var router = express.Router();
-
 module.exports = function (app) {
-    /** 
-     * povodne nastavenie JSON datat vytvorene rucne
-     * zrejme to bude potrebne prepracovat aby sa to dalo editovat
-     * a po zmene nanovo nacitat do pamate inak je potrebny restart servera 
-    */
-
-    var data = require(path.join(process.cwd(), 'data', 'app-data'))();
-    this.reservedDates = [];
-
+    
     /**
      * Rozsirenie modulu a uprava routerov
      * req : http://expressjs.com/en/api.html#req
@@ -29,19 +20,28 @@ module.exports = function (app) {
     // invoked for any requests passed to this router
     router.use(function (req, res, next) {
         data.url_referer = '';
-        var usersLog = require(path.join(process.cwd(), 'data', 'loger'));
-        usersLog.create({
-            url: req.url,
-            method: req.method,
-            protocol: req.protocol,
-            requestId: req.requestId,
-
-            // In case there's a proxy server:
-            ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress,
-        }, function () { });
+// Zrudene vlastne logovanie aktualne sa pouziva loger na applikacii celkovy
+        // var usersLog = require(path.join(process.cwd(), 'data', 'loger'));
+//         usersLog.create({
+//             url: req.url,
+//             method: req.method,
+//             protocol: req.protocol,
+//             requestId: req.requestId,
+// 
+//             // In case there's a proxy server:
+//             ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress,
+//         }, function () { });
         next();
     });
 
+   /** 
+     * povodne nastavenie JSON datat
+     * zrejme to bude potrebne prepracovat aby sa to dalo editovat
+     * a po zmene nanovo nacitat do pamate inak je potrebny restart servera 
+    */
+
+    var data = require(path.join(process.cwd(), 'config', 'app-data'))();
+    var reservedDates = [];
     // load async reservation  and prepare variable  
     router.use(['/loft', '/groundfloor'], function (req, res, next) {
         var path = req.baseUrl.substring(1);
@@ -50,8 +50,8 @@ module.exports = function (app) {
         data.url_referer = 'reservation';
         setTimeout(function () {
             rl.getReservedDays(function (err, dates) {
-                rl.rangeReservetDates(dates, data.default_lang, function (err, ret) {
-                    this.reservedDates = ret;
+                rl.rangeReservetDates(dates, data.lang, function (err, ret) {
+                    reservedDates = ret;
                     next();
                 });
             });
@@ -73,12 +73,12 @@ module.exports = function (app) {
     });
 
     router.get('/loft', function (req, res) {
-        data.content.accommodations[0].reserveddate = this.reservedDates;
+        data.content.accommodations[0].reserveddate = reservedDates;
         res.render('reservation.ejs', data);
     });
 
     router.get('/groundfloor', function (req, res) {
-        data.content.accommodations[0].reserveddate = this.reservedDates;
+        data.content.accommodations[0].reserveddate = reservedDates;
         res.render('reservation.ejs', data);
     });
 

@@ -1,7 +1,7 @@
 'use strict';
 
 var path = require('path');
-const DB_PATH_USER_CONTENT = path.join(__dirname, 'posted.db');
+const DB_PATH_USER_CONTENT = path.join(process.cwd(),'data','posted.db');
 
 var Database = require('nedb');
 var db = new Database({ filename: DB_PATH_USER_CONTENT, autoload: true, timestampData: true });

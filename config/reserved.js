@@ -20,7 +20,7 @@ function Reserved(room_type) {
     this.romm_type = room_type;
     this.db = null;
     if (!this.db) {
-        this.db = new Datastore({ filename: path.join(__dirname, 'reserved_' + room_type + '.db'), autoload: true, timestampData: true });
+        this.db = new Datastore({ filename: path.join(process.cwd(),'data', 'reserved_' + room_type + '.db'), autoload: true, timestampData: true });
     }
 }
     

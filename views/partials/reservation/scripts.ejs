@@ -22,20 +22,20 @@
 </script>
 <script src="js/quantity-bt.js"></script>
 <script src="moment/min/moment.min.js"></script>
-<script src="moment/locale/<%- default_lang %>.js"></script>
+<script src="moment/locale/<%- lang %>.js"></script>
 <script src="eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
 <script>
     $(function () {
    
         $('#check_in').datetimepicker({
             format: "L",
-            locale: "<%- default_lang %>",
+            locale: "<%- lang %>",
             minDate: Date.now(),
             disabledDates: [<%- content.accommodations[accommodation].reserveddate %>]
         });
         $('#check_out').datetimepicker({
             format: "L",
-            locale: "<%- default_lang %>",
+            locale: "<%- lang %>",
             minDate: Date.now(),
             useCurrent: false,
             disabledDates: [<%- content.accommodations[accommodation].reserveddate %>]
