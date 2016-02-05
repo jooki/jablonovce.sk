@@ -7,13 +7,14 @@
  */
 
 var express = require('express');
+var commpress = require('compression');
 var path = require('path');
 var port = process.env.PORT || 8080;
 
 
 // Create a new express.js web app:
 var app = express();
-
+app.use(commpress());
 // Configure express with the settings found in
 // our config.js file
 

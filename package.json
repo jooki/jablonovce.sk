@@ -1,6 +1,6 @@
 {
   "name": "jablonovce.sk",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "Server.js",
   "description": "Web stranka jablonovce - Prázdniny na vidieku.",
   "homepage": "http://jablonovce.sk",
@@ -12,6 +12,7 @@
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.14.2",
     "camo": "^0.11.4",
+    "compression": "^1.6.1",
     "connect-flash": "^0.1.1",
     "cookie-parser": "^1.4.1",
     "ejs": "^2.3.4",
