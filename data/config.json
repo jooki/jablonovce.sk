@@ -1,83 +1,86 @@
 {
-    "phone" : {
-        "link" : "tel://004542344599",
-        "label" : "+45 423 445 99"  
+    "contact": {
+        "label": "Kontakt"
     },
-    
-    "mailto" : {
-        "link" : "mailto:info@jablonovce.sk",
-        "label" : "info@jablonovce.sk"  
+    "contact_box": {
+        "title": "Potrebujete poradiť? <br> Kontaktujte nás",
+        "timeToContact": "Pondelok až piatok 9.00 - 18.30"
     },
-    
-    "facebook" : {
-        "link" : "https://www.facebook.com",
+    "address": {
+        "label": "Adresa",
+        "street": "",
+        "city": "Jabloňovce",
+        "psc": "935 06",
+        "state": "Slovensko"
+    },
+    "phone": {
+        "label": "Telefón",
+        "link": "tel://004542344599",
+        "text": "+45 423 445 99"
+    },
+    "mailto": {
+        "label": "Email",
+        "link": "mailto:info@jablonovce.sk",
+        "text": "info@jablonovce.sk"
+    },
+    "weather": {
+        "title": "Predpoved počasia"
+    },
+    "facebook": {
+        "link": "https://www.facebook.com",
         "id": ""
     },
-    
-    "twiter" : {
-        "link" : "https://www.twiter.com"
+    "twiter": {
+        "link": "https://www.twiter.com"
     },
-    
-    "googlePlus" : {
-        "link" : "https://plus.google.com/jablonovce"
+    "googlePlus": {
+        "link": "https://plus.google.com/jablonovce"
     },
-    
-     "instagram" : {
-        "link" : "https://www.instagram.com/jablonovce"
+    "instagram": {
+        "link": "https://www.instagram.com/jablonovce"
     },
-    
     "about": {
-        "route" : "/about",
-        "sysLink" : "/app/pages/about",
-        "label" : "O nás"  
+        "route": "/about",
+        "sysLink": "/app/pages/about",
+        "label": "O nás"
     },
-    
     "activity": {
-        "route" :  "/activities",
-        "sysLink"  :  "/app/pages/activities",
-        "label" : "Aktivity"  
+        "route": "#activities",
+        "label": "Aktivity"
     },
- 
     "apartmans": {
-        "route" :  "/reservation",
-        "sysLink"  :  "/app/pages/apartmans",
-        "label" : "Rezervácia"  
+        "route": "#acomodation",
+        "label": "Ubytovanie"
     },
-    
     "loft": {
-        "route" :  "/loft",
-        "sysLink"  :  "/app/pages/reservation:0",
-        "label" : "Podkrovná časť "  
+        "route": "/loft",
+        "sysLink": "/app/pages/reservation:0",
+        "label": "Podkrovná časť "
     },
-    
     "groundfloor": {
-        "route" :  "/groundfloor",
-        "sysLink"  :  "/app/pages/reservation:1",
-        "label" : "Prízemná časť s wellness "  
+        "route": "/groundfloor",
+        "sysLink": "/app/pages/reservation:1",
+        "label": "Prízemná časť s wellness "
     },
-    
     "contacts": {
-        "route" :  "/contacts",
-        "sysLink"  :  "/app/pages/contacts",
-        "label" : "Kontaktujte nás"  
+        "route": "/contacts",
+        "sysLink": "/app/pages/contacts",
+        "label": "Kontaktujte nás"
     },
-    
     "gallery": {
-        "route" :  "/gallery",
-        "sysLink"  :  "/app/pages/gallery",
-        "label" : "Galéria"  
+        "route": "/gallery",
+        "sysLink": "/app/pages/gallery",
+        "label": "Galéria"
     },
- 
     "lang": "sk",
-    "multy_lang_using" : false,
-    "title":"Prázdniny v krásnom prostredí hôr", 
-    "web_keywords":"farm activities, itineraries, farm holidays, country holidays, bed and breakfast, hotel, country hotel",
-    "charset":"utf-8",
-    "description" : "Prázdniny na vidieku",
-    "google_analytics" : "",
-    "url_referer" : "",
-    
-    "validationError":{
+    "multy_lang_using": false,
+    "title": "Prázdniny v krásnom prostredí hôr",
+    "web_keywords": "farm activities, itineraries, farm holidays, country holidays, bed and breakfast, hotel, country hotel",
+    "charset": "utf-8",
+    "description": "Prázdniny na vidieku",
+    "google_analytics": "",
+    "url_referer": "",
+    "validationError": {
         "name_IsEmpty": "Prosím zapíšte Vaše meno.",
         "lastname_IsEmpty": "Prosím zapíšte Vaše priezvisko.",
         "email_IsEmail": "Prosím zapíšte Vašu e-mailovú adresu.",
@@ -93,12 +96,60 @@
         "children_loft_IsInt": "Počet detí može byt v rozsahu od 0 do 10.",
         "adults_groundfloor_IsInt": "Počet maximálny počet dospelých osôb sú 2 osoby.",
         "children_groundfloor_IsInt": "Počet maximálny počet detí sú 2.",
-        "phone_format" : "Prosím zapíšte Vaše telefónne číso vo formáte \"0905123456\"."
-    }, 
-    
-    "validationStatus":{
-        "thankyou" : "Ďakujeme za Váš záujem",
-        "reservation" : "Vaša rezerváciaa bola odoslaná. Budeme Vás čoskoro kontaktovať.",
-        "contact" : "Vaša správa bola odoslaná. Budeme Vás čoskoro kontaktovať."
+        "phone_format": "Prosím zapíšte Vaše telefónne číso vo formáte \"0905123456\"."
+    },
+    "validationStatus": {
+        "thankyou": "Ďakujeme za Váš záujem",
+        "reservation": "Vaša rezerváciaa bola odoslaná. Budeme Vás čoskoro kontaktovať.",
+        "contact": "Vaša správa bola odoslaná. Budeme Vás čoskoro kontaktovať."
+    },
+    "Error404": {
+        "lable": 404,
+        "description": "Oops!! Page not found <br> Stranka nenajdená</p>"
+    },
+    "back_to_home": "Back to home",
+    "post_contact": {
+        "name": "Meno",
+        "name_ph": "Vaše meno",
+        "lastName": "Priezvisko",
+        "lastName_ph": "Vaše priezvisko",
+        "email": "Email",
+        "email_ph": "Váš email",
+        "phone": "Telefón",
+        "phone_ph": "Vaše telefónne číslo",
+        "message_for_us": "Správa pre nás",
+        "message_for_us_ph": "Správa urečená pre nás",
+        "checkIt": "Overenie",
+        "checkIt_ph": "Ste človek? 3 + 1 =",
+        "submit": "Odoslať"
+    },
+    "menu": [
+        {
+            "id": 1,
+            "label": "Chalupa"
+        },
+        {
+            "id": 2,
+            "label": "Zážitky v okolí"
+        }
+    ],
+    "post_reservation": {
+        "check_in": "Príchod",
+        "check_in_ph": "Dátum príchodu",
+        "check_out": "Odchod",
+        "check_out_ph": "Dátum odchod",
+        "adults": "Dospelý",
+        "adults_ph": "2",
+        "children": "Deti",
+        "children_ph": "0",
+        "room_type": "Časť k prenájmu",
+        "room_type_select": "Vyberte časť chalupy na prenájom",
+        "name": "Meno",
+        "name_ph": "Vaše meno a priezvisko",
+        "phone": "Telefón",
+        "phone_ph": "Vaše telefónne číslo",
+        "email": "Email",
+        "email_ph": "Váš email",
+        "submit": "Rezervovať"
     }
 }

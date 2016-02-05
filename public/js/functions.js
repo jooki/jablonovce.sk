@@ -1,44 +1,44 @@
 /* ==============================================
 	Preload
 =============================================== */
-$(window).load(function() { // makes sure the whole site is loaded
-	$('#status').fadeOut(); // will first fade out the loading animation
-	$('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
-	$('body').delay(350).css({'overflow':'visible'});
+$(window).load(function () { // makes sure the whole site is loaded
+    $('#status').fadeOut(); // will first fade out the loading animation
+    $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+    $('body').delay(350).css({ 'overflow': 'visible' });
 })
 /* ==============================================
 	Sticky nav
 =============================================== */
-$(window).scroll(function(){
+$(window).scroll(function () {
     'use strict';
-    if ($(this).scrollTop() > 1){  
+    if ($(this).scrollTop() > 1) {
         $('header').addClass("sticky");
     }
-    else{
+    else {
         $('header').removeClass("sticky");
     }
 });
 /* ==============================================
 	Menu
 =============================================== */
-$('a.open_close').on("click",function() {
-	 'use strict';
-	$('.main-menu').toggleClass('show');
-	$('.layer').toggleClass('layer-is-visible');
+$('a.open_close').on("click", function () {
+    'use strict';
+    $('.main-menu').toggleClass('show');
+    $('.layer').toggleClass('layer-is-visible');
 });
-$('a.show-submenu').on("click",function() {
-	 'use strict';
-	$(this).next().toggleClass("show_normal");
+$('a.show-submenu').on("click", function () {
+    'use strict';
+    $(this).next().toggleClass("show_normal");
 });
-$('a.show-submenu-mega').on("click",function() {
-	 'use strict';
-	$(this).next().toggleClass("show_mega");
+$('a.show-submenu-mega').on("click", function () {
+    'use strict';
+    $(this).next().toggleClass("show_mega");
 });
-if($(window).width() <= 480){
-	 'use strict';
-	$('a.open_close').on("click",function() {
-	$('.cmn-toggle-switch').removeClass('active')
-});
+if ($(window).width() <= 480) {
+    'use strict';
+    $('a.open_close').on("click", function () {
+        $('.cmn-toggle-switch').removeClass('active')
+    });
 }
 
 /* ==============================================
@@ -46,9 +46,9 @@ if($(window).width() <= 480){
 =============================================== */
 
 //<!-- Tooltip -->	
-$('.tooltip-1').tooltip({html:true});
+$('.tooltip-1').tooltip({ html: true });
 	
- //accordion	
+//accordion	
 function toggleChevron(e) {
     $(e.target)
         .prev('.panel-heading')
@@ -66,49 +66,69 @@ new WOW().init();
 	Video modal dialog + Parallax + Scroll to top  + Hamburger icon
 =============================================== */
 $(function () {
-'use strict';
-$('.video').magnificPopup({type:'iframe'});	/* video modal*/
-// Image popups
-$('.magnific-gallery').each(function() {
-	 'use strict';
-    $(this).magnificPopup({
-        delegate: 'a', 
-        type: 'image',
-        gallery:{enabled:true}
+    'use strict';
+    $('.video').magnificPopup({ type: 'iframe' });	/* video modal*/
+    // Image popups
+    $('.magnific-gallery').each(function () {
+        'use strict';
+        $(this).magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            gallery: { enabled: true }
+        });
+    }); 
+    /* Hamburger icon*/
+    var toggles = document.querySelectorAll(".cmn-toggle-switch");
+    for (var i = toggles.length - 1; i >= 0; i--) {
+        var toggle = toggles[i];
+        toggleHandler(toggle);
+    };
+    function toggleHandler(toggle) {
+        toggle.addEventListener("click", function (e) {
+            e.preventDefault();
+            (this.classList.contains("active") === true) ? this.classList.remove("active") : this.classList.add("active");
+        });
+    };
+    /* Scroll to top*/
+    $(window).scroll(function () {
+        'use strict';
+        if ($(this).scrollTop() != 0) {
+            $('#toTop').fadeIn();
+        } else {
+            $('#toTop').fadeOut();
+        }
     });
-}); 
-/* Hamburger icon*/
-var toggles = document.querySelectorAll(".cmn-toggle-switch"); 
-  for (var i = toggles.length - 1; i >= 0; i--) {
-    var toggle = toggles[i];
-    toggleHandler(toggle);
-  };
-  function toggleHandler(toggle) {
-    toggle.addEventListener( "click", function(e) {
-      e.preventDefault();
-      (this.classList.contains("active") === true) ? this.classList.remove("active") : this.classList.add("active");
+    $('#toTop').on("click", function () {
+        'use strict';
+        $('body,html').animate({ scrollTop: 0 }, 500);
     });
-  };
-  /* Scroll to top*/
-  $(window).scroll(function() {
-	   'use strict';
-		if($(this).scrollTop() != 0) {
-			$('#toTop').fadeIn();	
-		} else {
-			$('#toTop').fadeOut();
-		}
-	});
-	$('#toTop').on("click",function() {
-		 'use strict';
-		$('body,html').animate({scrollTop:0},500);
-	});	
 });
 
 //<!-- testimonial carousel -->	
-$(document).ready(function() {
-	 'use strict';
-  $('#quote-carousel').carousel({
-    pause: true,
-    interval: 6000
-  });
+$(document).ready(function () {
+    'use strict';
+    $('#quote-carousel').carousel({
+        pause: true,
+        interval: 6000
+    });
+});
+// Scrolig for # tag on pages 
+$(function () {
+    'use strict';
+    $('a.page-scroll').bind('click', function (event) {
+        var $anchor = $(this);
+        $('html, body').animate({
+            scrollTop: $($anchor.attr('href').substr(1)).offset().top
+        }, 500);
+        event.preventDefault();
+    });
+});
+
+$(document).ready(function () {
+    'use strict';
+    $(".comment").shorten({
+        "showChars": 250,
+        "moreText": "Čítaj viac >",
+        "lessText"  : "Čítaj menej <",
+    });
 });

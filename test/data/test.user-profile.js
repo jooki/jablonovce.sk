@@ -5,7 +5,7 @@
 var path = require('path');
 var camo = require('camo');
 
-var up = require(path.join(process.cwd(), 'data', 'user-profile'));
+var up = require(path.join(process.cwd(), 'config', 'user-profile'));
 
 describe('Data test user-profile.js', function () {
 

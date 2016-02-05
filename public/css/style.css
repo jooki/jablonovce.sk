@@ -77,6 +77,26 @@ a.link_normal:after{
 	margin-left:5px;
 }
 
+a.morelink{
+	position:relative;
+	font-weight:500;
+	display:block;
+	color:#6f962c;
+	margin-top:10px;
+}
+amorelink:hover{
+	color: #111;
+}
+amorelink:after{
+	font-style: normal;
+ 	font-weight: normal;
+ 	font-family: 'fontello';
+	content: "\e89b";
+	top:1px;
+	position:relative;
+	margin-left:5px;
+}
+
 p {margin: 0 0 20px 0;}
 
 .nopadding {

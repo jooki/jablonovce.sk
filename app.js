@@ -7,11 +7,11 @@
  */
 
 var express = require('express');
-var port = process.env.PORT || 8080;
 var path = require('path');
+var port = process.env.PORT || 8080;
+
 
 // Create a new express.js web app:
-
 var app = express();
 
 // Configure express with the settings found in
@@ -24,9 +24,10 @@ require(path.join(__dirname, 'config', 'config'))(app);
 
 require(path.join(__dirname, 'routers', 'index'))(app);
 require(path.join(__dirname, 'routers', 'api'))(app);
-require(path.join(__dirname, 'routers', 'login'))(app);
+// require(path.join(__dirname, 'routers', 'login'))(app);
 
- 
+// var adminExpress = express();
+// app.use('/admin', require('./lib/sbadmin/app')(adminExpress));
 
 // This file has been called directly with 
 // `node index.js`. Start the server!

@@ -1,10 +1,36 @@
 {
     "content": {
+        "infos": [
+            {"id": 1,
+            "title": "Príjemné ubytovanie",
+            "description" : "<p>Chalupa stojí na hranici chránenej oblasti Štiavnické vrchy necelé tri kilometre od dedinky Jabloňovce. Zo všetkých strán je obklopená lesom, spodnú časť pozemku lemuje potok. Dominantu tvorí rybník s príjemným posedením. Okolo rybníka je osvetlená vychádzková cestička, s netradičnou výsadbou. K dispozícii je ihrisko, trampolína a domček na strome, nie len pre deti. </p>",
+            "icon":"icon_set_2_icon-104"
+            },
+            {"id": 2,
+            "title": "Relax s nádychom nostalgie",
+            "description" : "<p>Relaxujte pri dobrej knihe v hojdacej sieti, pozorujte malinké pstruhy v potoku, počúvajte vtáky, púšťajte šarkana, alebo sa poprechádzajte, iba tak...Príďte si pripomenúť ako vonia les a ako vyzerá nočná obloha.</p>",
+            "icon":"icon_set_2_icon-108"
+            },
+            {"id": 3,
+            "title": "Vyskúšajte u nás rybolov",
+            "description" : "<p>Starostlivo udržiavaný rybník je ideálne miesto pre aktívny odpočinok. Kapre, karasy a ???.  Ulovte toho najväčšieho a porazte rekord uvedený na tabuli pod mólom.Rybársky preukaz nie je nutný, je však nutné priniesť si vlastné rybárske vybavenie.</p>",
+            "icon":"icon_set_1_icon-40"
+            }
+        ],
+        "info":{
+            "title": "We love Country Holidays",
+            "description" : "<p>Čas na oddych nastal vtedy, keď si myslíš že ho nemáš.(staré anglické príslovie)</p>"
+        },
+        "aboutas":{
+            "title": "\"Vaši štvornohí členovia rodiny sú aj našimi priateľmi\"",
+            "description" : "<p>Samozrejme, že si môžete Vašich štvornohých zobrať so sebou. Ideálne prostredie na dlhé spoločné prechádzky, plávanie v jazere či čľapotanie v potoku. Vaši miláčikovia si to u nás tiež zamilujú.</p>"
+        },
         "accommodations": [
             {
                 "id": 1,
                 "type": "loft",
                 "link": "",
+                "button_lable": "Detail",
                 "img": "img/loft/preview.jpg",
                 "imgAlt": "",
                 "title": "Podkrovná časť",
@@ -14,7 +40,7 @@
                 "price": "od 30€",
                 "unit": "eur/noc",
                 "slider": "slider_loft",
-                "reserveddate" :[],
+                "reserveddate": [],
                 "facilities": [
                     {
                         "icon": "icon_set_2_icon-116",
@@ -91,6 +117,7 @@
                 "id": 2,
                 "type": "groundfloor",
                 "link": "",
+                "button_lable": "Detail",
                 "img": "img/groundfloor/preview.jpg",
                 "imgAlt": "",
                 "title": "Prízemná časť s wellness",
@@ -100,7 +127,7 @@
                 "price": "170€",
                 "unit": "eur/noc",
                 "slider": "slider_groundfloor",
-                "reserveddate" :[],
+                "reserveddate": [],
                 "facilities": [
                     {
                         "icon": "icon_set_2_icon-116",
@@ -164,46 +191,53 @@
                 ]
             }
         ],
+        "activity": {
+            "title": "Zážitky v okolí",
+            "description" : "<p>Ako sa dá využiť volný čas v okolí?</p>",
+            "box_text" : "<p> Id pri consul aeterno petentium. Vivendo abhorreant et vim, et quot persecuti mel. Libris hendrerit ex sea. Duo legere evertitur an, pri hinc <strong>doctus definitiones</strong> an, vix id dicam putent. Ius ornatus instructior in. </p><p> Ad cum movet fierent assueverit, mei stet legere ne. Mel at vide soluta, ut utamur antiopam inciderint sed.</p>",  
+            "banner" : "<h3><span>-30% OFF</span>This week only for all rooms!</h3>",
+            "accuweahter_link" : "Predpoveď počasia"
+        },
         "activities": [
             {
                 "id": 1,
-                "link": "/#fish",
+                "menu_lable": "Rybačka",
+                "link": "#fish",
                 "img": "img/1_activity.jpg",
                 "thumbnail": "img/1_activity_thumb.jpg",
                 "imgAlt": "",
                 "title": "Vyskúšajte si rybačku ",
-                "text": "Starostlivo udržiavaný rybník je ideálne miesto pre aktívny odpočinok. Kapre, karasy a ???.  Ulovte toho najväčšieho a porazte rekord uvedený na tabuli pod mólom. Aj naše ryby si zaslúžia starostlivosť a preto je deň na rybách spoplatnený sumou 5eur/osoba. Rybársky preukaz nie je nutný, je však nutné si priniesť vlastné rybárske vybavenie.",
-                "text_preview": " Vyskúšajte si rybačku na starostlivo udržiavanóm rybníku priamo z chaty ..."
+                "text": "<p>Starostlivo udržiavaný rybník je ideálne miesto pre aktívny odpočinok. Kapre, karasy a ???.  Ulovte toho najväčšieho a porazte rekord uvedený na tabuli pod mólom. Aj naše ryby si zaslúžia starostlivosť a preto je deň na rybách spoplatnený sumou 5eur/osoba. Rybársky preukaz nie je nutný, je však nutné si priniesť vlastné rybárske vybavenie.</p>"                
             },
             {
                 "id": 2,
-                "link": "",
+                "menu_lable": "Turistika",
+                "link": "#turist",
                 "img": "img/activities_2.jpg",
                 "thumbnail": "img/activities_2_thumb.jpg",
                 "imgAlt": "",
                 "title": "Objavujte turistické chodníčky ",
-                "text": "priamo pri chalupe sa dá napojiť na turistickú trasu Bátovce, námestie – Tatárska lúka. (link na http://horne-jablonovce.oma.sk/turisticky-atlas). Celá dĺžka trasy má 22km, od chalupy je to približne 12 km a vedie okolo Počúvadlianskeho jazera, kde sa núka možnosť prestupu na žltú značku – Počúvadlianske jazero, tu je prechádzka dlhá 13,4 km; alebo pokračujte ďalej po zelenej na Tatársku lúku a odtiaľ po náučnom chodníku Sitno s dĺžkou 2,9 km.",
-                "text_preview": "Objavujte turistické chodníčky ktoré sa nachádzajú priamo pri chalupe ... "
+                "text": "<p>priamo pri chalupe sa dá napojiť na turistickú trasu Bátovce, námestie – Tatárska lúka. (link na http://horne-jablonovce.oma.sk/turisticky-atlas). Celá dĺžka trasy má 22km, od chalupy je to približne 12 km a vedie okolo Počúvadlianskeho jazera, kde sa núka možnosť prestupu na žltú značku – Počúvadlianske jazero, tu je prechádzka dlhá 13,4 km; alebo pokračujte ďalej po zelenej na Tatársku lúku a odtiaľ po náučnom chodníku Sitno s dĺžkou 2,9 km.</p>"
             },
             {
                 "id": 3,
-                "link": "",
+                "menu_lable": "Cikloturistika",
+                "link": "#cycling",
                 "img": "img/activities_3.jpg",
                 "thumbnail": "img/activities_3_thumb.jpg",
                 "imgAlt": "",
                 "title": "Cykloturistika ",
-                "text": "popri chalupe vedie 82 km dlhá Cyklomagistrála  dr.Téryho (link na http://cyklotrasa.oma.sk/052). K dispozícií sú Vám dva bicykle a jedna detská sedačka.",
-                "text_preview": "Cykloturistika cesticka ktorá vedie popri chalupe a je dlhá 82 km ..."
+                "text": "<p>popri chalupe vedie 82 km dlhá Cyklomagistrála  dr.Téryho (link na http://cyklotrasa.oma.sk/052). K dispozícií sú Vám dva bicykle a jedna detská sedačka. popri chalupe vedie 82 km dlhá Cyklomagistrála  dr.Téryho (link na http://cyklotrasa.oma.sk/052). K dispozícií sú Vám dva bicykle a jedna detská sedačka.</p>"                
             },
             {
                 "id": 4,
-                "link": "",
+                "menu_lable": "Jazdenie na koňoch",
+                "link": "#horses",
                 "img": "img/activities_4.jpg",
                 "thumbnail": "img/activities_4_thumb.jpg",
                 "imgAlt": "",
                 "title": "Prevezte sa na koňoch ",
-                "text": "vychádzky na koni pre začiatočníkov aj pokročilých. 1 hodina jazdy vychádza 9eur na koňa. Vychádzku je potrebné si dohodnúť pár dní vopred, neváhajte nás preto kontaktovať v prípade záujmu.",
-                "text_preview": "Vychutnajte si prechadzku na konoch pre začiatočníkov aj pokročilých ..."
+                "text": "<p>vychádzky na koni pre začiatočníkov aj pokročilých. 1 hodina jazdy vychádza 9eur na koňa. Vychádzku je potrebné si dohodnúť pár dní vopred, neváhajte nás preto kontaktovať v prípade záujmu. vychádzky na koni pre začiatočníkov aj pokročilých. 1 hodina jazdy vychádza 9eur na koňa. Vychádzku je potrebné si dohodnúť pár dní vopred, neváhajte nás preto kontaktovať v prípade záujmu.</p>"
             }
         ],
         "slider_loft": [
@@ -462,7 +496,7 @@
                 "large": "img/groundfloor/12_large.jpg",
                 "text": ""
             }
-        ], 
+        ],
         "slider": [
             {
                 "id": 1,

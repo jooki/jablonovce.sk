@@ -1,36 +1,38 @@
 <!-- Start activity container -->
-        <div class="container add_bottom_60">
+<div class="container add_bottom_60" id='activities'>
         <div class="main_title add_bottom_45">
             <span></span>
-            <h2>Zážitky v okolí</h2>
-            <p>
-                Ako sa dá využiť volný čas v okolí?
-            </p>
+            <h2><%= content.activity.title %></h2>
+                <%- content.activity.description %>
         </div>
         <div class="row">
             <div class="col-md-8" id="strip_activities">
                 <ul>
                     <% content.activities.forEach(function(activity){ %>
                     <li>
-                        <img src='<%= activity.thumbnail %>' alt= '<%= activity.imgAlt %>' class="img-circle styled"></a>
-                        <h4><%= activity.title %></h4>
-                        <p> 
-                            <% if (activity.text_preview) { %>
-                            <%= activity.text_preview %>
-                            <% } else { %>
-                            <%= activity.text %>
-                            <% } %>
-                            <a href='<%= activity.link %>' class="link_normal">Čítaj viac ...</a>
-                        </p>    
+                        <section id='<%= activity.link.substring(1) %>'>
+                            <img src='<%= activity.thumbnail %>' alt= '<%= activity.imgAlt %>' class="img-circle styled"></a>
+                            
+                            <h4><%= activity.title %></h4>
+                            <div class="comment more"> 
+                               <%- activity.text %>
+                            </div>
+                        </section>
                     </li>                   
                     <% }); %>    
                 </ul>
             </div>
             <div class="col-md-4">
-                
+            <div class="box_style_1 text-center">
+                <p ><img src="img/best_price.png" alt=""></p>
+                <%- content.activity.box_text %>
+            </div><!-- End box_style_1 -->
                 <a class="box_style_1 weahter" href="/contacts">
-                <i class="icon-light-up"></i> Predpoveď počasia </a>
+                <i class="icon-light-up"></i><%= content.activity.accuweahter_link %></a>
                 <!-- End  weather-->
+             <div id="banner">
+                    <%- content.activity.banner %>
+            </div><!-- End banner -->
             </div>
         </div><!-- End row -->
-    </div><!-- End container -->
+</div><!-- End container -->

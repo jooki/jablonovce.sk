@@ -10,6 +10,13 @@ var Reserved = require(path.join(process.cwd(), 'config', 'reserved'));
 var router = express.Router();
 module.exports = function (app) {
     
+    /** 
+      * povodne nastavenie JSON datat
+      * zrejme to bude potrebne prepracovat aby sa to dalo editovat
+      * a po zmene nanovo nacitat do pamate inak je potrebny restart servera 
+     */
+    var data = require(path.join(process.cwd(), 'config', 'app-data'))();
+    var reservedDates = [];
     /**
      * Rozsirenie modulu a uprava routerov
      * req : http://expressjs.com/en/api.html#req
@@ -17,31 +24,13 @@ module.exports = function (app) {
      */
 
 
-    // invoked for any requests passed to this router
+    // invoked for any requests passed to this router cistenie a upravovanie dat za jazdy
     router.use(function (req, res, next) {
         data.url_referer = '';
-// Zrudene vlastne logovanie aktualne sa pouziva loger na applikacii celkovy
-        // var usersLog = require(path.join(process.cwd(), 'data', 'loger'));
-//         usersLog.create({
-//             url: req.url,
-//             method: req.method,
-//             protocol: req.protocol,
-//             requestId: req.requestId,
-// 
-//             // In case there's a proxy server:
-//             ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress,
-//         }, function () { });
         next();
     });
 
-   /** 
-     * povodne nastavenie JSON datat
-     * zrejme to bude potrebne prepracovat aby sa to dalo editovat
-     * a po zmene nanovo nacitat do pamate inak je potrebny restart servera 
-    */
-
-    var data = require(path.join(process.cwd(), 'config', 'app-data'))();
-    var reservedDates = [];
+   
     // load async reservation  and prepare variable  
     router.use(['/loft', '/groundfloor'], function (req, res, next) {
         var path = req.baseUrl.substring(1);
@@ -86,6 +75,38 @@ module.exports = function (app) {
         res.render('activities.ejs', data);
     });
 
+
+    // This file has been called directly with 
+    // `node index.js`. Start the server!
+    // catch 404 and forward to error handler
+    router.use(function (req, res, next) {
+        // data.title = 'Error 404 Page not found.'
+        res.status(404).render('404', data);
+        var err = new Error('Page not found.');
+        next(err);
+    });
+
+    // development error handler
+    // will print stacktrace
+    if (app.get('env') === 'development') {
+        router.use(function (err, req, res, next) {
+            res.status(err.status || 500);
+            res.render('error', {
+                message: err.message,
+                error: err
+            });
+        });
+    }
+
+    // production error handler
+    // no stacktraces leaked to user
+    router.use(function (err, req, res, next) {
+        res.status(err.status || 500);
+        res.render('error', {
+            message: err.message,
+            error: {}
+        });
+    });
 
     app.use('/', router);
 

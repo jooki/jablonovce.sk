@@ -1,5 +1,5 @@
 <!-- Start ubytovanie container -->
-<div class="bg_gray add_bottom_60">
+<div class="bg_gray add_bottom_60" id='acomodation'>
     <div class="container">
         <div class="row">
             <% content.accommodations.forEach(function(ubytko){ %>
@@ -9,7 +9,7 @@
                     </div>
                     <h3><%= ubytko.title %><span class="price_home"><%= ubytko.price %><em><%= ubytko.unit %></em></span> </h3>
                     <p><%= ubytko.text_preview %></p>
-                    <p><a href='/<%= ubytko.type %>' class="btn_1">Detaily</a></p>
+                    <p><a href='/<%= ubytko.type %>' class="btn_1"><%= ubytko.button_lable %></a></p>
                 </div>
                 <% }) %>
         </div><!-- End row -->

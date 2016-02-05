@@ -15,20 +15,19 @@
                         <a href="#" class="open_close" id="close_in"><i class="icon_set_1_icon-77"></i></a>
                         <ul>
                             <li class="submenu">
-                                <a href="javascript:void(0);" class="show-submenu">Chalupa <i class="icon-down-open-mini"></i></a>
+                                <a href="javascript:void(0);" class="show-submenu"><%= menu[0].label %> <i class="icon-down-open-mini"></i></a>
                                 <ul>
                                     <li><a href='<%= loft.route %>'><%= loft.label %></a></li>
                                     <li><a href='<%= groundfloor.route %>'><%= groundfloor.label %></a></li>
                                 </ul>
                             </li>
                              <li class="submenu">
-                                <a href="javascript:void(0);" class="show-submenu">Zážitky v okolí <i class="icon-down-open-mini"></i></a>
+                                <a href="javascript:void(0);" class="show-submenu"><%= menu[1].label %><i class="icon-down-open-mini"></i></a>
                                 <ul>
-                                	<li><a href='<%= activity.route %>'><%= activity.label %></a></li>
-                                    <li><a href="horses.html">Rybačka</a></li>
-                                    <li><a href="local_food.html">Turistika</a></li>
-                                    <li><a href="cooking.html">Cikloturistika</a></li>
-                                    <li><a href="farm.html">Jazdenie na koňoch</a></li>
+                                	<li><a class='page-scroll' href='/<%= activity.route %>'><%= activity.label %></a></li>
+                                    <% content.activities.forEach(function(activ){ %>
+                                        <li><a class='page-scroll' href="/<%= activ.link %>"><%= activ.menu_lable %></a></li>
+                                     <% }); %>  
                                 </ul>
                             </li>
                             

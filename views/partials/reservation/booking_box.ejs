@@ -5,15 +5,15 @@
         <div class="row">
             <div class="col-md-6 col-sm-6 col-xs-6">
                 <div class="form-group">
-                    <label>Príchod</label>
-                    <input class="form-control" type="text" id="check_in" name="check_in" placeholder="Dátum príchodu" />
+                    <label><%= post_reservation.check_in %></label>
+                    <input class="form-control" type="text" id="check_in" name="check_in" placeholder="<%= post_reservation.check_in_ph %>" />
                     <span class="input-icon"><i class="icon-calendar"></i></span>
                 </div>
             </div>
             <div class="col-md-6 col-sm-6 col-xs-6">
                 <div class="form-group">
-                    <label>Odchod</label>
-                    <input class="form-control" type="text" id="check_out" name="check_out" placeholder="Dátum odchodu" />
+                    <label><%= post_reservation.check_out %></label>
+                    <input class="form-control" type="text" id="check_out" name="check_out" placeholder="<%= post_reservation.check_out_ph %>" />
                     <span class="input-icon"><i class="icon-calendar"></i></span>
                 </div>
             </div>
@@ -22,20 +22,20 @@
         <div class="row">
             <div class="col-md-6 col-sm-6 col-xs-6">
                 <div class="form-group">
-                    <label>Dospelý</label>
+                    <label><%= post_reservation.adults %></label>
                     <div class="qty-buttons">
                         <input type="button" value="-" class="qtyminus" name="adults">
-                        <input type="text" name="adults" id="adults" value="2" class="qty form-control" placeholder="2">
+                        <input type="text" name="adults" id="adults" value="2" class="qty form-control" placeholder="<%= post_reservation.adults_ph %>">
                         <input type="button" value="+" class="qtyplus" name="adults">
                     </div>
                 </div>
             </div>
             <div class="col-md-6 col-sm-6 col-xs-6">
                 <div class="form-group">
-                    <label>Deti</label>
+                    <label><%= post_reservation.children %></label>
                     <div class="qty-buttons">
                         <input type="button" value="-" class="qtyminus" name="children">
-                        <input type="text" name="children" id="children" value="0" class="qty form-control" placeholder="0">
+                        <input type="text" name="children" id="children" value="0" class="qty form-control" placeholder="<%= post_reservation.children_ph %>">
                         <input type="button" value="+" class="qtyplus" name="children">
                     </div>
                 </div>
@@ -45,9 +45,9 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group">
-                    <label>Časť k prenájmu</label>
+                    <label><%= post_reservation.room_type %></label>
                     <select class="form-control" name="room_type" id="room_type">
-                        <option value="">Vyberte časť chalupy na prenájom</option>
+                        <option value=""><%= post_reservation.room_type_select %></option>
                         <% content.accommodations.forEach(function(accomm){%>
                             <option value='<%= accomm.type %>'><%= accomm.title %></option>
                         <% });%>
@@ -56,25 +56,25 @@
             </div>
             <div class="col-md-12 col-sm-6">
                 <div class="form-group">
-                    <label>Meno</label>
-                    <input type="text" class="form-control" name="name_booking" id="name_booking" placeholder="Vaše meno a priezvisko">
+                    <label><%= post_reservation.name %></label>
+                    <input type="text" class="form-control" name="name_booking" id="name_booking" placeholder="<%= post_reservation.name_ph %>">
                 </div>
             </div>
             <div class="col-md-12 col-sm-6">
                 <div class="form-group">
-                    <label>Telefón</label>
-                    <input type="text" class="form-control" name="phone_booking" id="phone_booking" placeholder="Vaše telefónne číslo">
+                    <label><%= post_reservation.phone %></label>
+                    <input type="text" class="form-control" name="phone_booking" id="phone_booking" placeholder="<%= post_reservation.phone_ph %>">
                 </div>
             </div>
             <div class="col-md-12 col-sm-6">
                 <div class="form-group">
-                    <label>Email</label>
-                    <input type="text" class="form-control" name="email_booking" id="email_booking" placeholder="Váš email">
+                    <label><%= post_reservation.email %></label>
+                    <input type="text" class="form-control" name="email_booking" id="email_booking" placeholder="<%= post_reservation.email_ph %>">
                 </div>
             </div>
             <div class="col-md-12 col-sm-12">
                 <div class="form-group">
-                    <input type="submit" value="Rezervovať" class="btn_full" id="submit-booking">
+                    <input type="submit" value="<%= post_reservation.submit %>" class="btn_full" id="submit-booking">
                 </div>
             </div>
         </div>

@@ -5,13 +5,15 @@
 <main>
     <div id="map"> </div> <!-- end map-->
     <div class="container margin_60">
+        
         <!-- Weather widget -->
         <div class="main_title add_bottom_45">
             <span></span>
-            <h2>Predpoved počasia</h2>
+            <h2><%= weather.title %></h2>
         </div>
         <div id="weather" class="clearfix"></div>
         <!-- End Weather widget -->
+        
         <hr>
         <div class="row">
             <div class="col-md-8">
@@ -20,14 +22,14 @@
                     <div class="row">
                         <div class="col-md-6 col-sm-6">
                             <div class="form-group">
-                                <label>Meno</label>
-                                <input type="text" class="form-control" id="name_contact" name="name_contact" placeholder="Vaše meno">
+                                <label><%= post_contact.name %></label>
+                                <input type="text" class="form-control" id="name_contact" name="name_contact" placeholder="<%= post_contact.name_ph %>">
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <div class="form-group">
-                                <label>Priezvisko</label>
-                                <input type="text" class="form-control" id="lastname_contact" name="lastname_contact" placeholder="Vaše priezvisko">
+                                <label><%= post_contact.lastName %></label>
+                                <input type="text" class="form-control" id="lastname_contact" name="lastname_contact" placeholder="<%= post_contact.lastName_ph %>">
                             </div>
                         </div>
                     </div>
@@ -35,32 +37,32 @@
                     <div class="row">
                         <div class="col-md-6 col-sm-6">
                             <div class="form-group">
-                                <label>Email</label>
-                                <input type="email" id="email_contact" name="email_contact" class="form-control" placeholder="Váš Email">
+                                <label><%= post_contact.email %></label>
+                                <input type="email" id="email_contact" name="email_contact" class="form-control" placeholder="<%= post_contact.email_ph %>">
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <div class="form-group">
-                                <label>Telefón</label>
-                                <input type="text" id="phone_contact" name="phone_contact" class="form-control" placeholder="Vaše telefónne číslo">
+                                <label><%= post_contact.phone %></label>
+                                <input type="text" id="phone_contact" name="phone_contact" class="form-control" placeholder="<%= post_contact.phone_ph %>">
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label>Správa pre nás</label>
-                                <textarea id="message_contact" name="message_contact" class="form-control" placeholder="Správa urečená pre nás" style="height:150px;"></textarea>
+                                <label><%= post_contact.message_for_us %></label>
+                                <textarea id="message_contact" name="message_contact" class="form-control" placeholder="<%= post_contact.message_for_us_ph %>" style="height:150px;"></textarea>
                             </div>
                         </div>
                     </div>
                     <div class="row add_bottom_30">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>Overenie </label>
-                                <input type="text" id="verify_contact" class=" form-control add_bottom_30" placeholder="Ste človek? 3 + 1 =">
+                                <label><%= post_contact.checkIt %> </label>
+                                <input type="text" id="verify_contact" class=" form-control add_bottom_30" placeholder="<%= post_contact.checkIt_ph %>">
                             </div>
-                            <input type="submit" value="Odoslať" class="btn_1" id="submit-contact">
+                            <input type="submit" value="<%= post_contact.submit %>" class="btn_1" id="submit-contact">
                         </div>
                     </div>
                 </form>
@@ -69,15 +71,13 @@
 
             <div class="col-md-4">
                 <div class="box_style_1">
-                    <h3>Kontakt</h3>
-                    <h5>Adresa</h5>
-                    <p>??? Jabloňovce
-                        <br>Slovakia 935 06</p>
-                    <h5>Telefón</h5>
-                    <p><a href='<%= phone.link %>'><%= phone.label %></a></p>
-                    <h5>Email</h5>
-                    <p><a href='<%= mailto.link %>'><%= mailto.label %></a></p>
-                    <p>...</p>
+                    <h3><%= contact.label %></h3>
+                    <h5><%= address.label %></h5>
+                    <%= address.street %> <%= address.city %><br><%= address.psc %><%= address.state %>
+                    <h5><%= phone.label %></h5>
+                    <p><a href='<%= phone.link %>'><%= phone.text %></a></p>
+                    <h5><%= mailto.label %></h5>
+                    <p><a href='<%= mailto.link %>'><%= mailto.text %></a></p>
                 </div>
             </div><!-- End col-md-4 -->
         </div><!-- End row -->

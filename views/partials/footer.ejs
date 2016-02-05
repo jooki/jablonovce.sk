@@ -2,8 +2,8 @@
     <div class="row">
         <div class="col-xs-6 col-sm-6">
             <ul id="contact_details_footer">
-                <h3>Kontakt</h3>
-                <li>??? Jabloňovce<br>Slovakia 935 06</li>
+                <h3><%= contact.label %></h3>
+                <li><%= address.street %> <%= address.city %><br><%= address.psc %><%= address.state %></li>
                 <li><a href='<%= phone.link %>'><%= phone.label %></a></li>
                 <li><a href='<%= mailto.link %>'><%= mailto.label %></a></li>
             </ul>  

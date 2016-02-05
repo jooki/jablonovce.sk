@@ -8,7 +8,7 @@ var app = express();
 // use ejs-locals for all ejs templates:
 app.engine('ejs', require('ejs-mate'));
 
-require('../config')(app);
+require('../config/config')(app);
 // require('../routes')(app);
 
 // Tell express where it can find the templates

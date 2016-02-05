@@ -1,6 +1,6 @@
 var path = require('path');
 
-var Reserved = require(path.join(process.cwd(), 'data', 'reserved'));
+var Reserved = require(path.join(process.cwd(), 'config', 'reserved'));
 var reserved = new Reserved('loft');
 var assert = require('assert');
 var async = require('async');
