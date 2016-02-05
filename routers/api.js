@@ -6,7 +6,23 @@
 var express = require('express');
 var path = require('path');
 var ejs = require('ejs');
-
+// var mailer = require(path.join(process.cwd(), 'config', 'mailer'));
+var nodemailer = require('nodemailer');
+var mailOptions = {
+    from: 'Chalupa jablonovce <info@wica.sk>',
+    to: 'jozef.kluvanec@simb.sk',
+    subject: 'Testovaci email',
+    body: 'Obycajny text',
+    SMTP: {
+        host: 'simb01.simb.sk',
+        // port: 465,
+        // secure: true,
+        auth: {
+            user: "info",
+            pass: "1nf0wica"
+        }
+    }
+};
 
 // Setting database for posting all requirements
 var userPost = require(path.join(process.cwd(), 'config', 'posted'));
@@ -14,14 +30,14 @@ var Reserved = require(path.join(process.cwd(), 'config', 'reserved'));
 
 const ERR_VALIDATION = '<% errors.forEach(function(error){ %><div class="error_message"><span><%= error.msg %></span></div> <% }) %>';
 
-var router =  express.Router();
+var router = express.Router();
 module.exports = function (app) {
     
-     /** 
-     * povodne nastavenie JSON datat
-     * zrejme to bude potrebne prepracovat aby sa to dalo editovat
-     * a po zmene nanovo nacitat do pamate inak je potrebny restart servera 
-    */
+    /** 
+    * povodne nastavenie JSON datat
+    * zrejme to bude potrebne prepracovat aby sa to dalo editovat
+    * a po zmene nanovo nacitat do pamate inak je potrebny restart servera 
+   */
 
     var data = require(path.join(process.cwd(), 'config', 'app-data'))();
     var reservedDates = [];
@@ -67,13 +83,30 @@ module.exports = function (app) {
         } else {
             next();
         }
-    });    
+    });
 
+    router.post('/contact', function (req, res, next) {
+        var transporter = nodemailer.createTransport(mailOptions.SMTP);
+        mailOptions.to = req.body.email_contact;
+        mailOptions.subject = 'Poziadavka na kontakt';
+        mailOptions.body = req.body.message_contact;
+        try {
+            transporter.sendMail(mailOptions,function (err,info) {
+                console.log(err);
+                console.log(info)        
+            })
+        } catch (error) {
+            console.log(error)    
+        }
+
+        next();
+    }) 
+    
     /**
      * Zapisanie do databazy 
      * req.path vrati /api/contact to pomoze pri prelozdelenie 
      */
-    router.post('/contact', function (req, res) {
+    router.post('/contact', function (req, res, next) {
 
         userPost.create({
             type: 'contact',
@@ -89,12 +122,16 @@ module.exports = function (app) {
                 var html = "<div id='success_page' style='padding:20px 0'>"
                     + data.validationStatus.thankyou + "<strong>" + req.body.name_contact
                     + "</strong>,<br>" + data.validationStatus.contact + "</div>";
+                this.docToSend = newDoc;
                 res.send(html);
+
             } else {
-                console.log(err);
+                next(err);
             }
         });
     });
+
+   
     
     // Validation body booking
     router.post('/reserve', function (req, res, next) {
@@ -150,6 +187,6 @@ module.exports = function (app) {
             }
         });
     });
-    
+
     app.use('/api', router);
 };

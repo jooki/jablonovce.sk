@@ -33,5 +33,37 @@ require(path.join(__dirname, 'routers', 'api'))(app);
 // This file has been called directly with 
 // `node index.js`. Start the server!
 
+  // This file has been called directly with 
+    // `node index.js`. Start the server!
+    // catch 404 and forward to error handler
+    app.use(function (req, res, next) {
+        // data.title = 'Error 404 Page not found.'
+        res.status(404).render('404', data);
+        var err = new Error('Page not found.');
+        next(err);
+    });
+
+    // development error handler
+    // will print stacktrace
+    if (app.get('env') === 'development') {
+        app.use(function (err, req, res, next) {
+            res.status(err.status || 500);
+            res.render('error', {
+                message: err.message,
+                error: err
+            });
+        });
+    }
+
+    // production error handler
+    // no stacktraces leaked to user
+    app.use(function (err, req, res, next) {
+        res.status(err.status || 500);
+        res.render('error', {
+            message: err.message,
+            error: {}
+        });
+    });
+    
 app.listen(port);
 console.log('Your application is running on http://localhost' + port);
