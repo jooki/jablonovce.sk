@@ -5,6 +5,7 @@
 {"type":"contact","name":"Jozef Kluvanec","lastname":"Kluvanec","email":"jozef.kluvanec@gmail.com","phone":"421905345197","message":"sdfsdfsd","_id":"DfezqKH5Bb1JGzTC","createdAt":{"$$date":1455122110522},"updatedAt":{"$$date":1455122110522}}
 {"type":"contact","name":"Jozef","lastname":"Budinska","email":"ivana.budinska@nieco.sk","phone":"0908777","message":"trest za trest","_id":"IXmhKE4I8wL20OQx","createdAt":{"$$date":1452655280695},"updatedAt":{"$$date":1452655280695}}
 {"type":"contact","name":"Jozef Kluvanec","lastname":"Kluvanec","email":"jozef.kluvanec@gmail.com","phone":"421905345197","message":"1235824","_id":"IYuZILLJ3stjdLdI","createdAt":{"$$date":1454695665029},"updatedAt":{"$$date":1454695665029}}
+{"type":"contact","name":"Jozef Kluvanec","lastname":"Kluvanec","email":"jozef.kluvanec@gmail.com","phone":"421905345197","message":"sdfsdfsdf","_id":"LiDM51G0xqpSGyzh","createdAt":{"$$date":1455122152182},"updatedAt":{"$$date":1455122152182}}
 {"type":"contact","name":"Jozef Kluvanec","lastname":"Kluvanec","email":"jozef.kluvanec@gmail.com","phone":"421905345197","message":"12365874","_id":"OHUECH4xPBgTa8xh","createdAt":{"$$date":1454695924838},"updatedAt":{"$$date":1454695924838}}
 {"type":"contact","name":"Jozef Kluvanec","lastname":"Kluvanec","email":"jozef.kluvanec@gmail.com","phone":"421905345197","message":"123456","_id":"QCu5gS9QaVryWLHv","createdAt":{"$$date":1454695448700},"updatedAt":{"$$date":1454695448700}}
 {"type":"contact","name":"Ivana","lastname":"Budinska","email":"ivana.budinska@nieco.sk","phone":"0908777","message":"Pokus o poslanie spravy a zalogovanie IPadresy","_id":"QOJfnO4TsoislTXB","createdAt":{"$$date":1452621678918},"updatedAt":{"$$date":1452621678918}}
@@ -26,4 +27,3 @@
 {"type":"contact","name":"Jozef Kluvanec","lastname":"Kluvanec","email":"jozef.kluvanec@gmail.com","phone":"421905345197","message":"dfgkjsdflgjksdlfgs","_id":"sZJcVA9B7vGlanF0","createdAt":{"$$date":1454696367235},"updatedAt":{"$$date":1454696367235}}
 {"type":"contact","name":"Jozef Kluvanec","lastname":"Kluvanec","email":"jozef.kluvanec@gmail.com","phone":"421905345197","message":"sdfsdfsd","_id":"yiljsIxf9Yjcv2tD","createdAt":{"$$date":1455121825322},"updatedAt":{"$$date":1455121825322}}
 {"$$indexCreated":{"fieldName":"type","unique":false,"sparse":false}}
-{"type":"contact","name":"Jozef Kluvanec","lastname":"Kluvanec","email":"jozef.kluvanec@gmail.com","phone":"421905345197","message":"sdfsdfsdf","_id":"LiDM51G0xqpSGyzh","createdAt":{"$$date":1455122152182},"updatedAt":{"$$date":1455122152182}}

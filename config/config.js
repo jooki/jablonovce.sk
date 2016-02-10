@@ -7,7 +7,7 @@ var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
 var validator = require('express-validator');
-
+var favicon = require('serve-favicon');
 
 var morgan = require('morgan');
 
@@ -54,5 +54,5 @@ module.exports = function (app) {
      */
     app.use(validator());
 
-
+    app.use(favicon(path.join(process.cwd(), 'public', 'img','favicon.ico')))
 };
