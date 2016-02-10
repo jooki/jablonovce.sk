@@ -15,8 +15,8 @@
     },
     "phone": {
         "label": "Telefón",
-        "link": "tel://004542344599",
-        "text": "+45 423 445 99"
+        "link": "tel://00421",
+        "text": "+421 ... ... ..."
     },
     "mailto": {
         "label": "Email",
@@ -74,7 +74,7 @@
     },
     "lang": "sk",
     "multy_lang_using": false,
-    "title": "Prázdniny v krásnom prostredí hôr",
+    "title": "Prázdniny v krásnom prostredí štiavnických vrchoch",
     "web_keywords": "farm activities, itineraries, farm holidays, country holidays, bed and breakfast, hotel, country hotel",
     "charset": "utf-8",
     "description": "Prázdniny na vidieku",
@@ -99,9 +99,9 @@
         "phone_format": "Prosím zapíšte Vaše telefónne číso vo formáte \"0905123456\"."
     },
     "validationStatus": {
-        "thankyou": "Ďakujeme za Váš záujem",
-        "reservation": "Vaša rezerváciaa bola odoslaná. Budeme Vás čoskoro kontaktovať.",
-        "contact": "Vaša správa bola odoslaná. Budeme Vás čoskoro kontaktovať."
+        "thankyou": "Ďakujeme za Váš záujem ",
+        "reservation": "Vaša rezerváciaa bola odoslaná. Budeme Vás čoskoro kontaktovať. ",
+        "contact": "Vaša správa bola odoslaná. Budeme Vás čoskoro kontaktovať. "
     },
     "Error404": {
         "lable": 404,
@@ -151,5 +151,21 @@
         "email": "Email",
         "email_ph": "Váš email",
         "submit": "Rezervovať"
+    },
+    "mailer": {
+        "from": "Chalupa jablonovce <info@wica.sk>",
+        "to": null,
+        "subject": null,
+        "body": null,
+        "SMTP": {
+            "host": "simb01.simb.sk",
+            "auth": {
+                "user": "info",
+                "pass": "1nf0wica"
+            },
+            "tls": {
+                "rejectUnauthorized": false
+            }
+        }
     }
 }

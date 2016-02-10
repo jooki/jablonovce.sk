@@ -18,8 +18,8 @@
             }
         ],
         "info":{
-            "title": "We love Country Holidays",
-            "description" : "<p>Čas na oddych nastal vtedy, keď si myslíš že ho nemáš.(staré anglické príslovie)</p>"
+            "title": "Máme radi oddych na chalupe",
+            "description" : "<p>Čas na oddych nastal vtedy, keď si myslíš že ho nemáš.<em>(staré anglické príslovie)</em></p>"
         },
         "aboutas":{
             "title": "\"Vaši štvornohí členovia rodiny sú aj našimi priateľmi\"",
@@ -192,10 +192,10 @@
             }
         ],
         "activity": {
-            "title": "Zážitky v okolí",
-            "description" : "<p>Ako sa dá využiť volný čas v okolí?</p>",
-            "box_text" : "<p> Id pri consul aeterno petentium. Vivendo abhorreant et vim, et quot persecuti mel. Libris hendrerit ex sea. Duo legere evertitur an, pri hinc <strong>doctus definitiones</strong> an, vix id dicam putent. Ius ornatus instructior in. </p><p> Ad cum movet fierent assueverit, mei stet legere ne. Mel at vide soluta, ut utamur antiopam inciderint sed.</p>",  
-            "banner" : "<h3><span>-30% OFF</span>This week only for all rooms!</h3>",
+            "title": "Zážitky u nás a v okolí",
+            "description" : "<p>Ako sa dá využiť volný čas?</p>",
+            "box_text" : "<p> Niečo pekné a múdre.</p>",  
+            "banner" : "<h3><strong>Využite naše služby a prídite si oddychnuť<strong><h3>",
             "accuweahter_link" : "Predpoveď počasia"
         },
         "activities": [
@@ -203,8 +203,8 @@
                 "id": 1,
                 "menu_lable": "Rybačka",
                 "link": "#fish",
-                "img": "img/1_activity.jpg",
-                "thumbnail": "img/1_activity_thumb.jpg",
+                "img": "img/activities_1.jpg",
+                "thumbnail": "img/activities_1_thumb.jpg",
                 "imgAlt": "",
                 "title": "Vyskúšajte si rybačku ",
                 "text": "<p>Starostlivo udržiavaný rybník je ideálne miesto pre aktívny odpočinok. Kapre, karasy a ???.  Ulovte toho najväčšieho a porazte rekord uvedený na tabuli pod mólom. Aj naše ryby si zaslúžia starostlivosť a preto je deň na rybách spoplatnený sumou 5eur/osoba. Rybársky preukaz nie je nutný, je však nutné si priniesť vlastné rybárske vybavenie.</p>"                
@@ -217,7 +217,7 @@
                 "thumbnail": "img/activities_2_thumb.jpg",
                 "imgAlt": "",
                 "title": "Objavujte turistické chodníčky ",
-                "text": "<p>priamo pri chalupe sa dá napojiť na turistickú trasu Bátovce, námestie – Tatárska lúka. (link na http://horne-jablonovce.oma.sk/turisticky-atlas). Celá dĺžka trasy má 22km, od chalupy je to približne 12 km a vedie okolo Počúvadlianskeho jazera, kde sa núka možnosť prestupu na žltú značku – Počúvadlianske jazero, tu je prechádzka dlhá 13,4 km; alebo pokračujte ďalej po zelenej na Tatársku lúku a odtiaľ po náučnom chodníku Sitno s dĺžkou 2,9 km.</p>"
+                "text": "<p>priamo pri chalupe sa dá napojiť na turistickú trasu Bátovce, námestie – <a href= http://horne-jablonovce.oma.sk/turisticky-atlas target='_blank'>Tatárska lúka</a>. Celá dĺžka trasy má 22km, od chalupy je to približne 12 km a vedie okolo Počúvadlianskeho jazera, kde sa núka možnosť prestupu na žltú značku – Počúvadlianske jazero, tu je prechádzka dlhá 13,4 km; alebo pokračujte ďalej po zelenej na Tatársku lúku a odtiaľ po náučnom chodníku Sitno s dĺžkou 2,9 km.</p>"
             },
             {
                 "id": 3,
@@ -227,7 +227,7 @@
                 "thumbnail": "img/activities_3_thumb.jpg",
                 "imgAlt": "",
                 "title": "Cykloturistika ",
-                "text": "<p>popri chalupe vedie 82 km dlhá Cyklomagistrála  dr.Téryho (link na http://cyklotrasa.oma.sk/052). K dispozícií sú Vám dva bicykle a jedna detská sedačka. popri chalupe vedie 82 km dlhá Cyklomagistrála  dr.Téryho (link na http://cyklotrasa.oma.sk/052). K dispozícií sú Vám dva bicykle a jedna detská sedačka.</p>"                
+                "text": "<p>popri chalupe vedie 82 km dlhá Cyklomagistrála  dr.Téryho <a href= http://cyklotrasa.oma.sk/052 target='_blank'>mapa</a>. Súčasťou vybavenia chalupy sú k dispozícii aj dva bicykle a jedna detská sedačka.</p>"                
             },
             {
                 "id": 4,

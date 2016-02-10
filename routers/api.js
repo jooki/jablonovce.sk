@@ -1,67 +1,74 @@
 /**
  * This file defines the routes used in your application
- * It requires the database module that we wrote previously.
+ * It requires the res.locals.database module that we wrote previously.
  * http://expressjs.com/en/api.html#router
  */
 var express = require('express');
-var path = require('path');
+var path = require('path').join;
 var ejs = require('ejs');
+var read = require('fs').readFileSync;
+
 // var mailer = require(path.join(process.cwd(), 'config', 'mailer'));
 var nodemailer = require('nodemailer');
-var mailOptions = {
-    from: 'Chalupa jablonovce <info@wica.sk>',
-    to: 'jozef.kluvanec@simb.sk',
-    subject: 'Testovaci email',
-    body: 'Obycajny text',
-    SMTP: {
-        host: 'simb01.simb.sk',
-        // port: 465,
-        // secure: true,
-        auth: {
-            user: "info",
-            pass: "1nf0wica"
-        }
-    }
-};
 
-// Setting database for posting all requirements
-var userPost = require(path.join(process.cwd(), 'config', 'posted'));
-var Reserved = require(path.join(process.cwd(), 'config', 'reserved'));
+function extend(target) {
+    var sources = [].slice.call(arguments, 1);
+    sources.forEach(function (source) {
+        for (var prop in source) {
+            target[prop] = source[prop];
+        }
+    });
+    return target;
+}
+
+function sendMailer(req, res, next) {
+    var urlPath = req.url.substring(1);
+    var mailOptions = res.locals.data.mailer;
+    try {
+        var transporter = nodemailer.createTransport(mailOptions.SMTP);
+        if (urlPath == 'contact') {
+            mailOptions.to = req.body.email_contact;
+            mailOptions.subject = 'Požiadavka z web stránka o kontaktovanie';
+            var str = read(path(process.cwd(), 'views', 'emails', 'contact.ejs'), 'utf8');
+            // mailOptions.body = ejs.compile('emails/contact.ejs', { "body": req.body() });
+            var body = req.body;
+            var render = ejs.render(str, body);
+            mailOptions.html  = render; 
+        } else {
+            mailOptions.to = req.body.email_contact;
+            mailOptions.subject = 'Požiadavka z web stránka na rezerváciu';
+            mailOptions.body = ejs.compile('emails/reservation.ejs', { "body": req.body() });
+        }
+
+
+        transporter.sendMail(mailOptions, function (err, info) {
+            if (err) {
+                console.log('/api/sendMailer/error');
+                console.log(err);
+                console.log(info);
+            } else {
+                // if you don't want to use this transport object anymore, uncomment following line
+                socketTimeout: 30 * 1000 // 0.5 min: Time of inactivity until the connection is closed
+                transporter.close(); // shut down the connection pool, no more messages
+            }
+        })
+    } catch (error) {
+        console.log('/api/sendMailer/error');
+        console.log(error);
+    }
+    transporter.close();
+    next();
+}
+
+
+// Setting res.locals.database for posting all requirements
+var userPost = require(path(process.cwd(), 'config', 'posted'));
+var Reserved = require(path(process.cwd(), 'config', 'reserved'));
 
 const ERR_VALIDATION = '<% errors.forEach(function(error){ %><div class="error_message"><span><%= error.msg %></span></div> <% }) %>';
 
 var router = express.Router();
 module.exports = function (app) {
-    
-    /** 
-    * povodne nastavenie JSON datat
-    * zrejme to bude potrebne prepracovat aby sa to dalo editovat
-    * a po zmene nanovo nacitat do pamate inak je potrebny restart servera 
-   */
-
-    var data = require(path.join(process.cwd(), 'config', 'app-data'))();
-    var reservedDates = [];
-    // load async reservation  and prepare variable  
-    router.use(['/loft', '/groundfloor'], function (req, res, next) {
-        var path = req.baseUrl.substring(1);
-        var rl = new Reserved(path);
-        data.accommodation = (path == 'loft') ? 0 : 1;
-        data.url_referer = 'reservation';
-        setTimeout(function () {
-            rl.getReservedDays(function (err, dates) {
-                rl.rangeReservetDates(dates, data.lang, function (err, ret) {
-                    reservedDates = ret;
-                    next();
-                });
-            });
-        }, 1000);
-    });
-    
-    // rozsirene logovanie vsetkoho co pride na Api do consoly
-    router.use('/api', function (req, res, next) {
-        console.log('%s %s %s', req.method, req.url, req.path);
-        next();
-    });
     
     /**
      * Validation body contact
@@ -69,12 +76,12 @@ module.exports = function (app) {
      * Dependencies: https://www.npmjs.com/package/validator
      */
     router.post('/contact', function (req, res, next) {
-        req.checkBody("name_contact", data.validationError.name_IsEmpty).notEmpty();
-        req.checkBody("lastname_contact", data.validationError.lastname_IsEmpty).notEmpty();
-        req.checkBody("email_contact", data.validationError.email_IsEmail).isEmail();
-        req.checkBody("phone_contact", data.validationError.phone_IsNumeric).isNumeric();
-        req.checkBody("message_contact", data.validationError.message_IsEmpty).notEmpty();
-        req.checkBody("verify_contact", data.validationError.verify_IsNumber).isNumeric('4');
+        req.checkBody("name_contact", res.locals.data.validationError.name_IsEmpty).notEmpty();
+        req.checkBody("lastname_contact", res.locals.data.validationError.lastname_IsEmpty).notEmpty();
+        req.checkBody("email_contact", res.locals.data.validationError.email_IsEmail).isEmail();
+        req.checkBody("phone_contact", res.locals.data.validationError.phone_IsNumeric).isNumeric();
+        req.checkBody("message_contact", res.locals.data.validationError.message_IsEmpty).notEmpty();
+        req.checkBody("verify_contact", res.locals.data.validationError.verify_IsNumber).isNumeric('4');
 
         if (req.validationErrors()) {
             var html = ejs.render(ERR_VALIDATION, { "errors": req.validationErrors() });
@@ -85,25 +92,10 @@ module.exports = function (app) {
         }
     });
 
-    router.post('/contact', function (req, res, next) {
-        var transporter = nodemailer.createTransport(mailOptions.SMTP);
-        mailOptions.to = req.body.email_contact;
-        mailOptions.subject = 'Poziadavka na kontakt';
-        mailOptions.body = req.body.message_contact;
-        try {
-            transporter.sendMail(mailOptions,function (err,info) {
-                console.log(err);
-                console.log(info)        
-            })
-        } catch (error) {
-            console.log(error)    
-        }
-
-        next();
-    }) 
+    // router.post('/contact', sendMailer) 
     
     /**
-     * Zapisanie do databazy 
+     * Zapisanie do res.locals.databazy 
      * req.path vrati /api/contact to pomoze pri prelozdelenie 
      */
     router.post('/contact', function (req, res, next) {
@@ -120,8 +112,8 @@ module.exports = function (app) {
             // newDoc has no key called notToBeSaved since its value was undefined 
             if (!err) {
                 var html = "<div id='success_page' style='padding:20px 0'>"
-                    + data.validationStatus.thankyou + "<strong>" + req.body.name_contact
-                    + "</strong>,<br>" + data.validationStatus.contact + "</div>";
+                    + res.locals.data.validationStatus.thankyou + "<strong>" + req.body.name_contact
+                    + "</strong>,<br>" + res.locals.data.validationStatus.contact + "</div>";
                 this.docToSend = newDoc;
                 res.send(html);
 
@@ -131,26 +123,24 @@ module.exports = function (app) {
         });
     });
 
-   
-    
     // Validation body booking
     router.post('/reserve', function (req, res, next) {
-        req.checkBody("check_in", data.validationError.check_in_IsEmpty).notEmpty();
-        req.checkBody("check_out", data.validationError.check_out_IsEmpty).notEmpty();
-        req.checkBody("adults", data.validationError.adults_isNumeric).isNumeric();
-        req.checkBody("children", data.validationError.children_isNumeric).isNumeric();
-        req.checkBody("room_type", data.validationError.room_type_IsEmpty).notEmpty();
+        req.checkBody("check_in", res.locals.data.validationError.check_in_IsEmpty).notEmpty();
+        req.checkBody("check_out", res.locals.data.validationError.check_out_IsEmpty).notEmpty();
+        req.checkBody("adults", res.locals.data.validationError.adults_isNumeric).isNumeric();
+        req.checkBody("children", res.locals.data.validationError.children_isNumeric).isNumeric();
+        req.checkBody("room_type", res.locals.data.validationError.room_type_IsEmpty).notEmpty();
         if (req.body.room_type == "loft") {
-            req.checkBody("adults", data.validationError.adults_loft_IsInt).isInt({ min: 2, max: 12 });
-            req.checkBody("children", data.validationError.children_loft_IsInt).isInt({ min: 0, max: 10 });
+            req.checkBody("adults", res.locals.data.validationError.adults_loft_IsInt).isInt({ min: 2, max: 12 });
+            req.checkBody("children", res.locals.data.validationError.children_loft_IsInt).isInt({ min: 0, max: 10 });
         }
         if (req.body.room_type == "groundfloor") {
-            req.checkBody("adults", data.validationError.adults_groundfloor_IsInt).isInt({ min: 2, max: 4 });
-            req.checkBody("children", data.validationError.children_groundfloor_IsInt).isInt({ min: 0, max: 2 });
+            req.checkBody("adults", res.locals.data.validationError.adults_groundfloor_IsInt).isInt({ min: 2, max: 4 });
+            req.checkBody("children", res.locals.data.validationError.children_groundfloor_IsInt).isInt({ min: 0, max: 2 });
         }
-        req.checkBody("name_booking", data.validationError.name_IsEmpty).notEmpty();
-        req.checkBody("email_booking", data.validationError.email_IsEmail).isEmail();
-        req.checkBody("phone_booking", data.validationError.phone_format).optional().isNumeric();
+        req.checkBody("name_booking", res.locals.data.validationError.name_IsEmpty).notEmpty();
+        req.checkBody("email_booking", res.locals.data.validationError.email_IsEmail).isEmail();
+        req.checkBody("phone_booking", res.locals.data.validationError.phone_format).optional().isNumeric();
 
         if (req.validationErrors()) {
             var html = ejs.render(ERR_VALIDATION, { "errors": req.validationErrors() });
@@ -160,9 +150,10 @@ module.exports = function (app) {
             next();
         }
     });
-    
+
+    // router.post('/reserve', sendMailer) 
     /**]
-     * Zapisanie do databazy 
+     * Zapisanie do res.locals.databazy 
      */
     router.post('/reserve', function (req, res) {
 
@@ -179,8 +170,8 @@ module.exports = function (app) {
         }, function (err, newDoc) {
             if (!err) {
                 var html = "<div id='success_page' style='padding:20px 0'>"
-                    + data.validationStatus.thankyou + "<strong>" + req.body.name_booking
-                    + "</strong>,<br>" + data.validationStatus.contact + "</div>";
+                    + res.locals.data.validationStatus.thankyou + "<strong>" + req.body.name_booking
+                    + "</strong>,<br>" + res.locals.data.validationStatus.contact + "</div>";
                 res.send(html);
             } else {
                 console.log(err);

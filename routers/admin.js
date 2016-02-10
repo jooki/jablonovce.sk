@@ -5,7 +5,6 @@ var flash = require('connect-flash');
 var cookieParser = require('cookie-parser');
 var path = require('path');
 
-var admin = require('../lib/sbadmin/app')(expres());
 module.exports = function (app) {
     // http://passportjs.org/docs
     // pass passport for configuration
@@ -32,8 +31,7 @@ module.exports = function (app) {
     app.use(passport.session()); // persistent login sessions
     app.use(flash()); // use connect-flash for flash messages stored in session
   
-    require('./passport/pass')(passport);
-    require('./routes/index')(app, passport);  
+    // require('./routes/index')(app, passport);  
     // show the login form
     app.get('/login', function (req, res) {
         // render the page and pass in any flash data if it exists
@@ -45,7 +43,8 @@ module.exports = function (app) {
     // we will use route middleware to verify this (the isLoggedIn function)
     // http://passportjs.org/docs/basic-digest
     app.get('/setup', isLoggedIn, function (req, res) {
-        app.use('/admin', admin);
+        // app.use('/admin', admin);
+        
     });
 
 

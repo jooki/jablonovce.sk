@@ -9,14 +9,7 @@ var Reserved = require(path.join(process.cwd(), 'config', 'reserved'));
 
 var router = express.Router();
 module.exports = function (app) {
-    
-    /** 
-      * povodne nastavenie JSON datat
-      * zrejme to bude potrebne prepracovat aby sa to dalo editovat
-      * a po zmene nanovo nacitat do pamate inak je potrebny restart servera 
-     */
-    var data = require(path.join(process.cwd(), 'config', 'app-data'))();
-    var reservedDates = [];
+  
     /**
      * Rozsirenie modulu a uprava routerov
      * req : http://expressjs.com/en/api.html#req
@@ -25,8 +18,10 @@ module.exports = function (app) {
 
 
     // invoked for any requests passed to this router cistenie a upravovanie dat za jazdy
+    // nacitanie konfiguracných dát
     router.use(function (req, res, next) {
-        data.url_referer = '';
+        res.locals.data = require(path.join(process.cwd(), 'config', 'app-data'))();
+        // data.url_referer = '';
         next();
     });
 
@@ -34,13 +29,14 @@ module.exports = function (app) {
     // load async reservation  and prepare variable  
     router.use(['/loft', '/groundfloor'], function (req, res, next) {
         var path = req.baseUrl.substring(1);
-        var rl = new Reserved(path);
-        data.accommodation = (path == 'loft') ? 0 : 1;
-        data.url_referer = 'reservation';
+        res.locals.data.accommodation = (path == 'loft') ? 0 : 1;
+        res.locals.data.url_referer = 'reservation';
         setTimeout(function () {
+            var rl = new Reserved(path);
             rl.getReservedDays(function (err, dates) {
-                rl.rangeReservetDates(dates, data.lang, function (err, ret) {
-                    reservedDates = ret;
+                rl.rangeReservetDates(dates, res.locals.data.lang, function (err, ret) {
+                    res.locals.data.content.accommodations[res.locals.data.accommodation].reserveddate = ret;
+                    
                     next();
                 });
             });
@@ -49,7 +45,7 @@ module.exports = function (app) {
     
     // Basic routing
     router.get('/', function (req, res) {
-        res.render('index.ejs', data);
+        res.render('index.ejs', res.locals.data);
     });
 
     router.get('/index', function (req, res) {
@@ -57,25 +53,19 @@ module.exports = function (app) {
     });
 
     router.get('/contacts', function (req, res) {
-        data.url_referer = 'contacts';
-        res.render('contacts.ejs', data);
+        res.locals.data.url_referer = 'contacts';
+        res.render('contacts.ejs', res.locals.data);
     });
 
     router.get('/loft', function (req, res) {
-        data.content.accommodations[0].reserveddate = reservedDates;
-        res.render('reservation.ejs', data);
+        res.render('reservation.ejs', res.locals.data);
     });
 
     router.get('/groundfloor', function (req, res) {
-        data.content.accommodations[0].reserveddate = reservedDates;
-        res.render('reservation.ejs', data);
+        res.render('reservation.ejs', res.locals.data);
     });
 
-    router.get('/activities', function (req, res) {
-        res.render('activities.ejs', data);
-    });
-
-
+   
     app.use('/', router);
 
 };
