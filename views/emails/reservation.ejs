@@ -7,17 +7,14 @@
 </head>
 
 <body>
-    <p> Správa od : <%= body.name_booking %>
-    Dátum rezervácie od: <%= body.check_in %>
-                     do: <%= body.check_out %>
-                     
-    Rezervovaná čast: <%= body.room_type %>
-    
-    Počet dospelých: <%= body.adults %>
-    Počet detí: <%= body.children %>
-    
-    Telefón: <%= body.phone_booking %>
-    emial: <%= body.email_booking %> </p>
+    <p> Rezervácia na meno : <%= body.name %><br> 
+    Dátum rezervácie od: <%= body.check_in %> do: <%= body.check_out %></p>
+    <p>Čast chalupy: <%= body.room_type %><br>
+    Počet dospelých: <%= body.adults %><br>
+    Počet detí: <%= body.children %><br>
+    <br>
+    Telefón: <%= body.phone %><br>
+    emial: <%= body.email %> </p>
 </body>
 
 </html>

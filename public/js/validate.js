@@ -20,8 +20,9 @@ jQuery(document).ready(function () {
                 adults: $('#adults').val(),
                 children: $('#children').val(),
                 room_type: $('#room_type').val(),
-                name_booking: $('#name_booking').val(),
-                email_booking: $('#email_booking').val()
+                name: $('#name_booking').val(),
+                email: $('#email_booking').val(),
+                phone: $('#phone_booking').val()
             },
                 function (data) {
                     document.getElementById('message-booking').innerHTML = data;
@@ -54,10 +55,10 @@ jQuery(document).ready(function () {
                 .attr('disabled', 'disabled');
 
             $.post(action, {
-                name_contact: $('#name_contact').val(),
+                name: $('#name_contact').val(),
                 lastname_contact: $('#lastname_contact').val(),
-                email_contact: $('#email_contact').val(),
-                phone_contact: $('#phone_contact').val(),
+                email: $('#email_contact').val(),
+                phone: $('#phone_contact').val(),
                 message_contact: $('#message_contact').val(),
                 verify_contact: $('#verify_contact').val()
             },
