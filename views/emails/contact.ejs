@@ -5,7 +5,7 @@
     <title>Kontaktný formulár</title>
 </head>
 <body>
-<p><%= body.message_contact -%></p>
+<p><%- body.message_contact.replace(/\n/g, "<br>") -%></p>
 
 <p>Správa od : <%= body.name -%>  <%= body.lastname_contact -%><br>
 Telefón: <%= body.phone -%><br>

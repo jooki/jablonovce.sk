@@ -37,23 +37,28 @@ require(path.join(__dirname, 'routers', 'admin'))(app);
 // This file has been called directly with 
 // `node index.js`. Start the server!
 // catch 404 and forward to error handler
+
 app.use(function (req, res, next) {
     // data.title = 'Error 404 Page not found.'
-    res.status(404).render('404', data);
+    res.status(404).render('404', res.locals.data); //TODO: Odskusat
     var err = new Error('Page not found.');
     err.status = 400
-    next(err);
+    res.end();
 });
 
 // development error handler
 // will print stacktrace
 if (app.get('env') === 'development') {
     app.use(function (err, req, res, next) {
-        res.status(err.status || 500);
-        res.render('error', {
-            message: err.message,
-            error: err
-        });
+        try {
+            res.status(err.status || 500);
+            res.render('error', {
+                message: err.message,
+                error: err
+            });
+        } catch (error) {
+            console.error(error.stack);
+        }
     });
 }
 
@@ -61,55 +66,9 @@ if (app.get('env') === 'development') {
 // no stacktraces leaked to user
 app.use(function (err, req, res, next) {
     res.status(err.status || 500);
-    res.render('error', {
-        message: err.message,
-        error: {}
-    });
+    res.render('500', res.locals.data);
 });
 
+
 app.listen(port);
-app.on('error', onError);
-app.on('listening', onListening);
-
-/**
- * Event listener for HTTP server "error" event.
- */
-
-function onError(error) {
-    if (error.syscall !== 'listen') {
-        throw error;
-    }
-
-    var bind = typeof port === 'string'
-        ? 'Pipe ' + port
-        : 'Port ' + port;
-
-    // handle specific listen errors with friendly messages
-    switch (error.code) {
-        case 'EACCES':
-            console.error(bind + ' requires elevated privileges');
-            process.exit(1);
-            break;
-        case 'EADDRINUSE':
-            console.error(bind + ' is already in use');
-            process.exit(1);
-            break;
-        default:
-            throw error;
-    }
-}
-
-/**
- * Event listener for HTTP server "listening" event.
- */
-
-function onListening() {
-    var addr = app.address();
-    var bind = typeof addr === 'string'
-        ? 'pipe ' + addr
-        : 'port ' + addr.port;
-    debug('Listening on ' + bind);
-}
-
-
 console.log('Your application is running on http://localhost' + port);

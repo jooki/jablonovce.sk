@@ -24,7 +24,7 @@
             ],
             // Environment variables passed to the program.
             "env": {
-                "NODE_ENV": "development"
+                "NODE_ENV": "production"
             },
             // Use JavaScript source maps (if they exist).
             "sourceMaps": false,

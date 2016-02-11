@@ -1,0 +1,26 @@
+<% layout('layout') -%>
+
+<section class="sub_header" id="bg_general">
+    <div class="sub_header_content">
+        <div class="intro_title error">
+            <h1 class="animated fadeInDown"><%= Error500.lable %></h1>
+            <p class="animated fadeInDown"><%- Error500.description %>
+            <a href="/" class="animated fadeInUp button_intro"><%= back_to_home %></a>
+        </div>
+    </div>
+</section>
+
+<div class="container margin_60">
+    <div class="row">
+        <% content.accommodations.forEach(function(ubytko){ %>
+        <div class="col-md-6 col-sm-6">
+             <div class="img_zoom">
+            <a href='/<%= ubytko.type %>'><img src='<%= ubytko.img %>' alt= '<%= ubytko.imgAlt %>' class="img-responsive"></a>
+             </div>
+            <h4><%= ubytko.title %></h4>
+            <p><%= ubytko.text_preview %></p>
+             
+        </div>
+        <% }) %>
+    </div><!-- End row -->
+</div><!-- End container -->

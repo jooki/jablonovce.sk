@@ -107,6 +107,10 @@
         "lable": 404,
         "description": "Oops!! Page not found <br> Stranka nenajdená</p>"
     },
+    "Error500": {
+        "lable": 500,
+        "description": "Oops!! Something is wrong <br> Nastala chyba na servery</p>"
+    },
     "back_to_home": "Back to home",
     "post_contact": {
         "name": "Meno",
