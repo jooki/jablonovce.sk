@@ -9,7 +9,6 @@
 var express = require('express');
 var commpress = require('compression');
 var path = require('path');
-var debug = require('debug')('node-jablonovce:server');
 var port = process.env.PORT || 8080;
 
 

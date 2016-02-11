@@ -1,44 +1,52 @@
 var nodemailer = require('nodemailer');
-var mailOptions = {
-    from: 'Chalupa jablonovce <info@jablonovce.com>',
-    to: 'jozef.kluvanec@simb.sk',
-    subject: 'Testovaci email',
-    body: 'Obycajny text',
-    SMTP: {
-        host: 'smtp://simb01.simb.sk',
-        port: 465,
-        secure: true,
-        auth: {
-            user: "info",
-            pass: "1nf0wica"
+var path = require('path').join;
+var ejs = require('ejs');
+var read = require('fs').readFileSync;
+
+function extend(target) {
+    var sources = [].slice.call(arguments, 1);
+    sources.forEach(function (source) {
+        for (var prop in source) {
+            target[prop] = source[prop];
         }
-    }
+    });
+    return target;
 }
 
-
-class SendEmail {
-
-    constructor(options) {
-        mailOptions.from = options.from,
-        mailOptions.to = options.to,
-        mailOptions.subject = options.subject,
-        mailOptions.body = options.body,
-        mailOptions.SMTP = options.SMTP,
-
-        function () {
-            this.transporter = nodemailer.createTransport(mailOptions.SMTP);
+function sendEmail(req, res, next) {
+    var urlPath = req.url.substring(1);
+    var mailOptions = res.locals.data.mailer;
+    var str = '';
+    try {
+        var transporter = nodemailer.createTransport(mailOptions.SMTP);
+        
+        if (urlPath == 'contact') {
+            mailOptions.subject = 'Kontaktovanie zákazníka';
+            str = read(path(process.cwd(), 'views', 'emails', 'contact.ejs'), 'utf8');
+             
+        } else {
+            mailOptions.subject = 'Rezervácia';
+            str = read(path(process.cwd(), 'views', 'emails', 'reservation.ejs'), 'utf8');
         }
-    }
-
-    send() {
-        this.trasporter.sendMail(mailOptions, function (err, info) {
+        mailOptions.to = req.body.email;
+        mailOptions.html  = ejs.render(str, {'body':req.body});
+        transporter.sendMail(mailOptions, function (err, info) {
             if (err) {
-                return new Error("Can not send e email");
+                console.log('/api/sendMailer/error');
+                console.log(err);
+                console.log(info);
+            } else {
+                // if you don't want to use this transport object anymore, uncomment following line
+                // socketTimeout: 30 * 1000 // 0.5 min: Time of inactivity until the connection is closed
+                transporter.close(); // shut down the connection pool, no more messages
             }
-            return info;
         })
+    } catch (error) {
+        console.log('/api/sendMailer/error');
+        console.log(error);
     }
+    transporter.close();
+    next();
 }
 
-
-module.exports = SendEmail;
+module.export = sendEmail;

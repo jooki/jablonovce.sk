@@ -26,8 +26,10 @@ module.exports = function (app) {
     // setup the logger https://github.com/expressjs/morgan
     // dev :method :url :status :response-time ms - :res[content-length]
     // short :remote-addr :remote-user :method :url HTTP/:http-version :status :res[content-length] - :response-time ms
-    app.use(morgan('dev'));
-
+    if (app.get('env') === 'development') {
+        app.use(morgan('dev'));
+    }
+    
     // set the view engine to ejs
     // https://github.com/mde/ejs.git
     app.set('view engine', 'ejs');

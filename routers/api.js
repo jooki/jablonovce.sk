@@ -7,9 +7,9 @@ var express = require('express');
 var path = require('path').join;
 var ejs = require('ejs');
 var read = require('fs').readFileSync;
-
-// var mailer = require(path.join(process.cwd(), 'config', 'mailer'));
 var nodemailer = require('nodemailer');
+
+// var mailer = require(path.join(process.cwd(), 'config', 'mailer')); //todo: napojit kniznicu mailer
 
 function extend(target) {
     var sources = [].slice.call(arguments, 1);
