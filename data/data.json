@@ -23,7 +23,7 @@
         },
         "aboutas":{
             "title": "\"Vaši štvornohí členovia rodiny sú aj našimi priateľmi\"",
-            "description" : "<p>Samozrejme, že si môžete Vašich štvornohých zobrať so sebou. Ideálne prostredie na dlhé spoločné prechádzky, plávanie v jazere či čľapotanie v potoku. Vaši miláčikovia si to u nás tiež zamilujú.</p>"
+            "description" : "<p>Samozrejme, že si môžete Vašich štvornohých zobrať so sebou. Ideálne prostredie na dlhé spoločné prechádzky, plávanie v jazere či čľapotanie v potoku. Vaši miláčikovia si to u nás tiež zamilujú. V podkrovnej často domu sa môžete ubytovať pekne všetci spolu. Ak psík nie je zvyknutý zostávať vo Vašej spálni, pre tieto prípady tu máme izbu špeciálne pre psov. Je v hospodárskej časti domu, v zime dobre vykurovaná a plná pelechov na odpočinok.</p>"
         },
         "accommodations": [
             {
@@ -51,7 +51,7 @@
                         "title": "Wifi"
                     },
                     {
-                        "icon": "icon_set_2_icon-104",
+                        "icon": "icon_set_2_icon-114",
                         "title": "Válenda"
                     },
                     {
@@ -144,10 +144,6 @@
                     {
                         "icon": "icon_set_2_icon-111",
                         "title": "Kúpeľna s WC"
-                    },
-                    {
-                        "icon": "icon_set_1_icon-22",
-                        "title": "Váš miláčik"
                     }
                 ],
                 "facilities_text": [
@@ -464,7 +460,7 @@
                 "text": ""
             },
             {
-                "id": 8,
+                "id": 10,
                 "link": "",
                 "img": "",
                 "imgAlt": "",
@@ -475,7 +471,7 @@
                 "text": ""
             },
             {
-                "id": 8,
+                "id": 11,
                 "link": "",
                 "img": "",
                 "imgAlt": "",
@@ -486,7 +482,7 @@
                 "text": ""
             },
             {
-                "id": 8,
+                "id": 12,
                 "link": "",
                 "img": "",
                 "imgAlt": "",

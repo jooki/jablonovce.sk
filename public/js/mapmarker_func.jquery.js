@@ -1,7 +1,7 @@
 		//set up markers 
 		var myMarkers = {"markers": [
 				//{"latitude": "51.511732", "longitude":"-0.123270", "icon": "img/map-marker2.png"}
-                {"latitude": "48.322747", "longitude":"18.791539", "icon": "img/map-marker2.png"}
+                {"latitude": "48.322747", "longitude":"18.791539", "icon": "img/map-marker1.png"}
 			]
 		};
 		//set up map options 
