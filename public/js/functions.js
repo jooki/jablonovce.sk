@@ -117,8 +117,10 @@ $(function () {
     'use strict';
     $('a.page-scroll').bind('click', function (event) {
         var $anchor = $(this);
+        var topOffset = $($anchor.attr('href').substr(1)).offset().top
+		topOffset -= $( '#top_header' ).height();
         $('html, body').animate({
-            scrollTop: $($anchor.attr('href').substr(1)).offset().top
+            scrollTop: topOffset
         }, 500);
         event.preventDefault();
     });
