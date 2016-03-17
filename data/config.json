@@ -4,19 +4,19 @@
     },
     "contact_box": {
         "title": "Potrebujete poradiť? <br> Kontaktujte nás",
-        "timeToContact": "Pondelok až piatok 9.00 - 18.30"
+        "timeToContact": "9.00 - 18.30 hod."
     },
     "address": {
-        "label": "Adresa",
+        "label": "Chalupa Jabloňovce",
         "street": "",
-        "city": "Jabloňovce",
+        "city": "Horné Jabloňovce",
         "psc": "935 06",
-        "state": "Slovensko"
+        "state": " Jabloňovce"
     },
     "phone": {
         "label": "Telefón",
-        "link": "tel://00421",
-        "text": "+421 ... ... ..."
+        "link": "tel://00421905432455",
+        "text": "+421 905 432 455"
     },
     "mailto": {
         "label": "Email",
@@ -24,7 +24,7 @@
         "text": "info@jablonovce.sk"
     },
     "weather": {
-        "title": "Predpoved počasia"
+        "title": "Predpoveď počasia"
     },
     "facebook": {
         "link": "https://www.facebook.com",
@@ -55,17 +55,22 @@
     "loft": {
         "route": "/loft",
         "sysLink": "/app/pages/reservation:0",
-        "label": "Podkrovná časť "
+        "label": "Ubytovanie "
     },
     "groundfloor": {
         "route": "/groundfloor",
         "sysLink": "/app/pages/reservation:1",
-        "label": "Prízemná časť s wellness "
+        "label": "Okolie chalupy "
     },
     "contacts": {
         "route": "/contacts",
         "sysLink": "/app/pages/contacts",
-        "label": "Kontaktujte nás"
+        "label": "Kontakt"
+    },
+    "documents": {
+        "route": "/documents",
+        "sysLink": "/app/pages/documents",
+        "label": "Dokumenty"
     },
     "gallery": {
         "route": "/gallery",
@@ -74,10 +79,10 @@
     },
     "lang": "sk",
     "multy_lang_using": false,
-    "title": "Prázdniny v krásnom prostredí štiavnických vrchoch",
+    "title": "Chalupa Jabloňovce",
     "web_keywords": "farm activities, itineraries, farm holidays, country holidays, bed and breakfast, hotel, country hotel",
     "charset": "utf-8",
-    "description": "Prázdniny na vidieku",
+    "description": "Chalupa Jabloňovce",
     "google_analytics": "",
     "url_referer": "",
     "validationError": {
@@ -134,7 +139,7 @@
         },
         {
             "id": 2,
-            "label": "Zážitky v okolí"
+            "label": "Aktivity"
         }
     ],
     "post_reservation": {

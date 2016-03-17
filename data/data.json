@@ -3,23 +3,26 @@
         "infos": [
             {"id": 1,
             "title": "Príjemné ubytovanie",
-            "description" : "<p>Chalupa stojí na hranici chránenej oblasti Štiavnické vrchy necelé tri kilometre od dedinky Jabloňovce. Zo všetkých strán je obklopená lesom, spodnú časť pozemku lemuje potok. Dominantu tvorí rybník s príjemným posedením. Okolo rybníka je osvetlená vychádzková cestička, s netradičnou výsadbou. K dispozícii je ihrisko, trampolína a domček na strome, nie len pre deti. </p>",
+            "description" : "",
+            "description_" : "<p>Chalupa stojí na hranici chránenej oblasti Štiavnické vrchy necelé tri kilometre od dedinky Jabloňovce. Zo všetkých strán je obklopená lesom, spodnú časť pozemku lemuje potok. Dominantu tvorí rybník s príjemným posedením. Okolo rybníka je osvetlená vychádzková cestička, s netradičnou výsadbou. K dispozícii je ihrisko, trampolína a domček na strome, nie len pre deti. </p>",
             "icon":"icon_set_2_icon-104"
             },
             {"id": 2,
             "title": "Relax s nádychom nostalgie",
-            "description" : "<p>Relaxujte pri dobrej knihe v hojdacej sieti, pozorujte malinké pstruhy v potoku, počúvajte vtáky, púšťajte šarkana, alebo sa poprechádzajte, iba tak...Príďte si pripomenúť ako vonia les a ako vyzerá nočná obloha.</p>",
+            "description" : "",
+            "description_" : "<p>Relaxujte pri dobrej knihe v hojdacej sieti, pozorujte malinké pstruhy v potoku, počúvajte vtáky, púšťajte šarkana, alebo sa poprechádzajte, iba tak...Príďte si pripomenúť ako vonia les a ako vyzerá nočná obloha.</p>",
             "icon":"icon_set_2_icon-108"
             },
             {"id": 3,
             "title": "Vyskúšajte u nás rybolov",
-            "description" : "<p>Starostlivo udržiavaný rybník je ideálne miesto pre aktívny odpočinok. Kapre, karasy a ???.  Ulovte toho najväčšieho a porazte rekord uvedený na tabuli pod mólom.Rybársky preukaz nie je nutný, je však nutné priniesť si vlastné rybárske vybavenie.</p>",
+            "description" : "",
+            "description_" : "<p>Starostlivo udržiavaný rybník je ideálne miesto pre aktívny odpočinok. Kapre, karasy a ???.  Ulovte toho najväčšieho a porazte rekord uvedený na tabuli pod mólom.Rybársky preukaz nie je nutný, je však nutné priniesť si vlastné rybárske vybavenie.</p>",
             "icon":"icon_set_1_icon-40"
             }
         ],
         "info":{
-            "title": "Máme radi oddych na chalupe",
-            "description" : "<p>Čas na oddych nastal vtedy, keď si myslíš že ho nemáš.<em>(staré anglické príslovie)</em></p>"
+            "title": "Čas na oddych nastal vtedy, keď si myslíš že ho nemáš.",
+            "description" : "<p><em>(staré anglické príslovie)</em></p>"
         },
         "aboutas":{
             "title": "\"Vaši štvornohí členovia rodiny sú aj našimi priateľmi\"",
@@ -33,7 +36,7 @@
                 "button_lable": "Detail",
                 "img": "img/loft/preview.jpg",
                 "imgAlt": "",
-                "title": "Podkrovná časť",
+                "title": "Ubytovanie",
                 "title_preview": "Táto časť chlapupy ponúka ubytovanie pre 6 osôb s možnosťou až do 12 osôb.",
                 "text": "Táto časť domu poskytuje pohodlné ubytovanie pre  6 osôb. Avšak je možné ubytovať až dvojnásobný počet, teda 12 osôb. K dispozícii sú tri samostatné spálne (2x štvorlôžková, 1x dvojlôžková), obývačka s rozkladacou sedačkou, kuchyňa (elektrická varná platňa, rúra, chladnička, mikrovlnka, kanvica) a kúpeľňa s vaňou spolu s WC.  Súčasťou vybavenia je WiFi pripojenie a TV. Deti do 2 rokov sú ubytované zdarma a na vyžiadanie zabezpečíme detskú postieľku. V tejto časti domu je možné sa ubytovať aj s Vašim psíkom či mačkou za poplatok 2eur/deň/zvieratko. V celom blízkom okolí nie je pripojenie na žiadneho z mobilných operátorov.",
                 "text_preview": "Táto časť domu poskytuje pohodlné ubytovanie pre  6 osôb. Avšak je možné ubytovať až dvojnásobný počet, teda 12 osôb. K dispozícii sú tri samostatné spálne (2x štvorlôžková, 1x dvojlôžková), obývačka s rozkladacou sedačkou, kuchyňa, kúpeľňa s vaňou spolu s WC ...",
@@ -52,15 +55,15 @@
                     },
                     {
                         "icon": "icon_set_2_icon-114",
-                        "title": "Válenda"
+                        "title": "Posteľ"
                     },
                     {
                         "icon": "icon_set_2_icon-104",
-                        "title": "Manželská postel"
+                        "title": "Manželská posteľ"
                     },
                     {
                         "icon": "icon_set_2_icon-111",
-                        "title": "Kúpeľna s WC"
+                        "title": "Kúpeľňa s WC"
                     },
                     {
                         "icon": "icon_set_1_icon-22",
@@ -72,10 +75,10 @@
                         "text": "2x štvorlôžková spálňa"
                     },
                     {
-                        "text": "1x dvojlôžková spálňa"
+                        "text": "elektrická varná platňa"
                     },
                     {
-                        "text": "elektrická varná platňa"
+                        "text": "1x dvojlôžková spálňa"
                     },
                     {
                         "text": "rúra"
@@ -120,70 +123,22 @@
                 "button_lable": "Detail",
                 "img": "img/groundfloor/preview.jpg",
                 "imgAlt": "",
-                "title": "Prízemná časť s wellness",
-                "title_preview": "Táto časť chlapupy ponúka ubytovanie pre 4 osôb s možnosťou využitia wellness.",
+                "title": "Okolie chalupy",
+                "title_preview": "",
                 "text": "Prízemie ponúka ubytovanie pre štyri osoby. Táto časť domu je dimenzovaná pre dve dospelé osoby a dve deti. K dispozícii sú dve samostatné spálne (2x dvojlôžková), kuchyňa (elektrická varná platňa, rúra, chladnička, mikrovlnná rúra, umývačka riadku, kanvica, kávovar). Kúpeľňa s vaňou a sprchovým kútom, spolu s WC a jedno samostatné WC. V spoločenskej miestnosti spojenej s jedálňou je krb a vstup na zastrešenú terasu, z ktorej je priamy výhľad na detské ihrisko a obrovskú trampolínu. Hostia majú možnosť využiť saunu (fínsku alebo infra) a vírivku. K ďalšiemu vybaveniu patrí TV, WiFi, práčka, fén, množstvo hračiek a spoločenských hier. V celom blízkom okolí nie je možné pripojenie na žiadneho mobilného operátora.",
                 "text_preview": "Prízemie ponúka ubytovanie pre štyri osoby. Táto časť domu je dimenzovaná pre dve dospelé osoby a dve deti. K dispozícii sú dve samostatné spálne (2x dvojlôžková), kuchyňa (elektrická varná platňa, rúra, chladnička, mikrovlnná rúra, umývačka riadku, kanvica, kávovar)...",
-                "price": "170€",
-                "unit": "eur/noc",
+                "price": "",
+                "unit": "",
                 "slider": "slider_groundfloor",
                 "reserveddate": [],
                 "facilities": [
-                    {
-                        "icon": "icon_set_2_icon-116",
-                        "title": "TV"
-                    },
-                    {
-                        "icon": "icon_set_1_icon-86",
-                        "title": "Wifi"
-                    },
-                    {
-                        "icon": "icon_set_2_icon-104",
-                        "title": "Manželská postel"
-                    },
-                    {
-                        "icon": "icon_set_2_icon-111",
-                        "title": "Kúpeľna s WC"
-                    }
+                   
                 ],
                 "facilities_text": [
-                    {
-                        "text": "2x dvojlôžková spálňa"
-                    },
-                    {
-                        "text": "elektrická varná platňa"
-                    },
-                    {
-                        "text": "rúra"
-                    },
-                    {
-                        "text": "chladnička"
-                    },
-                    {
-                        "text": "mikrovlnná rúra"
-                    },
-                    {
-                        "text": "umývačka riadku"
-                    },
-                    {
-                        "text": "varná konvica"
-                    },
-                    {
-                        "text": "kávovar"
-                    },
-                    {
-                        "text": "vírivá vaňa"
-                    },
-                    {
-                        "text": "sauna"
-                    }
+                    
                 ],
                 "prices": [
-                    {
-                        "text": "2 osoby ",
-                        "value": 170,
-                        "unit": "eur/noc"
-                    }
+                    
                 ]
             }
         ],
@@ -217,7 +172,7 @@
             },
             {
                 "id": 3,
-                "menu_lable": "Cikloturistika",
+                "menu_lable": "Cykloturistika",
                 "link": "#cycling",
                 "img": "img/activities_3.jpg",
                 "thumbnail": "img/activities_3_thumb.jpg",
@@ -246,7 +201,7 @@
                 "medium": "img/loft/1_medium.jpg",
                 "small": "img/loft/1_small.jpg",
                 "large": "img/loft/1_large.jpg",
-                "text": "Text pre obrazovku cislo slider_1"
+                "text": ""
             },
             {
                 "id": 2,
@@ -369,7 +324,7 @@
                 "medium": "img/groundfloor/1_medium.jpg",
                 "small": "img/groundfloor/1_small.jpg",
                 "large": "img/groundfloor/1_large.jpg",
-                "text": "Text pre obrazovku cislo slider_2"
+                "text": ""
             },
             {
                 "id": 2,
@@ -505,14 +460,14 @@
                 "id": 2,
                 "img": "img/slides_bg/slide_2.jpg",
                 "imgAlt": "slidebg2",
-                "laier1text": "Objavujte nadherné miesta",
+                "laier1text": "PRÁZDNINY V ŠTIAVNICKÝCH VRCHOCH",
                 "laier2text": "Chalupa / Aktivity / Zážitky"
             },
             {
                 "id": 3,
                 "img": "img/slides_bg/slide_3.jpg",
                 "imgAlt": "slidebg3",
-                "laier1text": "Vychutnajte si u nás krásne chvíle",
+                "laier1text": "PRÁZDNINY V ŠTIAVNICKÝCH VRCHOCH",
                 "laier2text": "Chalupa / Aktivity / Zážitky"
             }
         ]

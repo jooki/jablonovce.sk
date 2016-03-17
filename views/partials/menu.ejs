@@ -24,13 +24,12 @@
                              <li class="submenu">
                                 <a href="javascript:void(0);" class="show-submenu"><%= menu[1].label %><i class="icon-down-open-mini"></i></a>
                                 <ul>
-                                	<li><a class='page-scroll' href='/<%= activity.route %>'><%= activity.label %></a></li>
                                     <% content.activities.forEach(function(activ){ %>
                                         <li><a class='page-scroll' href="/<%= activ.link %>"><%= activ.menu_lable %></a></li>
                                      <% }); %>  
                                 </ul>
                             </li>
-                            
+                             <li><a href='<%= documents.route %>'><%= documents.label %></a></li>
                             <li><a href='<%= contacts.route %>'><%= contacts.label %></a></li>
                             <!--<li><a href='/login'>login</a></li>-->
                             
