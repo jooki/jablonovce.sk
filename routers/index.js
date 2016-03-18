@@ -27,9 +27,9 @@ module.exports = function (app) {
 
    
     // load async reservation  and prepare variable  
-    router.use(['/loft', '/groundfloor'], function (req, res, next) {
+    router.use(['/rezervacia', '/okolie'], function (req, res, next) {
         var path = req.baseUrl.substring(1);
-        res.locals.data.accommodation = (path == 'loft') ? 0 : 1;
+        res.locals.data.accommodation = (path == 'rezervacia') ? 0 : 1;
         res.locals.data.url_referer = 'reservation';
         setTimeout(function () {
             var rl = new Reserved(path);
@@ -52,17 +52,26 @@ module.exports = function (app) {
         res.redirect('/');
     });
 
-    router.get('/contacts', function (req, res) {
+    router.get('/kontakt', function (req, res) {
         res.locals.data.url_referer = 'contacts';
         res.render('contacts.ejs', res.locals.data);
     });
 
-    router.get('/loft', function (req, res) {
+    router.get('/rezervacia', function (req, res) {
         res.render('reservation.ejs', res.locals.data);
     });
 
-    router.get('/groundfloor', function (req, res) {
+    router.get('/okolie', function (req, res) {
         res.render('reservation.ejs', res.locals.data);
+    });
+    
+    router.get('/dokumenty', function (req, res) {
+       // res.render('documents.ejs', res.locals.data);
+        res.redirect('/');
+    });
+    
+    router.get('/galeria', function (req, res) {
+        res.render('gallery.ejs', res.locals.data);
     });
 
    

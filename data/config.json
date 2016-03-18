@@ -39,11 +39,6 @@
     "instagram": {
         "link": "https://www.instagram.com/jablonovce"
     },
-    "about": {
-        "route": "/about",
-        "sysLink": "/app/pages/about",
-        "label": "O nás"
-    },
     "activity": {
         "route": "#activities",
         "label": "Aktivity"
@@ -52,35 +47,42 @@
         "route": "#acomodation",
         "label": "Ubytovanie"
     },
+     "about": {
+        "route": "/onas",
+        "sysLink": "/views/about",
+        "label": "O nás"
+    },
     "loft": {
-        "route": "/loft",
-        "sysLink": "/app/pages/reservation:0",
+        "route": "/rezervacia",
+        "sysLink": "/views/reservation:0",
         "label": "Ubytovanie "
     },
     "groundfloor": {
-        "route": "/groundfloor",
-        "sysLink": "/app/pages/reservation:1",
+        "route": "/okolie",
+        "sysLink": "/views/reservation:1",
         "label": "Okolie chalupy "
     },
     "contacts": {
-        "route": "/contacts",
-        "sysLink": "/app/pages/contacts",
+        "route": "/kontakt",
+        "sysLink": "/views/contacts",
         "label": "Kontakt"
     },
     "documents": {
-        "route": "/documents",
-        "sysLink": "/app/pages/documents",
+        "route": "/dokumenty",
+        "sysLink": "/views/gallery",
         "label": "Dokumenty"
     },
     "gallery": {
-        "route": "/gallery",
-        "sysLink": "/app/pages/gallery",
-        "label": "Galéria"
+        "route": "/galeria",
+        "sysLink": "/views/gallery",
+        "label": "Galéria", 
+        "labelPage": "Galéria obrázkov chalupy a okolia", 
+        "labelSubText": "" 
     },
     "lang": "sk",
     "multy_lang_using": false,
     "title": "Chalupa Jabloňovce",
-    "web_keywords": "farm activities, itineraries, farm holidays, country holidays, bed and breakfast, hotel, country hotel",
+    "web_keywords": "chalupa jablonovce, chalupa jabloňovce, čas na oddych, príjemné ubytovanie, relax, chata, chata v prirode, rybačka na chate",
     "charset": "utf-8",
     "description": "Chalupa Jabloňovce",
     "google_analytics": "",

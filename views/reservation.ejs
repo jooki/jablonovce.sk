@@ -1,7 +1,6 @@
 <!-- views/reservation.ejs -->
 <% layout('layout') -%>
 <% block('stylesheet').replace('<link href="css/slider-pro.min.css" rel="stylesheet">') -%>
-<!--<% block('stylesheet').append('<link href="eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" rel="stylesheet">') -%>-->
 <% block('stylesheet').append('<link href="css/date_time_picker.css" rel="stylesheet">') -%>
 
 <main>
@@ -36,6 +35,7 @@
                         <p>
                             <%= content.accommodations[accommodation].text %>
                         </p>
+                        <%if (content.accommodations[accommodation].facilities_text.length > 0) {%>
                         <h4>Vybavenie časti chalupy</h4>
                         <div class="row">
                             <div class="col-md-6 col-sm-6">
@@ -63,6 +63,8 @@
                                 </ul>
                             </div>
                         </div><!-- End row  -->
+                        <% }%>
+                        <%if (content.accommodations[accommodation].prices.length > 0) {%>
                         <h4>Ceny ubytovania</h4>
                         <!-- start pricing table -->
                         <table class="table table-striped">
@@ -76,6 +78,7 @@
                                     <% }) %>
                             </tbody>
                         </table><!-- End pricing table -->
+                        <% }%>
                     </div><!-- End col-md-9  -->
                 </div><!-- End row  -->
                 <hr>
