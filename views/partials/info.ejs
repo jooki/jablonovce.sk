@@ -6,26 +6,14 @@
     <%- content.info.description%>
 </div>
 <div class="row">
+    <% content.infos.forEach(function(info){ %>
     <div class="col-md-4">
         <div class="box_home">
-            <i class="icon_set_2_icon-104"></i>
-            <h3><%= content.infos[0].title%></h3>
-            <%- content.infos[0].description%>
+            <i class="<%= info.icon %>"></i>
+            <h3><%= info.title%></h3>
+            <%- info.description%>
         </div>
     </div>
-    <div class="col-md-4">
-        <div class="box_home">
-            <i class="icon_set_2_icon-108"></i>
-            <h3><%= content.infos[1].title%></h3>
-            <%- content.infos[1].description%>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="box_home">
-            <i class="icon_set_3-fisherman"></i>
-            <h3><%= content.infos[2].title%></h3>
-            <%- content.infos[2].description%>
-        </div>
-    </div>
+    <% })%>
 </div><!-- End row -->
 </div><!-- End container -->
