@@ -70,7 +70,7 @@
 					}
 
 					infowindow = new google.maps.InfoWindow({
-						content: baloon_text
+						content:  baloon_text
 					});
 
 					infowindow.open(map,marker);

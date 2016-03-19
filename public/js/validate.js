@@ -19,7 +19,6 @@ jQuery(document).ready(function () {
                 check_out: $('#check_out').val(),
                 adults: $('#adults').val(),
                 children: $('#children').val(),
-                room_type: $('#room_type').val(),
                 name: $('#name_booking').val(),
                 email: $('#email_booking').val(),
                 phone: $('#phone_booking').val()

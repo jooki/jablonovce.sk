@@ -43,17 +43,7 @@
         </div>
         <!-- End row -->
         <div class="row">
-            <div class="col-md-12">
-                <div class="form-group">
-                    <label><%= post_reservation.room_type %></label>
-                    <select class="form-control" name="room_type" id="room_type">
-                        <option value=""><%= post_reservation.room_type_select %></option>
-                        <% content.accommodations.forEach(function(accomm){%>
-                            <option value='<%= accomm.type %>'><%= accomm.title %></option>
-                        <% });%>
-                    </select>
-                </div>
-            </div>
+
             <div class="col-md-12 col-sm-6">
                 <div class="form-group">
                     <label><%= post_reservation.name %></label>

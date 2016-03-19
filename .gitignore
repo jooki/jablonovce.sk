@@ -8,7 +8,7 @@ node_modules
 *.out
 *.pid
 *.gz
-*.DS*
+*.DS_Store
 
 pids
 logs

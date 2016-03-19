@@ -115,3 +115,51 @@
         //         next(err);  
         //     }
         // })
+
+
+
+
+
+
+
+<div class="container margin_60">
+            <div class="main_title">
+                <span></span>
+                <h2><%= content.accommodations[0].title %></h2>
+                <p>
+                    <%= content.accommodations[0].title_preview %>
+                </p>
+            </div>
+            <hr>
+            <div class="row magnific-gallery add_bottom_60 ">
+             <% content[content.accommodations[0].slider].forEach(function(pic){ %>
+
+                <div class="col-md-3 col-sm-3">
+                    <a href="<%= pic.large %>" title="<%= pic.label %>">
+                    <img src="<%= pic.thumbnail %>" alt="<%= pic.imgAlt %>" class="img-responsive styled"></a>
+                </div>
+             <% }) %>
+            </div>
+            <!-- End row -->
+        </div>
+        <!-- End container -->
+        <div class="container margin_60">
+            <div class="main_title">
+                
+                <h2><%= content.accommodations[1].title %></h2>
+                <p>
+                    <%= content.accommodations[1].title_preview %>
+                </p>
+            </div>
+            <hr>
+            <div class="row magnific-gallery add_bottom_60 ">
+             <% content[content.accommodations[1].slider].forEach(function(pic){ %>
+
+                <div class="col-md-3 col-sm-3">
+                    <a href="<%= pic.large %>" title="<%= pic.label %>">
+                    <img src="<%= pic.thumbnail %>" alt="<%= pic.imgAlt %>" class="img-responsive styled"></a>
+                </div>
+             <% }) %>
+            </div>
+            <!-- End row -->
+        </div>

@@ -16,8 +16,8 @@
             {"id": 3,
             "title": "Vyskúšajte u nás rybolov",
             "description" : "",
-            "description_" : "<p>Starostlivo udržiavaný rybník je ideálne miesto pre aktívny odpočinok. Kapre, karasy a ???.  Ulovte toho najväčšieho a porazte rekord uvedený na tabuli pod mólom.Rybársky preukaz nie je nutný, je však nutné priniesť si vlastné rybárske vybavenie.</p>",
-            "icon":"icon_set_1_icon-40"
+            "description_" : "<p>Starostlivo udržiavaný rybník je ideálne miesto pre aktívny odpočinok. Kapre, karasy a ???.  Ulovte toho najväčšieho a porazte rekord uvedený na tabuli pod mólom. Rybársky preukaz nie je nutný, je však nutné priniesť si vlastné rybárske vybavenie.</p>",
+            "icon":"icon_set_3_restaurant-7"
             }
         ],
         "info":{
@@ -26,20 +26,20 @@
         },
         "aboutas":{
             "title": "\"Vaši štvornohí členovia rodiny sú aj našimi priateľmi\"",
-            "description" : "<p>Samozrejme, že si môžete Vašich štvornohých zobrať so sebou. Ideálne prostredie na dlhé spoločné prechádzky, plávanie v jazere či čľapotanie v potoku. Vaši miláčikovia si to u nás tiež zamilujú. V podkrovnej často domu sa môžete ubytovať pekne všetci spolu. Ak psík nie je zvyknutý zostávať vo Vašej spálni, pre tieto prípady tu máme izbu špeciálne pre psov. Je v hospodárskej časti domu, v zime dobre vykurovaná a plná pelechov na odpočinok.</p>"
+            "description" : "<p>Samozrejme, že si môžete Vašich štvornohých zobrať so sebou. Ideálne prostredie na dlhé spoločné prechádzky, plávanie v jazere či čľapotanie v potoku. Vaši miláčikovia si to u nás tiež zamilujú. V podkrovnej často domu sa môžete ubytovať pekne všetci spolu. Ak psík nie je zvyknutý zostávať vo Vašej spálni, pre tieto prípady tu máme izbu špeciálne pre psov. Je v hospodárskej časti domu, v zime dobre vykurovaná a plná pelechov na odpočinok. </p>"
         },
         "accommodations": [
             {
                 "id": 1,
-                "type": "loft",
+                "type": "rezervacia",
                 "link": "",
                 "button_lable": "Detail",
                 "img": "img/loft/preview.jpg",
-                "imgAlt": "",
+                "imgAlt": "Chalupa Jabloňovce Ubytovanie",
                 "title": "Ubytovanie",
                 "title_preview": "Táto časť chlapupy ponúka ubytovanie pre 6 osôb s možnosťou až do 12 osôb.",
-                "text": "Táto časť domu poskytuje pohodlné ubytovanie pre  6 osôb. Avšak je možné ubytovať až dvojnásobný počet, teda 12 osôb. K dispozícii sú tri samostatné spálne (2x štvorlôžková, 1x dvojlôžková), obývačka s rozkladacou sedačkou, kuchyňa (elektrická varná platňa, rúra, chladnička, mikrovlnka, kanvica) a kúpeľňa s vaňou spolu s WC.  Súčasťou vybavenia je WiFi pripojenie a TV. Deti do 2 rokov sú ubytované zdarma a na vyžiadanie zabezpečíme detskú postieľku. V tejto časti domu je možné sa ubytovať aj s Vašim psíkom či mačkou za poplatok 2eur/deň/zvieratko. V celom blízkom okolí nie je pripojenie na žiadneho z mobilných operátorov.",
-                "text_preview": "Táto časť domu poskytuje pohodlné ubytovanie pre  6 osôb. Avšak je možné ubytovať až dvojnásobný počet, teda 12 osôb. K dispozícii sú tri samostatné spálne (2x štvorlôžková, 1x dvojlôžková), obývačka s rozkladacou sedačkou, kuchyňa, kúpeľňa s vaňou spolu s WC ...",
+                "text": "Táto časť chalupy poskytuje pohodlné ubytovanie pre 6 osôb. Avšak je možné ubytovať až dvojnásobný počet, teda 12 osôb. K dispozícii sú tri samostatné spálne (2x štvorlôžková, 1x dvojlôžková), obývačka s rozkladacou sedačkou, kuchyňa (elektrická varná platňa, rúra, chladnička, mikrovlnka, kanvica) a kúpeľňa s vaňou spolu s WC.  Súčasťou vybavenia je WiFi pripojenie a TV. Deti do 2 rokov sú ubytované zdarma a na vyžiadanie zabezpečíme detskú postieľku. V tejto časti domu je možné sa ubytovať aj s Vašim psíkom či mačkou za poplatok 2eur/deň/zvieratko. V celom blízkom okolí nie je pripojenie na žiadneho z mobilných operátorov.",
+                "text_preview": "Táto časť chalupy poskytuje pohodlné ubytovanie pre  6 osôb. Avšak je možné ubytovať až dvojnásobný počet, teda 12 osôb. K dispozícii sú tri samostatné spálne (2x štvorlôžková, 1x dvojlôžková), obývačka s rozkladacou sedačkou, kuchyňa, kúpeľňa s vaňou spolu s WC ...",
                 "price": "od 30€",
                 "unit": "eur/noc",
                 "slider": "slider_loft",
@@ -118,15 +118,15 @@
             },
             {
                 "id": 2,
-                "type": "groundfloor",
+                "type": "okolie",
                 "link": "",
                 "button_lable": "Detail",
                 "img": "img/groundfloor/preview.jpg",
-                "imgAlt": "",
+                "imgAlt": "Chalupa Jabloňovce Okolie",
                 "title": "Okolie chalupy",
-                "title_preview": "",
-                "text": "Prízemie ponúka ubytovanie pre štyri osoby. Táto časť domu je dimenzovaná pre dve dospelé osoby a dve deti. K dispozícii sú dve samostatné spálne (2x dvojlôžková), kuchyňa (elektrická varná platňa, rúra, chladnička, mikrovlnná rúra, umývačka riadku, kanvica, kávovar). Kúpeľňa s vaňou a sprchovým kútom, spolu s WC a jedno samostatné WC. V spoločenskej miestnosti spojenej s jedálňou je krb a vstup na zastrešenú terasu, z ktorej je priamy výhľad na detské ihrisko a obrovskú trampolínu. Hostia majú možnosť využiť saunu (fínsku alebo infra) a vírivku. K ďalšiemu vybaveniu patrí TV, WiFi, práčka, fén, množstvo hračiek a spoločenských hier. V celom blízkom okolí nie je možné pripojenie na žiadneho mobilného operátora.",
-                "text_preview": "Prízemie ponúka ubytovanie pre štyri osoby. Táto časť domu je dimenzovaná pre dve dospelé osoby a dve deti. K dispozícii sú dve samostatné spálne (2x dvojlôžková), kuchyňa (elektrická varná platňa, rúra, chladnička, mikrovlnná rúra, umývačka riadku, kanvica, kávovar)...",
+                "title_preview": "Vychutnajte si príjemné chvíle v okolý chalupy.",
+                "text": "Chalupa stojí na hranici chránenej oblasti Štiavnické vrchy necelé tri kilometre od dedinky Jabloňovce. Zo všetkých strán je obklopená lesom, spodnú časť pozemku lemuje potok. Dominantu tvorí rybník s príjemným posedením. Okolo rybníka je osvetlená vychádzková cestička, s netradičnou výsadbou. K dispozícii je ihrisko, trampolína a domček na strome, nie len pre deti.",
+                "text_preview": "Chalupa stojí na hranici chránenej oblasti Štiavnické vrchy necelé tri kilometre od dedinky Jabloňovce. Zo všetkých strán je obklopená lesom, spodnú časť pozemku lemuje potok. Dominantu tvorí rybník s príjemným posedením. Okolo rybníka je osvetlená vychádzková cestička, s netradičnou výsadbou. K dispozícii je ihrisko, trampolína a domček na strome, nie len pre deti.",
                 "price": "",
                 "unit": "",
                 "slider": "slider_groundfloor",
@@ -196,122 +196,145 @@
                 "id": 1,
                 "link": "",
                 "img": "",
-                "imgAlt": "",
+                "imgAlt": "Chalupa Jabloňovce Ubytovanie",
                 "thumbnail": "img/loft/1_thumb.jpg",
                 "medium": "img/loft/1_medium.jpg",
                 "small": "img/loft/1_small.jpg",
                 "large": "img/loft/1_large.jpg",
-                "text": ""
+                "text": "",
+                "label":""
             },
             {
                 "id": 2,
                 "link": "",
                 "img": "",
-                "imgAlt": "",
+                "imgAlt": "Chalupa Jabloňovce Ubytovanie",
                 "thumbnail": "img/loft/2_thumb.jpg",
                 "medium": "img/loft/2_medium.jpg",
                 "small": "img/loft/2_small.jpg",
                 "large": "img/loft/2_large.jpg",
-                "text": ""
+                "text": "",
+                "label":""
             },
             {
                 "id": 3,
                 "link": "",
                 "img": "",
-                "imgAlt": "",
+                "imgAlt": "Chalupa Jabloňovce Ubytovanie",
                 "thumbnail": "img/loft/3_thumb.jpg",
                 "medium": "img/loft/3_medium.jpg",
                 "small": "img/loft/3_small.jpg",
                 "large": "img/loft/3_large.jpg",
-                "text": ""
+                "text": "",
+                "label":""
             },
             {
                 "id": 4,
                 "link": "",
                 "img": "",
-                "imgAlt": "",
+                "imgAlt": "Chalupa Jabloňovce Ubytovanie",
                 "thumbnail": "img/loft/4_thumb.jpg",
                 "medium": "img/loft/4_medium.jpg",
                 "small": "img/loft/4_small.jpg",
                 "large": "img/loft/4_large.jpg",
-                "text": ""
+                "text": "",
+                "label":""
             },
             {
                 "id": 5,
                 "link": "",
                 "img": "",
-                "imgAlt": "",
+                "imgAlt": "Chalupa Jabloňovce Ubytovanie",
                 "thumbnail": "img/loft/5_thumb.jpg",
                 "medium": "img/loft/5_medium.jpg",
                 "small": "img/loft/5_small.jpg",
                 "large": "img/loft/5_large.jpg",
-                "text": ""
+                "text": "",
+                "label":""
             },
             {
                 "id": 6,
                 "link": "",
                 "img": "",
-                "imgAlt": "",
+                "imgAlt": "Chalupa Jabloňovce Ubytovanie",
                 "thumbnail": "img/loft/6_thumb.jpg",
                 "medium": "img/loft/6_medium.jpg",
                 "small": "img/loft/6_small.jpg",
                 "large": "img/loft/6_large.jpg",
-                "text": ""
+                "text": "",
+                "label":""
             },
             {
                 "id": 7,
                 "link": "",
                 "img": "",
-                "imgAlt": "",
+                "imgAlt": "Chalupa Jabloňovce Ubytovanie",
                 "thumbnail": "img/loft/7_thumb.jpg",
                 "medium": "img/loft/7_medium.jpg",
                 "small": "img/loft/7_small.jpg",
                 "large": "img/loft/7_large.jpg",
-                "text": ""
+                "text": "",
+                "label":""
             },
             {
                 "id": 8,
                 "link": "",
                 "img": "",
-                "imgAlt": "",
+                "imgAlt": "Chalupa Jabloňovce Ubytovanie",
                 "thumbnail": "img/loft/8_thumb.jpg",
                 "medium": "img/loft/8_medium.jpg",
                 "small": "img/loft/8_small.jpg",
                 "large": "img/loft/8_large.jpg",
-                "text": ""
+                "text": "",
+                "label":""
             },
             {
                 "id": 9,
                 "link": "",
                 "img": "",
-                "imgAlt": "",
+                "imgAlt": "Chalupa Jabloňovce Ubytovanie",
                 "thumbnail": "img/loft/9_thumb.jpg",
                 "medium": "img/loft/9_medium.jpg",
                 "small": "img/loft/9_small.jpg",
                 "large": "img/loft/9_large.jpg",
-                "text": ""
+                "text": "",
+                "label":""
             },
             {
                 "id": 10,
                 "link": "",
                 "img": "",
-                "imgAlt": "",
+                "imgAlt": "Chalupa Jabloňovce Ubytovanie",
                 "thumbnail": "img/loft/10_thumb.jpg",
                 "medium": "img/loft/10_medium.jpg",
                 "small": "img/loft/10_small.jpg",
                 "large": "img/loft/10_large.jpg",
-                "text": ""
+                "text": "",
+                "label":""
             },
             {
                 "id": 11,
                 "link": "",
                 "img": "",
-                "imgAlt": "",
+                "imgAlt": "Chalupa Jabloňovce Ubytovanie",
                 "thumbnail": "img/loft/11_thumb.jpg",
                 "medium": "img/loft/11_medium.jpg",
                 "small": "img/loft/11_small.jpg",
                 "large": "img/loft/11_large.jpg",
-                "text": ""
+                "text": "",
+                "label":""
+            },
+            {
+                "id": 12,
+                "link": "",
+                "img": "",
+                "imgAlt": "Chalupa Jabloňovce Ubytovanie",
+                "thumbnail": "img/loft/12_thumb.jpg",
+                "medium": "img/loft/12_medium.jpg",
+                "small": "img/loft/12_small.jpg",
+                "large": "img/loft/12_large.jpg",
+                "text": "",
+                "label":""
             }
         ],
         "slider_groundfloor": [
@@ -319,133 +342,193 @@
                 "id": 1,
                 "link": "",
                 "img": "",
-                "imgAlt": "",
+                "imgAlt": "Chalupa Jabloňovce Okolie",
                 "thumbnail": "img/groundfloor/1_thumb.jpg",
                 "medium": "img/groundfloor/1_medium.jpg",
                 "small": "img/groundfloor/1_small.jpg",
                 "large": "img/groundfloor/1_large.jpg",
-                "text": ""
+                "text": "",
+                "label":""
             },
             {
                 "id": 2,
                 "link": "",
                 "img": "",
-                "imgAlt": "",
+                "imgAlt": "Chalupa Jabloňovce Okolie",
                 "thumbnail": "img/groundfloor/2_thumb.jpg",
                 "medium": "img/groundfloor/2_medium.jpg",
                 "small": "img/groundfloor/2_small.jpg",
                 "large": "img/groundfloor/2_large.jpg",
-                "text": ""
+                "text": "",
+                "label":""
             },
             {
                 "id": 3,
                 "link": "",
                 "img": "",
-                "imgAlt": "",
+                "imgAlt": "Chalupa Jabloňovce Okolie",
                 "thumbnail": "img/groundfloor/3_thumb.jpg",
                 "medium": "img/groundfloor/3_medium.jpg",
                 "small": "img/groundfloor/3_small.jpg",
                 "large": "img/groundfloor/3_large.jpg",
-                "text": ""
+                "text": "",
+                "label":""
             },
             {
                 "id": 4,
                 "link": "",
                 "img": "",
-                "imgAlt": "",
+                "imgAlt": "Chalupa Jabloňovce Okolie",
                 "thumbnail": "img/groundfloor/4_thumb.jpg",
                 "medium": "img/groundfloor/4_medium.jpg",
                 "small": "img/groundfloor/4_small.jpg",
                 "large": "img/groundfloor/4_large.jpg",
-                "text": ""
+                "text": "",
+                "label":""
             },
             {
                 "id": 5,
                 "link": "",
                 "img": "",
-                "imgAlt": "",
+                "imgAlt": "Chalupa Jabloňovce Okolie",
                 "thumbnail": "img/groundfloor/5_thumb.jpg",
                 "medium": "img/groundfloor/5_medium.jpg",
                 "small": "img/groundfloor/5_small.jpg",
                 "large": "img/groundfloor/5_large.jpg",
-                "text": ""
+                "text": "",
+                "label":""
             },
             {
                 "id": 6,
                 "link": "",
                 "img": "",
-                "imgAlt": "",
+                "imgAlt": "Chalupa Jabloňovce Okolie",
                 "thumbnail": "img/groundfloor/6_thumb.jpg",
                 "medium": "img/groundfloor/6_medium.jpg",
                 "small": "img/groundfloor/6_small.jpg",
                 "large": "img/groundfloor/6_large.jpg",
-                "text": ""
+                "text": "",
+                "label":""
             },
             {
                 "id": 7,
                 "link": "",
                 "img": "",
-                "imgAlt": "",
+                "imgAlt": "Chalupa Jabloňovce Okolie",
                 "thumbnail": "img/groundfloor/7_thumb.jpg",
                 "medium": "img/groundfloor/7_medium.jpg",
                 "small": "img/groundfloor/7_small.jpg",
                 "large": "img/groundfloor/7_large.jpg",
-                "text": ""
+                "text": "",
+                "label":""
             },
             {
                 "id": 8,
                 "link": "",
                 "img": "",
-                "imgAlt": "",
+                "imgAlt": "Chalupa Jabloňovce Okolie",
                 "thumbnail": "img/groundfloor/8_thumb.jpg",
                 "medium": "img/groundfloor/8_medium.jpg",
                 "small": "img/groundfloor/8_small.jpg",
                 "large": "img/groundfloor/8_large.jpg",
-                "text": ""
+                "text": "",
+                "label":""
             },
             {
                 "id": 9,
                 "link": "",
                 "img": "",
-                "imgAlt": "",
+                "imgAlt": "Chalupa Jabloňovce Okolie",
                 "thumbnail": "img/groundfloor/9_thumb.jpg",
                 "medium": "img/groundfloor/9_medium.jpg",
                 "small": "img/groundfloor/9_small.jpg",
                 "large": "img/groundfloor/9_large.jpg",
-                "text": ""
+                "text": "",
+                "label":""
             },
             {
                 "id": 10,
                 "link": "",
                 "img": "",
-                "imgAlt": "",
+                "imgAlt": "Chalupa Jabloňovce Okolie",
                 "thumbnail": "img/groundfloor/10_thumb.jpg",
                 "medium": "img/groundfloor/10_medium.jpg",
                 "small": "img/groundfloor/10_small.jpg",
                 "large": "img/groundfloor/10_large.jpg",
-                "text": ""
+                "text": "",
+                "label":""
             },
             {
                 "id": 11,
                 "link": "",
                 "img": "",
-                "imgAlt": "",
+                "imgAlt": "Chalupa Jabloňovce Okolie",
                 "thumbnail": "img/groundfloor/11_thumb.jpg",
                 "medium": "img/groundfloor/11_medium.jpg",
                 "small": "img/groundfloor/11_small.jpg",
                 "large": "img/groundfloor/11_large.jpg",
-                "text": ""
+                "text": "",
+                "label":""
             },
             {
                 "id": 12,
                 "link": "",
                 "img": "",
-                "imgAlt": "",
+                "imgAlt": "Chalupa Jabloňovce Okolie",
                 "thumbnail": "img/groundfloor/12_thumb.jpg",
                 "medium": "img/groundfloor/12_medium.jpg",
                 "small": "img/groundfloor/12_small.jpg",
                 "large": "img/groundfloor/12_large.jpg",
-                "text": ""
+                "text": "",
+                "label":""
+            },
+            {
+                "id": 13,
+                "link": "",
+                "img": "",
+                "imgAlt": "Chalupa Jabloňovce Okolie",
+                "thumbnail": "img/groundfloor/13_thumb.jpg",
+                "medium": "img/groundfloor/13_medium.jpg",
+                "small": "img/groundfloor/13_small.jpg",
+                "large": "img/groundfloor/13_large.jpg",
+                "text": "",
+                "label":""
+            },
+            {
+                "id": 14,
+                "link": "",
+                "img": "",
+                "imgAlt": "Chalupa Jabloňovce Okolie",
+                "thumbnail": "img/groundfloor/14_thumb.jpg",
+                "medium": "img/groundfloor/14_medium.jpg",
+                "small": "img/groundfloor/14_small.jpg",
+                "large": "img/groundfloor/14_large.jpg",
+                "text": "",
+                "label":""
+            },
+            {
+                "id": 15,
+                "link": "",
+                "img": "",
+                "imgAlt": "Chalupa Jabloňovce Okolie",
+                "thumbnail": "img/groundfloor/15_thumb.jpg",
+                "medium": "img/groundfloor/15_medium.jpg",
+                "small": "img/groundfloor/15_small.jpg",
+                "large": "img/groundfloor/15_large.jpg",
+                "text": "",
+                "label":""
+            },
+            {
+                "id": 16,
+                "link": "",
+                "img": "",
+                "imgAlt": "Chalupa Jabloňovce Okolie",
+                "thumbnail": "img/groundfloor/16_thumb.jpg",
+                "medium": "img/groundfloor/16_medium.jpg",
+                "small": "img/groundfloor/16_small.jpg",
+                "large": "img/groundfloor/16_large.jpg",
+                "text": "",
+                "label":""
             }
         ],
         "slider": [

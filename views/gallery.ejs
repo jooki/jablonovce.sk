@@ -1,0 +1,35 @@
+<% layout('layout') -%>
+    <main>
+        <section class="sub_header" id="bg_general">
+            <div class="sub_header_content">
+                <div class="animated fadeInDown">
+                    <h1><%= gallery.labelPage %></h1>
+                    <p>
+                        <%= gallery.labelSubText %>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- End Section -->
+        
+        <% content.accommodations.forEach(function(accommo){ %>
+        <div class="container margin_60">
+            <div class="main_title">
+                <span></span>
+                <h2><%= accommo.title %></h2>
+                <p><%= accommo.title_preview %></p>
+            </div>
+            <hr>
+          <div class="row magnific-gallery add_bottom_60 ">
+             <% content[accommo.slider].forEach(function(pic){ %>
+                <div class="col-md-3 col-sm-3">
+                    <a href="<%= pic.large %>" title="<%= pic.label %>">
+                    <img src="<%= pic.thumbnail %>" alt="<%= pic.imgAlt %>" class="img-responsive styled"></a>
+                </div>
+             <% }) %>
+            </div>  
+        </div>
+        <!-- End container -->
+        <% }) %>
+        
+    </main>

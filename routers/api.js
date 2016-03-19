@@ -13,7 +13,7 @@ var nodemailer = require('nodemailer');
 
 function extend(target) {
     var sources = [].slice.call(arguments, 1);
-    sources.forEach(function (source) {
+    sources.forEach(function(source) {
         for (var prop in source) {
             target[prop] = source[prop];
         }
@@ -27,18 +27,18 @@ function sendMailer(req, res, next) {
     var str = '';
     try {
         var transporter = nodemailer.createTransport(mailOptions.SMTP);
-        
+
         if (urlPath == 'contact') {
             mailOptions.subject = 'Kontaktovanie zákazníka';
             str = read(path(process.cwd(), 'views', 'emails', 'contact.ejs'), 'utf8');
-             
+
         } else {
             mailOptions.subject = 'Rezervácia';
             str = read(path(process.cwd(), 'views', 'emails', 'reservation.ejs'), 'utf8');
         }
         mailOptions.to = req.body.email;
-        mailOptions.html  = ejs.render(str, {'body':req.body});
-        transporter.sendMail(mailOptions, function (err, info) {
+        mailOptions.html = ejs.render(str, { 'body': req.body });
+        transporter.sendMail(mailOptions, function(err, info) {
             if (err) {
                 console.log('/api/sendMailer/error');
                 console.log(err);
@@ -65,14 +65,14 @@ var Reserved = require(path(process.cwd(), 'config', 'reserved'));
 const ERR_VALIDATION = '<% errors.forEach(function(error){ %><div class="error_message"><span><%= error.msg %></span></div> <% }) %>';
 
 var router = express.Router();
-module.exports = function (app) {
-    
+module.exports = function(app) {
+
     /**
      * Validation body contact
      * https://www.npmjs.com/package/express-validator 
      * Dependencies: https://www.npmjs.com/package/validator
      */
-    router.post('/contact', function (req, res, next) {
+    router.post('/contact', function(req, res, next) {
         req.checkBody("name", res.locals.data.validationError.name_IsEmpty).notEmpty();
         req.checkBody("lastname_contact", res.locals.data.validationError.lastname_IsEmpty).notEmpty();
         req.checkBody("email", res.locals.data.validationError.email_IsEmail).isEmail();
@@ -89,13 +89,13 @@ module.exports = function (app) {
         }
     });
 
-    router.post('/contact', sendMailer) 
-    
+    router.post('/contact', sendMailer)
+
     /**
      * Zapisanie do res.locals.databazy 
      * req.path vrati /api/contact to pomoze pri prelozdelenie 
      */
-    router.post('/contact', function (req, res, next) {
+    router.post('/contact', function(req, res, next) {
 
         userPost.create({
             type: 'contact',
@@ -104,7 +104,7 @@ module.exports = function (app) {
             email: req.body.email,
             phone: req.body.phone,
             message: req.body.message_contact
-        }, function (err, newDoc) {   // Callback is optional 
+        }, function(err, newDoc) {   // Callback is optional 
             // newDoc is the newly inserted document, including its _id 
             // newDoc has no key called notToBeSaved since its value was undefined 
             if (!err) {
@@ -121,20 +121,13 @@ module.exports = function (app) {
     });
 
     // Validation body booking
-    router.post('/reserve', function (req, res, next) {
+    router.post('/reserve', function(req, res, next) {
         req.checkBody("check_in", res.locals.data.validationError.check_in_IsEmpty).notEmpty();
         req.checkBody("check_out", res.locals.data.validationError.check_out_IsEmpty).notEmpty();
         req.checkBody("adults", res.locals.data.validationError.adults_isNumeric).isNumeric();
         req.checkBody("children", res.locals.data.validationError.children_isNumeric).isNumeric();
-        req.checkBody("room_type", res.locals.data.validationError.room_type_IsEmpty).notEmpty();
-        if (req.body.room_type == "loft") {
-            req.checkBody("adults", res.locals.data.validationError.adults_loft_IsInt).isInt({ min: 2, max: 12 });
-            req.checkBody("children", res.locals.data.validationError.children_loft_IsInt).isInt({ min: 0, max: 10 });
-        }
-        if (req.body.room_type == "groundfloor") {
-            req.checkBody("adults", res.locals.data.validationError.adults_groundfloor_IsInt).isInt({ min: 2, max: 4 });
-            req.checkBody("children", res.locals.data.validationError.children_groundfloor_IsInt).isInt({ min: 0, max: 2 });
-        }
+        req.checkBody("adults", res.locals.data.validationError.adults_loft_IsInt).isInt({ min: 2, max: 12 });
+        req.checkBody("children", res.locals.data.validationError.children_loft_IsInt).isInt({ min: 0, max: 10 });
         req.checkBody("name", res.locals.data.validationError.name_IsEmpty).notEmpty();
         req.checkBody("email", res.locals.data.validationError.email_IsEmail).isEmail();
         req.checkBody("phone", res.locals.data.validationError.phone_format).isNumeric();
@@ -148,11 +141,11 @@ module.exports = function (app) {
         }
     });
 
-    router.post('/reserve', sendMailer) 
+    router.post('/reserve', sendMailer)
     /**]
      * Zapisanie do res.locals.databazy 
      */
-    router.post('/reserve', function (req, res) {
+    router.post('/reserve', function(req, res) {
 
         userPost.create({
             type: 'booking',
@@ -160,11 +153,11 @@ module.exports = function (app) {
             check_out: req.body.check_out,
             adults: req.body.adults,
             children: req.body.children,
-            room_type: req.body.room_type,
+            room_type: 'loft',
             name: req.body.name,
             email: req.body.email,
             phone: req.body.phone
-        }, function (err, newDoc) {
+        }, function(err, newDoc) {
             if (!err) {
                 var html = "<div id='success_page' style='padding:20px 0'>"
                     + res.locals.data.validationStatus.thankyou + "<strong>" + req.body.name
