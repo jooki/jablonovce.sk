@@ -348,7 +348,7 @@ ul#contact_details_footer{
     text-align:right;
 }
 ul#contact_details_footer li{
-	margin-bottom:10px;
+	margin-bottom:0px;
 }
 input#email_newsletter_2.form-control{
 	border:none;

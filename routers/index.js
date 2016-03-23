@@ -26,17 +26,16 @@ module.exports = function (app) {
     });
 
    
-    // load async reservation  and prepare variable  
+    // load async reservation  and prepare variable  , '/okolie'
     router.use(['/rezervacia', '/okolie'], function (req, res, next) {
         var path = req.baseUrl.substring(1);
-        res.locals.data.accommodation = (path == 'rezervacia') ? 0 : 1;
+        res.locals.data.accommodation = (path == 'rezervacia') ? 0 : 1 ;
         res.locals.data.url_referer = 'reservation';
         setTimeout(function () {
             var rl = new Reserved(path);
             rl.getReservedDays(function (err, dates) {
                 rl.rangeReservetDates(dates, res.locals.data.lang, function (err, ret) {
                     res.locals.data.content.accommodations[res.locals.data.accommodation].reserveddate = ret;
-                    
                     next();
                 });
             });
@@ -66,8 +65,8 @@ module.exports = function (app) {
     });
     
     router.get('/dokumenty', function (req, res) {
-       // res.render('documents.ejs', res.locals.data);
-        res.redirect('/');
+        res.render('documents.ejs', res.locals.data);
+        // res.redirect('/');
     });
     
     router.get('/galeria', function (req, res) {

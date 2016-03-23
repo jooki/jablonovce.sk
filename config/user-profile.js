@@ -10,7 +10,7 @@ var database;
 var uri = 'nedb://' + path.join(process.cwd(), 'data', 'usersprofile')
 // var uri = 'nedb://memory';
 
-// Napojenie na databazy musi zbehnut aby bol oniciovany objekt v globalnej premennej
+// Napojenie na databazy musi zbehnut aby bolo iciovany objekt v globalnej premennej
 camo.connect(uri).then(function (db) {
     database = db;
 });

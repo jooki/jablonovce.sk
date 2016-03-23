@@ -1,0 +1,51 @@
+<!-- views/reservation.ejs -->
+<% layout('layout') -%>
+    <main>
+        <section class="sub_header" id="bg_room">
+            <div class="sub_header_content">
+                <div class="animated fadeInDown">
+                    <h1>Dokumenty na stahnutie</h1>
+                    <p>
+
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- End Section -->
+
+        <div class="container margin_60">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="panel-group" id="accordion">
+                        <% files.forEach(function(file){ %>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><%= file.title %> <i class="indicator icon-minus-circle pull-right"></i></a></h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <div class="text-field file">
+                                        <div class="text-field-right">
+                                            <div class="title"><a href="<%= file.filename %>" download><%=  file.title %> </a></div>
+                                            <div class="text">
+                                                <p><%- file.description %></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       <% }) %>
+                    </div>
+                </div>
+                <!-- End col-md-8 -->
+                <div class="col-md-4">
+                    <!-- základné vybavenie -->
+                    <%- partial('partials/reservation/contact_box') %>
+                </div>
+                <!-- End col-md-4 -->
+            </div>
+            <!-- End row -->
+        </div>
+        <!-- End Container -->
+    </main>

@@ -70,4 +70,4 @@ app.use(function (err, req, res, next) {
 
 
 app.listen(port);
-console.log('Your application is running on http://localhost' + port);
+console.log('Your application is running on http://localhost:' + port);

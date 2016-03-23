@@ -53,7 +53,7 @@ function toggleChevron(e) {
     $(e.target)
         .prev('.panel-heading')
         .find("i.indicator")
-        .toggleClass('icon_plus_alt2 icon_minus_alt2');
+        .toggleClass('icon-plus-circle icon-minus-circle');
 }
 $('#accordion').on('hidden.bs.collapse shown.bs.collapse', toggleChevron);
 
