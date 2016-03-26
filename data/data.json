@@ -5,19 +5,19 @@
             "title": "Príjemné ubytovanie",
             "description" : "",
             "description_" : "<p>Chalupa stojí na hranici chránenej oblasti Štiavnické vrchy necelé tri kilometre od dedinky Jabloňovce. Zo všetkých strán je obklopená lesom, spodnú časť pozemku lemuje potok. Dominantu tvorí rybník s príjemným posedením. Okolo rybníka je osvetlená vychádzková cestička, s netradičnou výsadbou. K dispozícii je ihrisko, trampolína a domček na strome, nie len pre deti. </p>",
-            "icon":"icon_set_2_icon-104"
+            "icon":"icon-set-3-twobed"
             },
             {"id": 2,
             "title": "Relax s nádychom nostalgie",
             "description" : "",
             "description_" : "<p>Relaxujte pri dobrej knihe v hojdacej sieti, pozorujte malinké pstruhy v potoku, počúvajte vtáky, púšťajte šarkana, alebo sa poprechádzajte, iba tak...Príďte si pripomenúť ako vonia les a ako vyzerá nočná obloha.</p>",
-            "icon":"icon_set_2_icon-108"
+            "icon":"icon-set-3-tree-2"
             },
             {"id": 3,
             "title": "Vyskúšajte u nás rybolov",
             "description" : "",
             "description_" : "<p>Starostlivo udržiavaný rybník je ideálne miesto pre aktívny odpočinok. Kapre, karasy a ???.  Ulovte toho najväčšieho a porazte rekord uvedený na tabuli pod mólom. Rybársky preukaz nie je nutný, je však nutné priniesť si vlastné rybárske vybavenie.</p>",
-            "icon":"icon_set_3-fisherman"
+            "icon":"icon-set-3-fisherman"
             }
         ],
         "info":{

@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5, h6{-webkit-font-smoothing:antialiased; color:#222; font-fami
 h3{ font-size:20px;}
 
 .main_title{ text-align:center; font-size:16px; margin-bottom:30px;}
-.main_title h2{ text-transform: uppercase; font-weight:700; letter-spacing:-1px; font-size:30px; margin-bottom:0;margin-top:0; color:#92278f; }
+.main_title h2{ text-transform: uppercase; font-weight:700; letter-spacing:-1px; font-size:30px; margin-bottom:0;margin-top:0; color:#A48573; } /*#92278f*/
 .main_title span{ display:block; width:40px; height:4px; background-color:#ededed; margin:auto;-webkit-border-radius: 5  px;-moz-border-radius: 5px;border-radius: 5px; margin-bottom:15px; }
 .main_title p{ font-family:"Varela Round",Arial, sans-serif; font-weight:300; font-size:20px}
 

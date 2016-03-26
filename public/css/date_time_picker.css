@@ -766,6 +766,10 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
 .datepicker.datepicker-inline td {
   padding: 0px 5px;
 }
+.glyphicon-chevron-right:before, .glyphicon-chevron-left:before{
+    content: "";
+} 
+
 .datepicker thead tr:first-child th.prev:before,
 .datepicker thead tr:first-child th.next:before {
   font-family: 'fontello';

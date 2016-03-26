@@ -1,5 +1,5 @@
 /* General import css styles*/
-@import url("bootstrap.min.css"); 						 /* Main Bootstrap */
+@import url("/bootstrap/dist/css/bootstrap.min.css"); 						 /* Main Bootstrap */
 @import url("animate.min.css");							/* Animate On Page Scroll */
 @import url("style.css");										/* Main theme styles */
 @import url("menu.css");										/* Menu styles */
